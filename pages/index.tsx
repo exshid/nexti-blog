@@ -23,7 +23,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
       
         <div className="mt-8">
           <Link href="/posts">
-            <a className="group inline-flex items-center gap-2 text-pink-600">
+            <a className="group prose dark:prose-invert inline-flex items-center gap-2 text-pink-600">
               View more posts{" "}
               <ArrowRight
                 className="group-hover:translate-x-0.5 transition-transform"

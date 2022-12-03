@@ -18,14 +18,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         Skip to main content
       </a>
-      <div className="flex flex-col mx-auto min-h-full px-4">
         <Header />
         <Search/>
         <main id="main">
           <Component {...pageProps} />
         </main>
         <Footer />
-      </div>
     </ThemeProvider>
   );
 }
