@@ -16,11 +16,6 @@ interface ContextProps extends ParsedUrlQuery {
   slug: string;
 }
 
-type Tag = {
-  post?: { // 👈️ could be undefined
-    tags?: string;
-  };
-};
 
 interface PostProps {
   frontMatter: MDXFrontMatter;
@@ -87,13 +82,17 @@ const Post: NextPage<PostProps> = ({ frontMatter, posts, mdx, previous, next }) 
       {posts.map((post,index) => (
       <div className="w-3/12 h-auto rounded-lg"> 
          <PostSidebar author={post.author} date={post.date}>
-          {post?.tags.map((tag, index) => {
+          
+          {`${post.tags ? post.tags.map((tag, index) => {
                     return (
                       <li className="inline-block mx-1 mr-1" key={index}>
                         <Tag href={`/posts/tagged/${slugify(tag)}`}>{tag}</Tag>
                       </li>
                     );
-                  })}
+                  }) : ''}`}
+
+
+
                   </PostSidebar></div>
                   ))}
                   </div>
