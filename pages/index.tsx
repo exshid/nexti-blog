@@ -8,17 +8,15 @@ import { ArrowRight } from "react-feather";
 import Layout from '@/components/Layout';
 import TopSection from '@/components/TopSection';
 import Topics from '@/components/Topics';
-import { getGlobalData } from '@/utils/global-data';
 
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
-  globalData:string;
 }
-const Home: NextPage<HomeProps> = ({ posts, globalData }) => {
+const Home: NextPage<HomeProps> = ({ posts }) => {
   return (
     <Layout>
-      <SEO title={globalData.name} description={globalData.blogTitle} />
+      <SEO title="Blog" description="Blog" />
       <TopSection/>
         <Topics/>
         <div className="flex mt-3">
