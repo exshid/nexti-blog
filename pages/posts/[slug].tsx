@@ -81,7 +81,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, posts, mdx, previous, next }) 
       </div>
         
       {posts.map((post,index) => (
-      <div className="w-3/12 h-auto rounded-lg"> 
+      <div key={index} className="w-3/12 h-auto rounded-lg"> 
          <PostSidebar author={post.author} date={post.date}>
           
           {`${post.tags ? post.tags.map((tag, index) => {
