@@ -15,7 +15,6 @@ interface HomeProps {
   posts: Array<MDXFrontMatter>;
   globalData:string;
 }
-
 const Home: NextPage<HomeProps> = ({ posts, globalData }) => {
   return (
     <Layout>
