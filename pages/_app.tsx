@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </a>
         <Header />
         <Search/>
-        <main id="main">
+        <main id="main" className="p-4">
           <Component {...pageProps} />
         </main>
         <Footer />

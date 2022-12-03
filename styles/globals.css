@@ -29,3 +29,7 @@ body {
 		object-fit: cover !important;
    
 	}
+
+	.image-container span{
+position: relative;	
+	}
