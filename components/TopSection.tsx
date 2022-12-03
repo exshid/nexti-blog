@@ -1,5 +1,6 @@
 import {Tag} from '@/components/Tag';
 import { cx, slugify } from "@/lib/utils";
+import Post from '@/components/Post'
 
 const TopSection:React.FC = () => {
     return <div className="flex my-2">
