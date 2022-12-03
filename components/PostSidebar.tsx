@@ -1,4 +1,4 @@
-import Tag from '@/components/Tag';
+import {Tag} from '@/components/Tag';
 import { cx, slugify } from "@/lib/utils";
 
 const PostSidebar:React.FC<{author:string, date:string}> = ({author,date,children}) => {
