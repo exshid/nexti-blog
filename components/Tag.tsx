@@ -12,7 +12,7 @@ export const Tag: React.FC<TagProps> = ({ href, children }) => {
       <a
         className={cx(
           "inline-block text-sm py-0.5 prose dark:prose-invert px-2.5 rounded-full hover:underline",
-          "bg-reddish"
+          "bg-reddish hover:bg-darker-reddish transition text-white"
         )}
       >
         #{slugify(children)}
