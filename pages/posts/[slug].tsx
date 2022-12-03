@@ -80,22 +80,17 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next }) 
       </Page>
       </div>
         
-      {posts.map((post,index) => (
       <div key={index} className="w-3/12 h-auto rounded-lg"> 
-         <PostSidebar author={post.author} date={post.date}>
-          
-          {`${post.tags ? post.tags.map((tag, index) => {
+         <PostSidebar author={frontMatter.author} date={frontMatter.date}>
+         {frontMatter.tags.map((tag, index) => {
                     return (
                       <li className="inline-block mx-1 mr-1" key={index}>
                         <Tag href={`/posts/tagged/${slugify(tag)}`}>{tag}</Tag>
                       </li>
                     );
-                  }) : ''}`}
-
-
-
-                  </PostSidebar></div>
-                  ))}
+                  })}
+                  </PostSidebar>
+</div>
                   </div>
 
       </article>
