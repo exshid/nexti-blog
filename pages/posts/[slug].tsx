@@ -26,7 +26,7 @@ interface PostProps {
   next: MDXFrontMatter | null;
 }
 
-const Post: NextPage<PostProps> = ({ frontMatter, posts, mdx, previous, next }) => {
+const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next }) => {
   return (
     <article className="px-6 md:px-0 w-full">
     <div className="flex">
