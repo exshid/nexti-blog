@@ -31,5 +31,5 @@ body {
 	}
 
 	.image-container span{
-position: relative;	
+position: relative !important;	
 	}
