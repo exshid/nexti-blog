@@ -80,7 +80,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next }) 
       </Page>
       </div>
         
-      <div key={index} className="w-3/12 h-auto rounded-lg"> 
+      <div className="w-3/12 h-auto rounded-lg"> 
          <PostSidebar author={frontMatter.author} date={frontMatter.date}>
          {frontMatter.tags.map((tag, index) => {
                     return (
