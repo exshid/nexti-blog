@@ -3,6 +3,7 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import Search from "@/components/Search";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -19,6 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </a>
       <div className="flex flex-col max-w-3xl mx-auto min-h-full px-4">
         <Header />
+        <Search/>
         <main id="main">
           <Component {...pageProps} />
         </main>
