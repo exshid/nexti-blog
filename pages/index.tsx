@@ -9,7 +9,6 @@ import Layout from '@/components/Layout';
 import Sidebar from '@/components/Sidebar';
 import TopSection from '@/components/TopSection';
 import Topics from '@/components/Topics';
-import SEO from '@/components/SEO';
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
@@ -17,8 +16,6 @@ interface HomeProps {
 const Home: NextPage<HomeProps> = ({ posts }) => {
   return (
     <Layout>
-      <TopSection/>
-        <Topics/>
         <div className="flex mt-3">
 	<div className="w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish">
 
