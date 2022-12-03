@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { onlyText } from "react-children-utilities";
 import { formatDate } from "@/lib/formatDate";
 import siteConfig from "@/data/siteConfig";
@@ -62,6 +63,16 @@ export const Page: React.FC<PageProps> = ({
               ) : (
                 description
               )}
+                      {thumbnail && (
+    <Image
+    className="w-full mb-3 rounded-lg"
+    src={thumbnail}
+    alt={title}
+    layout='fill'
+    objectFit='contain'
+  />)}
+
+
             </Prose>
           </div>
         ) : null}
