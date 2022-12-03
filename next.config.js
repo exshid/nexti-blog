@@ -12,8 +12,4 @@ module.exports = {
   images: {
     domains: ['static.wixstatic.com'],
 },
-experimental: {
-  images: {
-      allowFutureImage: true
-  }},
 }
