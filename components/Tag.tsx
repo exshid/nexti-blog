@@ -11,9 +11,9 @@ export const Tag: React.FC<TagProps> = ({ href, children }) => {
     <Link href={href}>
       <a
         className={cx(
-          "inline-block text-sm py-0.5 px-2.5 rounded-full border hover:underline",
-          "bg-gray-100 border-gray-200",
-          "dark:bg-gray-800 dark:border-gray-700"
+          "inline-block text-sm py-0.5 prose dark:prose-invert px-2.5 rounded-full hover:underline",
+          "bg-gray-100",
+          "dark:bg-gray-800"
         )}
       >
         #{slugify(children)}
