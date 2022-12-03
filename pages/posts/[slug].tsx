@@ -8,6 +8,7 @@ import { getAllMdx, getMdx } from "@/lib/mdx";
 import { MDXFrontMatter } from "@/lib/types";
 import { Page } from "@/components/Page";
 import { components } from "@/components/MDX";
+import { Tag } from "@/components/Tag";
 import { Prose } from "@/components/Prose";
 import PostSidebar from "@/components/PostSidebar";
 import { cx } from "@/lib/utils";
