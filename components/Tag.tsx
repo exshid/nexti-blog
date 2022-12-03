@@ -15,7 +15,7 @@ export const Tag: React.FC<TagProps> = ({ href, children }) => {
           "bg-reddish hover:bg-darker-reddish transition text-white"
         )}
       >
-        #{slugify(children)}
+        {slugify(children)}
       </a>
     </Link>
   );
