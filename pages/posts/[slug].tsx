@@ -9,6 +9,7 @@ import { MDXFrontMatter } from "@/lib/types";
 import { Page } from "@/components/Page";
 import { components } from "@/components/MDX";
 import { Prose } from "@/components/Prose";
+import PostSidebar from "@/components/PostSidebar";
 import { cx } from "@/lib/utils";
 
 interface ContextProps extends ParsedUrlQuery {
