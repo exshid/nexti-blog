@@ -8,7 +8,7 @@ import { ArrowRight } from "react-feather";
 import Layout from '@/components/Layout';
 import TopSection from '@/components/TopSection';
 import Topics from '@/components/Topics';
-
+import SEO from '@/components/SEO';
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
