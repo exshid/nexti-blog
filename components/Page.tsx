@@ -65,7 +65,7 @@ export const Page: React.FC<PageProps> = ({
               )}
                       {thumbnail && (
     <Image
-    className="w-full mb-3 rounded-lg"
+    className="postImage w-full mb-3 rounded-lg"
     src={thumbnail}
     alt='Post thumbnail'
     layout='fill'
