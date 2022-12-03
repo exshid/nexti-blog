@@ -67,7 +67,7 @@ export const Page: React.FC<PageProps> = ({
     <Image
     className="w-full mb-3 rounded-lg"
     src={thumbnail}
-    alt={title}
+    alt={title ? title : 'Post thumbnail'}
     layout='fill'
     objectFit='contain'
   />)}
