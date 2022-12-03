@@ -19,11 +19,12 @@ interface ContextProps extends ParsedUrlQuery {
 interface PostProps {
   frontMatter: MDXFrontMatter;
   mdx: any;
+  posts: Array<MDXFrontMatter>;
   previous: MDXFrontMatter | null;
   next: MDXFrontMatter | null;
 }
 
-const Post: NextPage<PostProps> = ({ frontMatter, mdx, previous, next }) => {
+const Post: NextPage<PostProps> = ({ frontMatter, posts, mdx, previous, next }) => {
   return (
     <article className="px-6 md:px-0 w-full">
     <div className="flex">
@@ -76,14 +77,21 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, previous, next }) => {
         ) : null}
       </Page>
       </div>
-      <div className="w-3/12 h-auto rounded-lg"><PostSidebar author={frontMatter.author} date={frontMatter.date}>{frontMatter.tags.map((tag, index) => {
+        
+      {posts.map((post,index) => (
+      <div className="w-3/12 h-auto rounded-lg"> 
+         <PostSidebar author={post.author} date={post.date}>
+          {post.tags.map((tag, index) => {
                     return (
                       <li className="inline-block mx-1 mr-1" key={index}>
                         <Tag href={`/posts/tagged/${slugify(tag)}`}>{tag}</Tag>
                       </li>
                     );
-                  })}</PostSidebar></div>
+                  })}
+                  </PostSidebar></div>
+                  ))}
                   </div>
+
       </article>
     
   );
