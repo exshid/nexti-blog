@@ -11,7 +11,10 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+
+        </Head>
         <body
           className={cx(
             "bg-gray-50 text-gray-800",
@@ -20,6 +23,7 @@ class MyDocument extends Document {
         >
           <Main />
           <NextScript />
+          <script async src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
         </body>
       </Html>
     );
