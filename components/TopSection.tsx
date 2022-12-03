@@ -3,7 +3,7 @@ import { cx, slugify } from "@/lib/utils";
 import Post from '@/components/Post'
 
 const TopSection:React.FC = () => {
-    return <div className="flex my-2">
+    return <div className="flex mb-4">
     <div className="w-2/6 h-52 h-auto mr-4 dark:border-none border border-grayish rounded-lg">
     <Post title="About Us" subtitle="Know more about us">As you can see the paragraphs gracefully wrap around the floated image.</Post></div>
     <div className="w-4/6 h-52 h-auto dark:border-none border border-grayish rounded-lg">
