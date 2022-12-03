@@ -16,10 +16,7 @@ class MyDocument extends Document {
 
         </Head>
         <body
-          className={cx(
-            "bg-gray-50 text-gray-800",
-            "dark:bg-gray-900 dark:text-gray-50"
-          )}
+          className="bg-white dark:bg-nightish"
         >
           <Main />
           <NextScript />
