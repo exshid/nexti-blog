@@ -17,7 +17,6 @@ interface HomeProps {
 const Home: NextPage<HomeProps> = ({ posts }) => {
   return (
     <Layout>
-      <SEO title="Blog" description="Blog" />
       <TopSection/>
         <Topics/>
         <div className="flex mt-3">
