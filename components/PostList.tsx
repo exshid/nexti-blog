@@ -15,9 +15,9 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
       className="w-full py-8"
     >
 <ul className="w-full py-8">
-          {posts.map((post) => (
+          {posts.map((post,index) => (
             <li
-              key={post.filePath}
+              key={index}
               className="px-8 bg-white dark:bg-midnightish hover:bg-daylight dark:hover:bg-lightnight transition"
             >
                               <Link href={`/posts/${post.slug}`}>
