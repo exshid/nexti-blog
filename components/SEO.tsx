@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const SEO:React.FC = ({ title, description }) => {
+const SEO:React.FC<{title:string, description:string}> = ({ title, description }) => {
   return (
     <Head>
       <title>{title}</title>
