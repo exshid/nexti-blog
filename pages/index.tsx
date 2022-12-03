@@ -6,6 +6,7 @@ import { Page } from "@/components/Page";
 import { PostList } from "@/components/PostList";
 import { ArrowRight } from "react-feather";
 import Layout from '@/components/Layout';
+import Sidebar from '@/components/Sidebar';
 import TopSection from '@/components/TopSection';
 import Topics from '@/components/Topics';
 import SEO from '@/components/SEO';
