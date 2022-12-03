@@ -1,10 +1,10 @@
 import Link from "next/link";
+import Image from 'next/future/image'
 import { formatDate } from "@/lib/formatDate";
 import type { MDXFrontMatter } from "@/lib/types";
 import { Prose } from "@/components/Prose";
 import { cx, slugify } from "@/lib/utils";
 import { Tag } from "@/components/Tag";
-import Image from 'next/future/image'
 
 interface PostListProps {
   posts: Array<MDXFrontMatter>;
