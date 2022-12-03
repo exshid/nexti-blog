@@ -1,17 +1,17 @@
 import { useCallback, useRef, useState } from 'react'
 import Link from 'next/link'
-import styles from '@/components/search.module.css'
+import styles from './search.module.css'
 
-const Search:React.FC = () => {
+export default function Search() {
 
   const searchRef = useRef(null)
   const [query, setQuery] = useState('')
   const [active, setActive] = useState(false)
   const [results, setResults] = useState([])
 
-  const searchEndpoint = (query:any) => `/api/search?q=${query}`
+  const searchEndpoint = (query) => `/api/search?q=${query}`
 
-  const onChange = useCallback((event:any) => {
+  const onChange = useCallback((event) => {
     const query = event.target.value;
     setQuery(query)
     if (query.length) {
@@ -78,5 +78,3 @@ const Search:React.FC = () => {
 
   )
 }  
-
-export default Search
