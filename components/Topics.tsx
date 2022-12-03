@@ -1,4 +1,3 @@
-import Post from '@/components/Post';
 import styles from '@/components/Home.module.css'
 import Topic from '@/components/UI/Topic';
 
