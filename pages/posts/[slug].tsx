@@ -24,8 +24,10 @@ interface PostProps {
 
 const Post: NextPage<PostProps> = ({ frontMatter, mdx, previous, next }) => {
   return (
-    <>
-      <Page {...frontMatter}>
+    <article className="px-6 md:px-0 w-full">
+    <div className="flex">
+<div className="w-9/12 mr-4 border border-grayish dark:border-none dark:bg-midnightish rounded-lg pt-9 p-12 h-auto">
+    <Page {...frontMatter}>
         <Prose>
           <MDXRemote {...mdx} components={components} />
         </Prose>
@@ -72,7 +74,17 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, previous, next }) => {
           </nav>
         ) : null}
       </Page>
-    </>
+      </div>
+      <div className="w-3/12 h-auto rounded-lg"><PostSidebar author={frontMatter.author} date={frontMatter.date}>{frontMatter.tags.map((tag, index) => {
+                    return (
+                      <li className="inline-block mx-1 mr-1" key={index}>
+                        <Tag href={`/posts/tagged/${slugify(tag)}`}>{tag}</Tag>
+                      </li>
+                    );
+                  })}</PostSidebar></div>
+                  </div>
+      </article>
+    
   );
 };
 
