@@ -9,9 +9,9 @@ const Search:React.FC = () => {
   const [active, setActive] = useState(false)
   const [results, setResults] = useState([])
 
-  const searchEndpoint = (query) => `/api/search?q=${query}`
+  const searchEndpoint = (query:any) => `/api/search?q=${query}`
 
-  const onChange = useCallback((event) => {
+  const onChange = useCallback((event:any) => {
     const query = event.target.value;
     setQuery(query)
     if (query.length) {
