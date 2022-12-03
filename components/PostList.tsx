@@ -30,7 +30,7 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
                     />
                     </div>
                   )}
-<div class="w-4/6">
+<div className="w-4/6">
                   {post.date && (
                     <p className="uppercase mb-3 opacity-60">
                       {post.date}
