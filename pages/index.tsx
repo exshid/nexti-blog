@@ -16,8 +16,8 @@ interface HomeProps {
 const Home: NextPage<HomeProps> = ({ posts }) => {
   return (
     <Layout>
-        <div className="flex mt-3">
-	<div className="w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish">
+        <div className="flex mt-3 w-full">
+	<div className="w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish h-fit">
 
         <PostList posts={posts} />
       
