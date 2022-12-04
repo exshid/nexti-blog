@@ -41,6 +41,7 @@ const Post: NextPage<Props> = ({ frontMatter, mdx, posts, previous, next, doc, t
     <article className="px-6 md:px-0 w-full">
     <div className="flex">
 <div className="w-9/12 mr-4 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-9 p-12 h-auto">
+//@ts-ignore
     <Page {...frontMatter}>
         <Prose>
           <MDXRemote {...mdx} components={components} />
