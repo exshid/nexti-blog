@@ -18,9 +18,9 @@ interface PostsProps {
 const Posts: NextPage<PostsProps> = ({ tag, posts }) => {
   return (
     <>
-      <Page title={`Posts tagged: "${tag}"`}>
+      <TagTitle title={`Posts tagged: "${tag}"`}>
         <PostList posts={posts} />
-      </Page>
+      </TagTitle>
     </>
   );
 };
