@@ -150,14 +150,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const doc = await getMdxNode("doc", context, {
-    mdxOptions: {
-      remarkPlugins: [
-        require("remark-slug"),
-        require("remark-autolink-headings"),
-      ],
-    },
-  })
+  const doc = await getMdxNode("doc", context)
   const mdxFile = getAllMdx().map((post) => post["frontMatter"]);
   const { slug } = context.params as ContextProps;
   const mdxFiles = getAllMdx();
