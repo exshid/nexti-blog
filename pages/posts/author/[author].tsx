@@ -24,14 +24,14 @@ const Posts: NextPage<PostsProps> = ({ author, posts }) => {
     </>
   );
 };
-// @ts-ignore
 export const getStaticPaths: GetStaticPaths = async () => {
-  const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
-  return {
-    paths: Array.from(new Set(mdxFiles.map((file) => file).flat())).map(
-      (author) => {
-        return {
-          params: {
+    const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
+    return {
+        paths: Array.from(new Set(mdxFiles.map((file) => file).flat())).map(
+            (author) => {
+                return {
+                    params: {
+              // @ts-ignore
             author: slugify(author!),
           },
         };
