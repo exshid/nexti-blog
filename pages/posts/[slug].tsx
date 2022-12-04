@@ -35,7 +35,7 @@ interface PostProps {
 
 type Props = Doc | PostProps;
 
-
+//@ts-ignore
 const Post: NextPage<Props> = ({ frontMatter, mdx, posts, previous, next, doc, tableOfContents }) => {
   return (
     <article className="px-6 md:px-0 w-full">
