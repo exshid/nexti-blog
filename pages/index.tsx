@@ -29,19 +29,12 @@ function postNumberHandler(){
 
         <PostList posts={posts.slice(0, postNum)} />
 
-      <button className="p-4 bg-reddish hover:bg-darker-reddish text-white transition" onClick={postNumberHandler}>Load More Posts <ArrowRight
+      <button className="p-4 bg-reddish hover:bg-darker-reddish rounded-bl-lg text-white transition flex" onClick={postNumberHandler}><p className="mr-1">Load More Posts </p><ArrowRight
                 className="group-hover:translate-x-0.5 transition-transform"
                 width={".9em"}
               />
 </button>
-
-        <div className="mt-8">
-          <Link href="/posts">
-            <a className="group prose dark:prose-invert inline-flex items-center gap-2 text-pink-600">
-              View more posts{" "}
-            </a>
-          </Link>
-        </div>
+       
         </div>
         <div className="w-3/12 h-auto"><Sidebar/></div>
 </div>
