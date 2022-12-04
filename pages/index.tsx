@@ -27,7 +27,7 @@ function postNumberHandler(){
         <div className="flex mt-3 w-full ">
 	<div className="w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish h-fit">
 
-        <PostList posts={posts} />
+        <PostList posts={posts.slice(0, postNum)} />
       <button onClick={postNumberHandler}/>
         <div className="mt-8">
           <Link href="/posts">
@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
   return {
     props: {
-      posts: mdxFiles.slice(0, postNum),
+      posts: mdxFiles,
     },
   };
 };
