@@ -137,7 +137,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
+  const mdxFile = getAllMdx().map((post) => post["frontMatter"]);
   const { slug } = context.params as ContextProps;
   const mdxFiles = getAllMdx();
   const postIndex = mdxFiles.findIndex((p) => p.frontMatter.slug === slug);
@@ -152,7 +152,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   });
   return {
     props: {
-      posts: mdxFiles,
+      posts: mdxFile,
       frontMatter,
       mdx: mdxContent,
       previous: mdxFiles[postIndex + 1]?.frontMatter || null,
