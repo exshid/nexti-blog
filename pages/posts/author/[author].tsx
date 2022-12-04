@@ -7,7 +7,7 @@ import { TagTitle } from "@/components/TagTitle";
 import { PostList } from "@/components/PostList";
 
 interface ContextProps extends ParsedUrlQuery {
-  tag: string;
+  author: string;
 }
 
 interface PostsProps {
@@ -48,7 +48,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       author,
       posts: mdxFiles.filter((file) => {
-        return file.author?.includes(author?);
+        return file.author?.includes(author);
       }),
     },
   };
