@@ -1,4 +1,3 @@
-//@ts-nocheck
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 import Link from "next/link";
@@ -13,19 +12,9 @@ import { components } from "@/components/MDX";
 import { Tag } from "@/components/Tag";
 import { Prose } from "@/components/Prose";
 import PostSidebar from "@/components/PostSidebar";
-import TOC from "@/components/TOC";
-import { getMdxNode } from "next-mdx/server"
-import { getTableOfContents } from "next-mdx-toc"
-import { MdxNode } from "next-mdx/server"
-import { TableOfContents } from "next-mdx-toc"
-import remarkSlug from 'remark-slug'
-import remarkAutolinkHeadings from 'remark-autolink-headings'
 
 interface ContextProps extends ParsedUrlQuery {
   slug: string;
-}
-interface Doc extends MdxNode {
-  toc: TableOfContents
 }
 
 
@@ -37,7 +26,7 @@ interface PostProps {
   next: MDXFrontMatter | null;
 }
 
-const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next, doc, tableOfContents }) => {
+const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next }) => {
   return (
     <article className="px-6 md:px-0 w-full">
     <div className="flex">
@@ -130,7 +119,6 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next, do
                     );
                   }) : ''}
                   </PostSidebar>
-                  <TOC tree={tableOfContents} />
 </div>
                   </div>
 
@@ -150,7 +138,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const doc = await getMdxNode("doc", context)
   const mdxFile = getAllMdx().map((post) => post["frontMatter"]);
   const { slug } = context.params as ContextProps;
   const mdxFiles = getAllMdx();
@@ -171,8 +158,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
       mdx: mdxContent,
       previous: mdxFiles[postIndex + 1]?.frontMatter || null,
       next: mdxFiles[postIndex - 1]?.frontMatter || null,
-      doc,
-      tableOfContents: await getTableOfContents(doc),
     },
   };
 };
