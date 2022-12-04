@@ -15,7 +15,7 @@ import PostSidebar from "@/components/PostSidebar";
 import TOC from "@/components/TOC";
 import { getMdxNode } from "next-mdx/server"
 import { getTableOfContents } from "next-mdx-toc"
-
+import { MdxNode } from "next-mdx/server"
 
 interface ContextProps extends ParsedUrlQuery {
   slug: string;
