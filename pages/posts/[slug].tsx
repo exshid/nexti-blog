@@ -86,7 +86,8 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next }) 
             )}
           >
                       {posts.slice(0, 2).map((post,index) => (
-<div>
+<div key={index}
+>
                 <p
                   className={cx(
                     "mb-2 uppercase tracking-wider text-sm",
