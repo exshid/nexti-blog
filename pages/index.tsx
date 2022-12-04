@@ -1,4 +1,5 @@
 import type { GetStaticProps, NextPage } from "next";
+import {useState} from 'react'
 import Link from "next/link";
 import { getAllMdx } from "@/lib/mdx";
 import { MDXFrontMatter } from "@/lib/types";
@@ -14,6 +15,11 @@ interface HomeProps {
   posts: Array<MDXFrontMatter>;
 }
 const Home: NextPage<HomeProps> = ({ posts }) => {
+const [postNum, setPostNum] = useState(3);
+
+function postNumberHandler(){
+  setPostNum(prevPostNum => prevPostNum + 3)
+}
   return (
     <Layout>
           <TopSection/>
@@ -22,7 +28,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 	<div className="w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish h-fit">
 
         <PostList posts={posts} />
-      
+      <button onClick={postNumberHandler}/>
         <div className="mt-8">
           <Link href="/posts">
             <a className="group prose dark:prose-invert inline-flex items-center gap-2 text-pink-600">
@@ -45,7 +51,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
   return {
     props: {
-      posts: mdxFiles.slice(0, 5),
+      posts: mdxFiles.slice(0, postNum),
     },
   };
 };
