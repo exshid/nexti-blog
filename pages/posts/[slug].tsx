@@ -85,7 +85,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next }) 
               "dark:border-gray-700"
             )}
           >
-                      {posts.map((post,index) => (
+                      {posts.slice(0, 2).map((post,index) => (
 <div key={index}
 >
                 <p

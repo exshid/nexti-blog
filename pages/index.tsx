@@ -15,7 +15,7 @@ interface HomeProps {
   posts: Array<MDXFrontMatter>;
 }
 const Home: NextPage<HomeProps> = ({ posts }) => {
-const [postNum, setPostNum] = useState(3);
+const [postNum, setPostNum] = useState(10);
 
 function postNumberHandler(){
   setPostNum(prevPostNum => prevPostNum + 3)
@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
   return {
     props: {
-      posts: mdxFiles,
+      posts: mdxFiles.slice(1,10),
     },
   };
 };
