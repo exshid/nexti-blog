@@ -33,6 +33,7 @@ interface PostProps {
   next: MDXFrontMatter | null;
 }
 
+
 type Props = Doc | PostProps;
 
 //@ts-nocheck
