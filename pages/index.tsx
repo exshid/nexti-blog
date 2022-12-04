@@ -18,7 +18,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
 const [postNum, setPostNum] = useState(10);
 
 function postNumberHandler(){
-  setPostNum(prevPostNum => prevPostNum + 1)
+  setPostNum(prevPostNum => prevPostNum + 5)
 }
   return (
     <Layout>
