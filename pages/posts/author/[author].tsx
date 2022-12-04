@@ -28,7 +28,7 @@ const Posts: NextPage<PostsProps> = ({ written, posts }) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
   return {
-    paths: Array.from(new Set(mdxFiles.map((file) => file.written).flat())).map(
+    paths: Array.from(new Set(mdxFiles.map((file) => file.author).flat())).map(
       (written) => {
         return {
           params: {
@@ -48,7 +48,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       written,
       posts: mdxFiles.filter((file) => {
-        return file.written?.includes(written);
+        return file.author?.includes(written);
       }),
     },
   };
