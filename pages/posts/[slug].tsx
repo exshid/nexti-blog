@@ -18,6 +18,8 @@ import { getMdxNode } from "next-mdx/server"
 import { getTableOfContents } from "next-mdx-toc"
 import { MdxNode } from "next-mdx/server"
 import { TableOfContents } from "next-mdx-toc"
+import remarkSlug from 'remark-slug'
+import remarkAutolinkHeadings from 'remark-autolink-headings'
 
 interface ContextProps extends ParsedUrlQuery {
   slug: string;
