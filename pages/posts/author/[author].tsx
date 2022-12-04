@@ -32,7 +32,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       (author) => {
         return {
           params: {
-            author: slugify(author!),
+            author: slugify(author ? author! : ''),
           },
         };
       }
