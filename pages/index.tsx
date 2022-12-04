@@ -23,7 +23,7 @@ function postNumberHandler(){
   setPostNum(prevPostNum => prevPostNum + 5)
 }
 function buttonHandler(){
-  if (posts.length !== postNum || posts.length > postNum){
+  if (posts.length < postNum){
     setButtonReturn(false)
   }
 }
