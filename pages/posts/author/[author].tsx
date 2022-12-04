@@ -7,11 +7,11 @@ import { TagTitle } from "@/components/TagTitle";
 import { PostList } from "@/components/PostList";
 
 interface ContextProps extends ParsedUrlQuery {
-  author: string;
+  author: any;
 }
 
 interface PostsProps {
-  author: string;
+  author: any;
   posts: Array<MDXFrontMatter>;
 }
 
