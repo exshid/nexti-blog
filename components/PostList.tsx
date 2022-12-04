@@ -12,11 +12,11 @@ interface PostListProps {
 
 export const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (
-    <ul className="w-full py-8 bg-white rounded-lg dark:bg-midnightish">
+    <ul className="w-full pt-8 pb-4 bg-white rounded-lg dark:bg-midnightish">
           {posts.map((post,index) => (
             <li
               key={index}
-              className="pt-8 pb-4 bg-white dark:bg-midnightish hover:bg-daylight dark:hover:bg-lightnight transition"
+              className="px-8 bg-white dark:bg-midnightish hover:bg-daylight dark:hover:bg-lightnight transition"
             >
                               <Link href={`/posts/${post.slug}`}>
                 <a className="py-2 flex focus:outline-none focus:ring-4">
