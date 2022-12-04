@@ -12,9 +12,16 @@ import { components } from "@/components/MDX";
 import { Tag } from "@/components/Tag";
 import { Prose } from "@/components/Prose";
 import PostSidebar from "@/components/PostSidebar";
+import TOC from "@/components/TOC";
+import { getMdxNode } from "next-mdx/server"
+import { getTableOfContents } from "next-mdx-toc"
+
 
 interface ContextProps extends ParsedUrlQuery {
   slug: string;
+}
+interface Doc extends MdxNode {
+  toc: TableOfContents
 }
 
 
@@ -26,7 +33,7 @@ interface PostProps {
   next: MDXFrontMatter | null;
 }
 
-const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next }) => {
+const Post: NextPage<PostProps,Doc> = ({ frontMatter, mdx, posts, previous, next, doc, tableOfContents }) => {
   return (
     <article className="px-6 md:px-0 w-full">
     <div className="flex">
@@ -119,6 +126,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next }) 
                     );
                   }) : ''}
                   </PostSidebar>
+                  <TOC tree={tableOfContents} />
 </div>
                   </div>
 
@@ -138,6 +146,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  const doc = await getMdxNode("doc", context, {
+    mdxOptions: {
+      remarkPlugins: [
+        require("remark-slug"),
+        require("remark-autolink-headings"),
+      ],
+    },
+  })
   const mdxFile = getAllMdx().map((post) => post["frontMatter"]);
   const { slug } = context.params as ContextProps;
   const mdxFiles = getAllMdx();
@@ -154,6 +170,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       posts: mdxFile,
+      doc,
+      tableOfContents: await getTableOfContents(doc),
       frontMatter,
       mdx: mdxContent,
       previous: mdxFiles[postIndex + 1]?.frontMatter || null,
