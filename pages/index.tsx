@@ -10,9 +10,12 @@ import Layout from '@/components/Layout';
 import Sidebar from '@/components/Sidebar';
 import TopSection from '@/components/TopSection';
 import Topics from '@/components/Topics';
+import { listTags, TagContent } from "../../lib/tags";
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
+  tags: TagContent[];
+
 }
 const Home: NextPage<HomeProps> = ({ posts }) => {
 const [postNum, setPostNum] = useState(10);
@@ -30,7 +33,7 @@ function buttonHandler(){
   return (
     <Layout>
           <TopSection/>
-          <Topics/>
+          <Topics tags={tags}/>
         <div className="flex mt-3 w-full ">
 	<div className="w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish h-fit">
 
