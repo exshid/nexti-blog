@@ -7,18 +7,18 @@ import { TagTitle } from "@/components/TagTitle";
 import { PostList } from "@/components/PostList";
 
 interface ContextProps extends ParsedUrlQuery {
-  author: string;
+  written: string;
 }
 
 interface PostsProps {
-  author: string;
+  written: string;
   posts: Array<MDXFrontMatter>;
 }
 
-const Posts: NextPage<PostsProps> = ({ author, posts }) => {
+const Posts: NextPage<PostsProps> = ({ written, posts }) => {
   return (
     <>
-      <TagTitle title={`Posts written by ${author}`}>
+      <TagTitle title={`Posts written by ${written}`}>
         <PostList posts={posts} />
       </TagTitle>
     </>
@@ -28,11 +28,11 @@ const Posts: NextPage<PostsProps> = ({ author, posts }) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
   return {
-    paths: Array.from(new Set(mdxFiles.map((file) => file.author).flat())).map(
-      (author) => {
+    paths: Array.from(new Set(mdxFiles.map((file) => file.written).flat())).map(
+      (written) => {
         return {
           params: {
-            author: slugify(author!),
+            written: slugify(written!),
           },
         };
       }
@@ -42,13 +42,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { author } = context.params as ContextProps;
+  const { written } = context.params as ContextProps;
   const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
   return {
     props: {
-      author,
+      written,
       posts: mdxFiles.filter((file) => {
-        return file.author?.includes(author);
+        return file.written?.includes(written);
       }),
     },
   };
