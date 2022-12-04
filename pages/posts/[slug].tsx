@@ -20,10 +20,12 @@ import { TableOfContents } from "next-mdx-toc"
 interface ContextProps extends ParsedUrlQuery {
   slug: string;
 }
-
-
-interface PostProps extends MdxNode {
+interface Doc extends MdxNode {
   toc: TableOfContents
+}
+
+
+interface PostProps {
   frontMatter: MDXFrontMatter;
   mdx: any;
   posts: Array<MDXFrontMatter>;
@@ -31,7 +33,10 @@ interface PostProps extends MdxNode {
   next: MDXFrontMatter | null;
 }
 
-const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next, doc, tableOfContents }) => {
+type Props = Doc | PostProps;
+
+
+const Post: NextPage<Props> = ({ frontMatter, mdx, posts, previous, next, doc, tableOfContents }) => {
   return (
     <article className="px-6 md:px-0 w-full">
     <div className="flex">
