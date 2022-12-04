@@ -16,7 +16,7 @@ import TOC from "@/components/TOC";
 import { getMdxNode } from "next-mdx/server"
 import { getTableOfContents } from "next-mdx-toc"
 import { MdxNode } from "next-mdx/server"
-
+import { TableOfContents } from "next-mdx-toc"
 interface ContextProps extends ParsedUrlQuery {
   slug: string;
 }
