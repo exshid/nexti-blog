@@ -48,7 +48,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       author,
       posts: mdxFiles.filter((file) => {
-        return file.author?.includes(author);
+        return file.author?.includes(author?);
       }),
     },
   };
