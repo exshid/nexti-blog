@@ -1,7 +1,8 @@
 import { TableOfContents } from "next-mdx-toc"
 
 export default function TOC({ tree }: { tree: TableOfContents }) {
-  return tree?.items.length ? (
+  //@ts-ignore
+    return tree?.items.length ? (
     <ul>
       {tree.items.map((item) => {
         return (
