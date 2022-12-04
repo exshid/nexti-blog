@@ -5,6 +5,7 @@ export type TagContent = {
   readonly name: string;
 };
 
+
 const tagMap: { [key: string]: TagContent } = generateTagMap();
 
 function generateTagMap(): { [key: string]: TagContent } {
