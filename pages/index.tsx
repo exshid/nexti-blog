@@ -28,7 +28,7 @@ function postNumberHandler(){
 	<div className="w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish h-fit">
 
         <PostList posts={posts.slice(0, postNum)} />
-      <button onClick={postNumberHandler}/>
+      <button onClick={postNumberHandler}>More</button>
         <div className="mt-8">
           <Link href="/posts">
             <a className="group prose dark:prose-invert inline-flex items-center gap-2 text-pink-600">
