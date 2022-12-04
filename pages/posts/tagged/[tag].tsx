@@ -3,7 +3,7 @@ import { ParsedUrlQuery } from "querystring";
 import { getAllMdx } from "@/lib/mdx";
 import { slugify } from "@/lib/utils";
 import { MDXFrontMatter } from "@/lib/types";
-import { Page } from "@/components/Page";
+import { TagTitle } from "@/components/TagTitle";
 import { PostList } from "@/components/PostList";
 
 interface ContextProps extends ParsedUrlQuery {
