@@ -167,12 +167,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       posts: mdxFile,
-      doc,
-      tableOfContents: await getTableOfContents(doc),
       frontMatter,
       mdx: mdxContent,
       previous: mdxFiles[postIndex + 1]?.frontMatter || null,
       next: mdxFiles[postIndex - 1]?.frontMatter || null,
+      doc,
+      tableOfContents: await getTableOfContents(doc),
     },
   };
 };
