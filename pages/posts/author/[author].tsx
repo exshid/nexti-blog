@@ -32,7 +32,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
                 return {
                     params: {
               // @ts-ignore
-            author: slugify(author!),
+            author: slugify(author.toString()!),
           },
         };
       }
@@ -48,7 +48,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       author,
       posts: mdxFiles.filter((file) => {
-        return file.author.toString();
+        return file.author;
       }),
     },
   };
