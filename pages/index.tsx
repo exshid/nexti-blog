@@ -16,9 +16,16 @@ interface HomeProps {
 }
 const Home: NextPage<HomeProps> = ({ posts }) => {
 const [postNum, setPostNum] = useState(10);
+const [buttonReturn, setButtonReturn] = useState(true);
+
 
 function postNumberHandler(){
   setPostNum(prevPostNum => prevPostNum + 5)
+}
+function buttonHandler(){
+  if (posts.length !== postNum || posts.length > postNum){
+    setButtonReturn(false)
+  }
 }
   return (
     <Layout>
@@ -29,11 +36,11 @@ function postNumberHandler(){
 
         <PostList posts={posts.slice(0, postNum)} />
 
-      {(posts.length !== postNum || posts.length > postNum) ? <button className="p-4 bg-reddish hover:bg-darker-reddish rounded-bl-lg text-white transition flex" onClick={postNumberHandler}><p className="mr-1">Load More Posts </p><ArrowRight
+      {buttonReturn && <button className="p-4 bg-reddish hover:bg-darker-reddish rounded-bl-lg text-white transition flex" onClick={postNumberHandler}><p className="mr-1">Load More Posts </p><ArrowRight
                 className="group-hover:translate-x-0.5 transition-transform"
                 width={".9em"}
               />
-</button> : ''}
+</button>}
        
         </div>
         <div className="w-3/12 h-auto"><Sidebar/></div>
