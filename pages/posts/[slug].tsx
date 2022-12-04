@@ -77,6 +77,34 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next }) 
             ) : null}
           </nav>
         ) : null}
+
+          <nav
+            className={cx(
+              "mt-8 pt-8 grid grid-cols-2 gap-8 border-t",
+              "border-gray-200",
+              "dark:border-gray-700"
+            )}
+          >
+                      {posts.slice(0, 2).map((post,index) => (
+<div>
+                <p
+                  className={cx(
+                    "mb-2 uppercase tracking-wider text-sm",
+                    "text-gray-500",
+                    "dark:text-gray-400"
+                  )}
+                >
+                  {post.title}
+                </p>
+                <Link href={`/posts/${post.slug}`}>
+                  <a className="font-bold">{post.title}</a>
+                </Link>
+              </div>
+))}            
+          </nav>
+        
+
+
       </Page>
       </div>
         
@@ -109,6 +137,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
   const { slug } = context.params as ContextProps;
   const mdxFiles = getAllMdx();
   const postIndex = mdxFiles.findIndex((p) => p.frontMatter.slug === slug);
@@ -123,6 +152,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   });
   return {
     props: {
+      posts: mdxFiles,
       frontMatter,
       mdx: mdxContent,
       previous: mdxFiles[postIndex + 1]?.frontMatter || null,
