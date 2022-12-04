@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 import Link from "next/link";
@@ -18,7 +19,6 @@ import { getTableOfContents } from "next-mdx-toc"
 import { MdxNode } from "next-mdx/server"
 import { TableOfContents } from "next-mdx-toc"
 
-//@ts-nocheck
 interface ContextProps extends ParsedUrlQuery {
   slug: string;
 }
