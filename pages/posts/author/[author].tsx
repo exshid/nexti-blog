@@ -24,7 +24,7 @@ const Posts: NextPage<PostsProps> = ({ author, posts }) => {
     </>
   );
 };
-
+// @ts-ignore
 export const getStaticPaths: GetStaticPaths = async () => {
   const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
   return {
@@ -32,7 +32,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       (author) => {
         return {
           params: {
-            author: slugify(author ? author! : ''),
+            author: slugify(author!),
           },
         };
       }
