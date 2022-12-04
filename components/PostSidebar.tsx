@@ -14,10 +14,9 @@ return <ul style={{top: "85px"}} className="w-full dark:text-white dark:border-n
           "bg-reddish hover:bg-darker-reddish transition text-white"
         )}
       >
-        {slugify(author ? author : '')}
+        {author}
       </a>
         
-        {author}
     </Link></p>
 <hr/>
         </li>
