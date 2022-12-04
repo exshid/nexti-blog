@@ -21,6 +21,7 @@ interface ContextProps extends ParsedUrlQuery {
   slug: string;
 }
 
+
 interface PostProps extends MdxNode {
   toc: TableOfContents
   frontMatter: MDXFrontMatter;
