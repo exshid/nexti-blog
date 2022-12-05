@@ -1,3 +1,4 @@
+//@ts-nocheck
 import type { GetStaticProps, NextPage } from "next";
 import {useState} from 'react'
 import Link from "next/link";
