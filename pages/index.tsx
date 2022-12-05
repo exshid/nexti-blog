@@ -17,7 +17,7 @@ interface HomeProps {
   tags: TagContent[];
 
 }
-const Home: NextPage<HomeProps> = ({ posts }) => {
+const Home: NextPage<HomeProps> = ({ posts, tags }) => {
 const [postNum, setPostNum] = useState(10);
 const [buttonReturn, setButtonReturn] = useState(true);
 
