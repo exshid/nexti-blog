@@ -10,7 +10,7 @@ import Layout from '@/components/Layout';
 import Sidebar from '@/components/Sidebar';
 import TopSection from '@/components/TopSection';
 import Topics from '@/components/Topics';
-import { listTags, TagContent } from "../../lib/tags";
+import { listTags, TagContent } from "@/lib/tags";
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
