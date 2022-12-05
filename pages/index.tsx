@@ -55,9 +55,12 @@ function buttonHandler(){
 
 export const getStaticProps: GetStaticProps = async () => {
   const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
+  const tags = listTags();
+
   return {
     props: {
       posts: mdxFiles,
+      tags,
     },
   };
 };
