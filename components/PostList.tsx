@@ -10,6 +10,7 @@ interface PostListProps {
   posts: Array<MDXFrontMatter>;
 }
 
+
 export const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (
     <ul className="w-full pt-8 pb-4 bg-white rounded-lg dark:bg-midnightish">
