@@ -1,3 +1,4 @@
+import { MDXFrontMatter } from "@/lib/types";
 import {Tag} from '@/components/Tag';
 import { cx, slugify } from "@/lib/utils";
 import Post from '@/components/Post'
