@@ -11,10 +11,9 @@ interface PostListProps {
   posts: Array<MDXFrontMatter>;
 }
 
-
-
 export const Header: React.FC<PostListProps> = ({ posts }) => {
   const { pathname } = useRouter();
+console.log(posts.slice(0, 3).filter((file) => file.tags?.includes('news')))
   return (
 
     <header className="mt-3 px-4 z-40	sticky top-0 w-full">

@@ -34,13 +34,13 @@ function buttonHandler(){
 }
   return (
     <Layout>
+      <Header posts={posts} />
           <TopSection/>
           <Topics tags={tags}/>
         <div className="flex mt-3 w-full ">
 	<div className="w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish h-fit">
 
         <PostList posts={posts.slice(0, postNum) } />
-        <Header posts={posts} />
 
       {buttonReturn && <button className="p-4 bg-reddish hover:bg-darker-reddish rounded-bl-lg text-white transition flex" onClick={postNumberHandler}><p className="mr-1">Load More Posts </p><ArrowRight
                 className="group-hover:translate-x-0.5 transition-transform"
