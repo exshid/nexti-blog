@@ -2,9 +2,18 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import siteConfig from "@/data/siteConfig";
 import Link from "next/link";
-import { cx } from "@/lib/utils";
+import { formatDate } from "@/lib/formatDate";
+import type { MDXFrontMatter } from "@/lib/types";
+import { Prose } from "@/components/Prose";
+import { cx, slugify } from "@/lib/utils";
 
-export const Header: React.FC = () => {
+interface PostListProps {
+  posts: Array<MDXFrontMatter>;
+}
+
+
+
+export const Header: React.FC<PostListProps> = ({ posts }) => {
   const { pathname } = useRouter();
   return (
 
@@ -52,45 +61,33 @@ export const Header: React.FC = () => {
   <div id="mega-menu-full-dropdown" className="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-midnightish dark:border-gray-600 hidden">
         <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
             <ul>
-                <li>
+            {posts.slice(0, 3).filter((file) => file.tags?.includes('news')).map((post,index) => (
+
+                <li key={index}
+                >
+                                    <Link href={`/posts/${post.slug}`}>
                     <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
-                        <div className="font-semibold">Online Stores</div>
-                        <span className="text-sm font-light text-gray-500 dark:text-gray-400">Connect with third-party tools that youre already using.</span>
+                        <div className="font-semibold">{post.title}</div>
+                        <span className="text-sm font-light text-gray-500 dark:text-gray-400">{post.description}</span>
                     </a>
+                </Link>
                 </li>
-                <li>
-                    <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
-                        <div className="font-semibold">Segmentation</div>
-                        <span className="text-sm font-light text-gray-500 dark:text-gray-400">Connect with third-party tools that youre already using.</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
-                        <div className="font-semibold">Marketing CRM</div>
-                        <span className="text-sm font-light text-gray-500 dark:text-gray-400">Connect with third-party tools that youre already using.</span>
-                    </a>
-                </li>
-            </ul>
+          ))}
+
+</ul>
             <ul>
-                <li>
+            {posts.slice(0, 3).filter((file) => file.tags?.includes('featured')).map((post,index) => (
+
+                <li key={index}>
+                                    <Link href={`/posts/${post.slug}`}>
                     <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
-                        <div className="font-semibold">Online Stores</div>
-                        <span className="text-sm font-light text-gray-500 dark:text-gray-400">Connect with third-party tools that youre already using.</span>
+                        <div className="font-semibold">{post.title}</div>
+                        <span className="text-sm font-light text-gray-500 dark:text-gray-400">{post.description}</span>
                     </a>
+                </Link>
                 </li>
-                <li>
-                    <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
-                        <div className="font-semibold">Segmentation</div>
-                        <span className="text-sm font-light text-gray-500 dark:text-gray-400">Connect with third-party tools that youre already using.</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
-                        <div className="font-semibold">Marketing CRM</div>
-                        <span className="text-sm font-light text-gray-500 dark:text-gray-400">Connect with third-party tools that youre already using.</span>
-                    </a>
-                </li>
-            </ul>
+             ))}
+             </ul>
         </div>
     </div>
 </nav>

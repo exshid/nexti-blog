@@ -9,6 +9,7 @@ import { PostList } from "@/components/PostList";
 import { ArrowRight } from "react-feather";
 import Layout from '@/components/Layout';
 import Sidebar from '@/components/Sidebar';
+import Header from '@/components/Header';
 import TopSection from '@/components/TopSection';
 import Topics from '@/components/Topics';
 import { listTags, TagContent } from "@/lib/tags";
@@ -39,6 +40,7 @@ function buttonHandler(){
 	<div className="w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish h-fit">
 
         <PostList posts={posts.slice(0, postNum) } />
+        <Header posts={posts} />
 
       {buttonReturn && <button className="p-4 bg-reddish hover:bg-darker-reddish rounded-bl-lg text-white transition flex" onClick={postNumberHandler}><p className="mr-1">Load More Posts </p><ArrowRight
                 className="group-hover:translate-x-0.5 transition-transform"
