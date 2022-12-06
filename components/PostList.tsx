@@ -12,7 +12,7 @@ interface PostListProps {
 
 
 export const PostList: React.FC<PostListProps> = ({ posts }) => {
-  console.log(posts.filter((file) => file.tags?.includes('css')))
+  console.log(posts.filter((file) => file.tags?.includes('react')))
   console.log(posts)
 
   return (
