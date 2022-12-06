@@ -26,4 +26,4 @@ interface PostListProps {
 </ul>
 }
 
-export default TopSection
+export default Sidebar
