@@ -8,7 +8,7 @@ import { Tag } from "@/components/Tag";
 
 interface PostListProps {
   posts: Array<MDXFrontMatter>;
-  tag: string;
+  tag: Array<MDXFrontMatter>;
   
 }
 
