@@ -66,7 +66,7 @@ return (
 
                 <li key={index}>
                                     <Link href={`/posts/${post.slug}`}>
-                    <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
+                    <a className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
                         <div className="font-semibold">{post.title}</div>
                         <span className="text-sm font-light text-gray-500 dark:text-gray-400">{post.description}</span>
                     </a>
@@ -79,7 +79,7 @@ return (
 
                 <li key={index}>
                                     <Link href={`/posts/${post.slug}`}>
-                    <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
+                    <a className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
                         <div className="font-semibold">{post.title}</div>
                         <span className="text-sm font-light text-gray-500 dark:text-gray-400">{post.description}</span>
                     </a>
