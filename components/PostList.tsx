@@ -17,9 +17,7 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
 <>
 
     <ul className="w-full pt-8 pb-4 bg-white rounded-lg dark:bg-midnightish">
-    {posts.filter((file) => {
-        return file.tags?.includes('css');
-      }).map((post,index) => (
+    {posts.filter((file) => file.tags?.includes('css')).map((post,index) => (
       <li
         key={index}
         className="px-8 bg-white dark:bg-midnightish hover:bg-daylight dark:hover:bg-lightnight transition"
