@@ -18,7 +18,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         Skip to main content
       </a>
-        <Header />
         <Search/>
         <main id="main" className="p-4">
           <Component {...pageProps} />
