@@ -15,7 +15,7 @@ interface PostListProps {
                               <a className="py-2 flex focus:outline-none focus:ring-4">       
     <li className="py-6">
 <h5 className="text-xl">{post.title}</h5>
-<p className="text-muted">{post.description}</p>
+<p className="text-muted uppercase">{formatDate(post.date)}</p>
     </li>
     </a>
     </Link>
