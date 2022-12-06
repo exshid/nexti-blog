@@ -77,7 +77,7 @@ return (
 
 </ul>
             <ul>
-            {posts.slice(0, 3).filter((file) => file.tags?.includes('featured')).map((post,index) => (
+            {posts.slice(0, 3).filter((file) => file.tags?.includes('react')).map((post,index) => (
 
                 <li key={index}>
                                     <Link href={`/posts/${post.slug}`}>
