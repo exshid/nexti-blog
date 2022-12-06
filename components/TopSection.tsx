@@ -4,6 +4,7 @@ import Post from '@/components/Post'
 import Link from "next/link";
 import type { MDXFrontMatter } from "@/lib/types";
 import { cx, slugify } from "@/lib/utils";
+import { formatDate } from "@/lib/formatDate";
 
 interface PostListProps {
     posts: Array<MDXFrontMatter>;
