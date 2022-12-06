@@ -8,10 +8,12 @@ import { Tag } from "@/components/Tag";
 
 interface PostListProps {
   posts: Array<MDXFrontMatter>;
+  tag: string;
+  
 }
 
 
-export const PostList: React.FC<PostListProps> = ({ posts }) => {
+export const PostList: React.FC<PostListProps> = ({ posts, tag }) => {
   return (
 <>
 <ul className="w-full pt-8 pb-4 bg-white rounded-lg dark:bg-midnightish">
