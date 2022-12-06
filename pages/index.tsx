@@ -9,7 +9,7 @@ import { PostList } from "@/components/PostList";
 import { ArrowRight } from "react-feather";
 import Layout from '@/components/Layout';
 import Sidebar from '@/components/Sidebar';
-import Header from '@/components/Header';
+import { Header } from "@/components/Header";
 import TopSection from '@/components/TopSection';
 import Topics from '@/components/Topics';
 import { listTags, TagContent } from "@/lib/tags";
