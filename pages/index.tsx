@@ -35,7 +35,7 @@ function buttonHandler(){
   return (
     <Layout>
       <Header posts={posts.slice(0, 4)} />
-          <TopSection/>
+          <TopSection posts={posts.slice(0, 2)}/>
           <Topics tags={tags}/>
         <div className="flex mt-3 w-full ">
 	<div className="w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish h-fit">
