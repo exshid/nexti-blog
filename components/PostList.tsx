@@ -13,6 +13,8 @@ interface PostListProps {
 
 export const PostList: React.FC<PostListProps> = ({ posts }) => {
   console.log(posts.filter((file) => file.tags?.includes('css')))
+  console.log(posts)
+
   return (
     <ul className="w-full pt-8 pb-4 bg-white rounded-lg dark:bg-midnightish">
           {posts.map((post,index) => (
