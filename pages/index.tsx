@@ -16,7 +16,7 @@ import { listTags, TagContent } from "@/lib/tags";
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
   tags: TagContent[];
-
+tag: string;
 }
 const Home: NextPage<HomeProps> = ({ posts, tags }) => {
 const [postNum, setPostNum] = useState(10);
