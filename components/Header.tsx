@@ -13,7 +13,7 @@ interface PostListProps {
 
 export const Header: React.FC<PostListProps> = ({ posts }) => {
   const { pathname } = useRouter();
-console.log(posts.filter((file) => file.tags?.includes('news')))
+console.log(posts.filter((file) => file.tags?.includes('typescript')))
 console.log(posts.filter((file) => file.tags?.includes('react')))
 
 return (
