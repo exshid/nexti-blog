@@ -21,7 +21,6 @@ const Posts: NextPage<PostsProps> = ({ tag, posts }) => {
       <TagTitle title={`Posts tagged: "${tag}"`}>
         <PostList posts={posts} />
       </TagTitle>
-      <div>{posts}</div>
     </>
   );
 };
