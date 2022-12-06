@@ -34,7 +34,7 @@ function buttonHandler(){
 }
   return (
     <Layout>
-      <Header posts={posts} />
+      <Header posts={posts.slice(0, postNum)} />
           <TopSection/>
           <Topics tags={tags}/>
         <div className="flex mt-3 w-full ">
