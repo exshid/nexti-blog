@@ -10,7 +10,6 @@ interface PostListProps {
   }
   
   export const TopSection: React.FC<PostListProps> = ({ posts }) => {
-      console.log(posts.filter((file) => file.tags?.includes('typescript')))
       return <div className="flex mb-4 w-full">
                {posts.filter((file) => file.tags?.includes('typescript')).map((post,index) => (
                               <Link key={index} href={`/posts/${post.slug}`}>

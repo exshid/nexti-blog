@@ -49,7 +49,7 @@ function buttonHandler(){
 </button>}
        
         </div>
-        <div className="w-3/12 h-auto"><Sidebar/></div>
+        <div className="w-3/12 h-auto"><Sidebar posts={posts.slice(0, 10)}/></div>
 </div>
         </Layout>
   );
