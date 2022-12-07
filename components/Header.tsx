@@ -6,6 +6,7 @@ import { formatDate } from "@/lib/formatDate";
 import type { MDXFrontMatter } from "@/lib/types";
 import { Prose } from "@/components/Prose";
 import { cx, slugify } from "@/lib/utils";
+import { useRef, useEffect, useState, ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 
 interface PostListProps {
