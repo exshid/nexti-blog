@@ -13,7 +13,7 @@ interface HomeProps {
 tag: string;
 }
 
-const MyApp: NextPage<HomeProps> = ({ posts, tags }) => {
+const MyApp: React.FC<HomeProps> = ({ posts, tags }) => {
 
   return (
     <ThemeProvider
