@@ -35,6 +35,8 @@ function buttonHandler(){
   return (
     <Layout>
       <Header posts={posts.slice(0, 4)} />
+      <main id="main" className="p-4">
+
           <TopSection posts={posts.slice(0, 3)}/>
           <Topics tags={tags}/>
         <div className="flex mt-3 w-full ">
@@ -51,6 +53,7 @@ function buttonHandler(){
         </div>
         <div className="w-3/12 h-auto"><Sidebar posts={posts.slice(0, 10)}/></div>
 </div>
+</main>
         </Layout>
   );
 };

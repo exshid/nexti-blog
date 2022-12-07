@@ -18,12 +18,15 @@ const Posts: NextPage<PostsProps> = ({ posts,tags }) => {
   return (
     <>
           <Header posts={posts.slice(0, 4)} />
+          <main id="main" className="p-4">
+
       <Page
         title="Posts"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
       >
         <PostList posts={posts} />
       </Page>
+</main>
     </>
   );
 };

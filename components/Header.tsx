@@ -6,24 +6,16 @@ import { formatDate } from "@/lib/formatDate";
 import type { MDXFrontMatter } from "@/lib/types";
 import { Prose } from "@/components/Prose";
 import { cx, slugify } from "@/lib/utils";
-import { useRef, useEffect, useState, ReactNode } from 'react'
-import { createPortal } from 'react-dom'
 
 interface PostListProps {
   posts: Array<MDXFrontMatter>;
 }
 
 export const Header: React.FC<PostListProps> = ({ posts }) => {
-  const ref = useRef<Element | null>(null)
-  const [mounted, setMounted] = useState(false)
-  
-  useEffect(() => {
-    ref.current = document.querySelector<HTMLElement>("#__next")
-    setMounted(true)
-  }, [])
 
-  return (mounted && ref.current) ? createPortal(
-(<header className="mt-3 px-4 z-40	sticky top-0 w-full">
+return (
+
+    <header className="mt-3 px-4 z-40	sticky top-0 w-full">
 
 
 <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-midnightish w-full z-20 top-0 left-0 rounded-lg border border-grayish dark:border-none">
@@ -96,6 +88,6 @@ export const Header: React.FC<PostListProps> = ({ posts }) => {
     </div>
 </nav>
 
-    </header>), ref.current) : null
-
+    </header>
+    );
 };
