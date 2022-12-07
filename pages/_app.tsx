@@ -5,7 +5,14 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Search from "@/components/Search";
 
-function MyApp({ Component, pageProps }: AppProps) {
+interface HomeProps {
+  posts: Array<MDXFrontMatter>;
+  tags: TagContent[];
+tag: string;
+}
+
+const MyApp: NextPage<HomeProps> = ({ posts, tags }) => {
+
   return (
     <ThemeProvider
       disableTransitionOnChange
@@ -18,6 +25,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         Skip to main content
       </a>
+      <Header posts={posts.slice(0, 4)} />
+    
         <Search/>
         <main id="main" className="p-4">
           <Component {...pageProps} />
@@ -28,5 +37,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 
+export const getStaticProps: GetStaticProps = async () => {
+  const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
+  const tags = listTags();
+
+  return {
+    props: {
+      posts: mdxFiles,
+      tags,
+    },
+  };
+};
 
 export default MyApp;
