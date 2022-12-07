@@ -13,7 +13,7 @@ interface HomeProps {
 tag: string;
 }
 
-const MyApp: React.FC<HomeProps> = ({ Component, pageProps,posts, tags }) => {
+const MyApp: React.FC= ({ Component, pageProps},{posts, tags }:HomeProps) => {
 
   return (
     <ThemeProvider
