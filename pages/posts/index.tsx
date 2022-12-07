@@ -1,7 +1,7 @@
+import { Page } from "@/components/Page";
 import type { GetStaticProps, NextPage } from "next";
 import { getAllMdx } from "@/lib/mdx";
 import { MDXFrontMatter } from "@/lib/types";
-import { Page } from "@/components/Page";
 import { PostList } from "@/components/PostList";
 import { listTags, TagContent } from "@/lib/tags";
 import { Header } from "@/components/Header";

@@ -13,6 +13,9 @@ import { components } from "@/components/MDX";
 import { Tag } from "@/components/Tag";
 import { Prose } from "@/components/Prose";
 import PostSidebar from "@/components/PostSidebar";
+import { listTags, TagContent } from "@/lib/tags";
+import { Header } from "@/components/Header";
+
 
 interface ContextProps extends ParsedUrlQuery {
   slug: string;
@@ -22,13 +25,17 @@ interface ContextProps extends ParsedUrlQuery {
 interface PostProps {
   frontMatter: MDXFrontMatter;
   mdx: any;
+  tags: TagContent[];
   posts: Array<MDXFrontMatter>;
   previous: MDXFrontMatter | null;
   next: MDXFrontMatter | null;
 }
 
-const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next }) => {
+const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, next }) => {
   return (
+<>
+    <Header posts={posts.slice(0, 4)} />
+    <main id="main" className="p-4">
     <article className="px-6 md:px-0 w-full">
     <div className="flex">
 <div className="w-9/12 mr-4 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-9 p-12 h-auto">
@@ -124,7 +131,8 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, posts, previous, next }) 
                   </div>
 
       </article>
-    
+      </main>
+</>    
   );
 };
 
@@ -141,6 +149,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   const mdxFile = getAllMdx().map((post) => post["frontMatter"]);
   const { slug } = context.params as ContextProps;
+  const tags = listTags();
   const mdxFiles = getAllMdx();
   const postIndex = mdxFiles.findIndex((p) => p.frontMatter.slug === slug);
   const post = mdxFiles[postIndex];
@@ -154,6 +163,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   });
   return {
     props: {
+tags,
       posts: mdxFile,
       frontMatter,
       mdx: mdxContent,
