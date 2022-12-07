@@ -1,3 +1,4 @@
+//@ts-nocheck
 import "@/styles/globals.css";
 import { MDXFrontMatter } from "@/lib/types";
 import { ThemeProvider } from "next-themes";
@@ -13,7 +14,7 @@ interface HomeProps {
 tag: string;
 }
 
-const MyApp: React.FC= ({ Component, pageProps},{posts, tags }:HomeProps) => {
+const MyApp: React.FC<HomeProps> = ({ Component, pageProps,posts, tags }) => {
 
   return (
     <ThemeProvider
