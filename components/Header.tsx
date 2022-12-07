@@ -61,9 +61,9 @@ return (
         <ul>
             {posts.filter((file) => file.tags?.includes('typescript')).map((post,index) => (
 
-                <li key={index}>
+                <li className="flex" key={index}>
          {post.thumbnail && (<div className="overflow-hidden mr-4 rounded-lg relative w-1/5">
-                    <Image className="bg-contain w-full relative post-image" src={post.thumbnail}
+                    <Image className="bg-contain w-full relative post-image" src={post.thumbnail} height= "100px"
                     alt={post.title}
                     />
                     </div>
