@@ -1,18 +1,18 @@
 //@ts-nocheck
-import type { GetStaticProps, NextPage } from "next";
 import {useState} from 'react'
 import Link from "next/link";
-import { getAllMdx } from "@/lib/mdx";
-import { MDXFrontMatter } from "@/lib/types";
 import { Page } from "@/components/Page";
 import { PostList } from "@/components/PostList";
 import { ArrowRight } from "react-feather";
 import Layout from '@/components/Layout';
 import Sidebar from '@/components/Sidebar';
+import type { GetStaticProps, NextPage } from "next";
+import { getAllMdx } from "@/lib/mdx";
+import { MDXFrontMatter } from "@/lib/types";
+import { listTags, TagContent } from "@/lib/tags";
 import { Header } from "@/components/Header";
 import TopSection from '@/components/TopSection';
 import Topics from '@/components/Topics';
-import { listTags, TagContent } from "@/lib/tags";
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
