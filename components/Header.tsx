@@ -11,8 +11,6 @@ import { createPortal } from 'react-dom'
 
 interface PostListProps {
   posts: Array<MDXFrontMatter>;
-
-    children: ReactNode
 }
 
 export const Header: React.FC<PostListProps> = ({ posts }) => {
