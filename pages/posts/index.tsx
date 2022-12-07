@@ -18,7 +18,7 @@ const Posts: NextPage<PostsProps> = ({ posts,tags }) => {
   return (
     <>
           <Header posts={posts.slice(0, 4)} />
-          <main id="main" className="p-4">
+          <main id="main" className="pt-2 p-4">
 
       <Page
         title="Posts"

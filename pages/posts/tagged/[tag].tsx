@@ -23,7 +23,7 @@ const Posts: NextPage<PostsProps> = ({ tag, posts,tags }) => {
   return (
     <>
               <Header posts={posts.slice(0, 4)} />
-    <main id="main" className="p-4">
+              <main id="main" className="pt-2 p-4">
       <TagTitle title={`Posts tagged: "${tag}"`}>
         <PostList posts={posts} />
       </TagTitle>

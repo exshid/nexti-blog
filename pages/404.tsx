@@ -13,8 +13,8 @@ tag: string;
 const Custom404: NextPage<HomeProps> = ({ posts, tags }) => {
 
   return <> <Header posts={posts.slice(0, 4)} />
-  <main id="main" className="p-4">
-<Page title="404" description="Page not found" />;
+  <main id="main" className="pt-2 p-4">
+<Page title="404" description="Page not found" />
 </main>
 </>
 };

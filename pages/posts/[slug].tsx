@@ -35,7 +35,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
   return (
 <>
     <Header posts={posts.slice(0, 4)} />
-    <main id="main" className="p-4">
+    <main id="main" className="pt-2 p-4">
     <article className="px-6 md:px-0 w-full">
     <div className="flex">
 <div className="w-9/12 mr-4 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-9 p-12 h-auto">
