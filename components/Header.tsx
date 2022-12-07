@@ -61,9 +61,11 @@ return (
         <ul>
             {posts.filter((file) => file.tags?.includes('typescript')).map((post,index) => (
 
-                <li className="flex" key={index}>
+                                    <Link href={`/posts/${post.slug}`}>
+                    <a className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
+                <li className="flex my-1" key={index}>
          {post.thumbnail && (<div className="overflow-hidden mr-4 rounded-lg relative w-1/5">
-                    <Image className="bg-contain w-full relative post-image" src={post.thumbnail} height= "100px"
+                    <Image className="bg-contain w-full relative header-image" src={post.thumbnail} height= "100px"
                     alt={post.title}
                     />
                     </div>
@@ -71,14 +73,12 @@ return (
 
          <div className="w-4/5">
 
-                                    <Link href={`/posts/${post.slug}`}>
-                    <a className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
                         <div className="font-semibold">{post.title}</div>
                         <span className="text-sm font-light text-gray-500 dark:text-gray-400">{post.description}</span>
-                    </a>
-                </Link>
                 </div>
                 </li>
+                    </a>
+                </Link>
              ))}
              </ul>
             <ul>
