@@ -4,6 +4,7 @@ import { MDXFrontMatter } from "@/lib/types";
 import { Page } from "@/components/Page";
 import { PostList } from "@/components/PostList";
 import { listTags, TagContent } from "@/lib/tags";
+import { Header } from "@/components/Header";
 
 
 interface PostsProps {
