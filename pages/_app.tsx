@@ -1,6 +1,7 @@
 //@ts-nocheck
 import "@/styles/globals.css";
 import { MDXFrontMatter } from "@/lib/types";
+import { getAllMdx } from "@/lib/mdx";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { Header } from "@/components/Header";
@@ -15,7 +16,7 @@ tag: string;
 }
 
 const MyApp: React.FC<HomeProps> = ({ Component, pageProps,posts, tags }) => {
-console.log(posts)
+
   return (
     <ThemeProvider
       disableTransitionOnChange
@@ -28,7 +29,7 @@ console.log(posts)
       >
         Skip to main content
       </a>
-      <Header posts={posts} />
+      <Header posts={posts.slice(0, 4)} />
     
         <Search/>
         <main id="main" className="p-4">
