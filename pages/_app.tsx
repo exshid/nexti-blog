@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Search from "@/components/Search";
+import { listTags, TagContent } from "@/lib/tags";
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
