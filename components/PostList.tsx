@@ -13,14 +13,14 @@ interface PostListProps {
 
 export const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (
-    <ul className="w-full pt-8 pb-4 bg-white rounded-lg dark:bg-midnightish">
+    <ul className="w-full pt-8 pb-4 bg-white divide-y divide-grayish dark:divide-none rounded-lg dark:bg-midnightish">
           {posts.map((post,index) => (
             <li
               key={index}
               className="px-8 bg-white dark:bg-midnightish hover:bg-daylight dark:hover:bg-lightnight transition"
             >
                               <Link href={`/posts/${post.slug}`}>
-                <a className="py-2 flex focus:outline-none focus:ring-4">
+                <a className="py-3 flex focus:outline-none focus:ring-4">
 	
                 {post.thumbnail && (<div className="overflow-hidden mr-4 rounded-lg relative w-2/6">
                     <Image className="bg-contain w-full relative post-image" src={post.thumbnail}
