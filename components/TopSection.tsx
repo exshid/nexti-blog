@@ -13,10 +13,10 @@ interface PostListProps {
       return <div className="flex mb-4 w-full">
                {posts.filter((file) => file.tags?.includes('typescript')).map((post,index) => (
                               <Link key={index} href={`/posts/${post.slug}`}>
-                              <a className="py-2 flex focus:outline-none odd:w-2/6 even:w-4/6 focus:ring-4">
+                              <a className="py-2 flex odd:mr-4 focus:outline-none odd:w-2/6 even:w-4/6 focus:ring-4">
               
     <div 
-    className="w-full h-52 h-auto odd:mr-4 dark:border-none border border-grayish rounded-lg">
+    className="w-full h-52 h-auto dark:border-none border border-grayish rounded-lg">
     <Post title={post.title} subtitle={formatDate(post.date)}>{post.description}</Post></div>
     </a>
     </Link>
