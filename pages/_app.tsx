@@ -15,7 +15,7 @@ tag: string;
 }
 
 const MyApp: React.FC<HomeProps> = ({ Component, pageProps,posts, tags }) => {
-
+console.log(posts)
   return (
     <ThemeProvider
       disableTransitionOnChange
@@ -28,7 +28,7 @@ const MyApp: React.FC<HomeProps> = ({ Component, pageProps,posts, tags }) => {
       >
         Skip to main content
       </a>
-      <Header posts={posts.slice(0, 4)} />
+      <Header posts={posts} />
     
         <Search/>
         <main id="main" className="p-4">
