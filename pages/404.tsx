@@ -4,7 +4,6 @@ import { MDXFrontMatter } from "@/lib/types";
 import { listTags, TagContent } from "@/lib/tags";
 import { Header } from "@/components/Header";
 import { Page } from "@/components/Page";
-import type { NextPage } from "next";
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
