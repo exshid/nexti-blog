@@ -5,6 +5,8 @@ import { slugify } from "@/lib/utils";
 import { MDXFrontMatter } from "@/lib/types";
 import { TagTitle } from "@/components/TagTitle";
 import { PostList } from "@/components/PostList";
+import { listTags, TagContent } from "@/lib/tags";
+import { Header } from "@/components/Header";
 
 interface ContextProps extends ParsedUrlQuery {
   tag: string;
@@ -13,20 +15,26 @@ interface ContextProps extends ParsedUrlQuery {
 interface PostsProps {
   tag: string;
   posts: Array<MDXFrontMatter>;
+  tags: TagContent[];
+
 }
 
-const Posts: NextPage<PostsProps> = ({ tag, posts }) => {
+const Posts: NextPage<PostsProps> = ({ tag, posts,tags }) => {
   return (
     <>
+              <Header posts={posts.slice(0, 4)} />
+    <main id="main" className="p-4">
       <TagTitle title={`Posts tagged: "${tag}"`}>
         <PostList posts={posts} />
       </TagTitle>
+</main>
     </>
   );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
+  
   return {
     paths: Array.from(new Set(mdxFiles.map((file) => file.tags).flat())).map(
       (tag) => {
@@ -36,16 +44,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
           },
         };
       }
-    ),
-    fallback: false,
+      ),
+      fallback: false,
+    };
   };
-};
-
-export const getStaticProps: GetStaticProps = async (context) => {
+  
+  export const getStaticProps: GetStaticProps = async (context) => {
+  const tags = listTags();
   const { tag } = context.params as ContextProps;
   const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
   return {
     props: {
+tags,
       tag,
       posts: mdxFiles.filter((file) => {
         return file.tags?.includes(tag);
