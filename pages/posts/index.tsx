@@ -13,7 +13,7 @@ tag: string;
 
 }
 
-const Posts: NextPage<PostsProps> = ({ posts }) => {
+const Posts: NextPage<PostsProps> = ({ posts,tags }) => {
   return (
     <>
           <Header posts={posts.slice(0, 4)} />
