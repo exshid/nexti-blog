@@ -12,7 +12,9 @@ body {
 	content:'•';
 }
 
-
+.image-span span{
+	height: 100% !important;
+}
 
 .post-image{
 	width: 350px !important;
