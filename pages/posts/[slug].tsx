@@ -105,18 +105,9 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
               "dark:border-gray-700 w-1/2"
             )}
           >
-                      {posts.slice(0, 2).map((post,index) => (
+                      {posts.slice(0, 4).map((post,index) => (
 <div key={index}
 >
-                <p
-                  className={cx(
-                    "mb-2 uppercase tracking-wider text-sm",
-                    "text-gray-500",
-                    "dark:text-gray-400"
-                  )}
-                >
-                  {post.title}
-                </p>
                 <Link href={`/posts/${post.slug}`}>
                   <a className="font-bold">{post.title}</a>
                 </Link>
