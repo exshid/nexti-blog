@@ -6,6 +6,7 @@ import { formatDate } from "@/lib/formatDate";
 import type { MDXFrontMatter } from "@/lib/types";
 import { Prose } from "@/components/Prose";
 import { cx, slugify } from "@/lib/utils";
+import { Navbar, Dropdown, Avatar } from 'flowbite-react';
 
 interface PostListProps {
   posts: Array<MDXFrontMatter>;
