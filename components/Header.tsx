@@ -12,8 +12,8 @@ interface PostListProps {
 }
 
 export const Header: React.FC<PostListProps> = ({ posts }) => {
-const dropdownHandler = () =>{
   let dropdown = false;
+const dropdownHandler = () =>{
   if (!dropdown){
   dropdown = true; 
   }
