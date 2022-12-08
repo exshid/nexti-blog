@@ -43,7 +43,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
         <Prose>
           <MDXRemote {...mdx} components={components} />
         </Prose>
-<div>
+<div className="flex">
         {previous || next ? (
           <nav
             className={cx(
@@ -53,7 +53,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
             )}
           >
             {previous ? (
-              <div className="w-full flex">
+              <div className="w-full">
                 <p
                   className={cx(
                     "mb-2 uppercase tracking-wider text-sm",
