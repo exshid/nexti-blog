@@ -16,11 +16,7 @@ export const Header: React.FC<PostListProps> = ({ posts }) => {
 const dropdownHandler = () =>{
   if (!dropdown){
   dropdown = true; 
-  }
-  else if (dropdown){
-dropdown = false;
-  }
-  console.log(dropdown)
+  }   console.log(dropdown)
 
 }
 console.log(dropdown)
