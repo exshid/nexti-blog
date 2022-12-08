@@ -35,7 +35,7 @@ function buttonHandler(){
   return (
     <Layout>
       <Header posts={posts.slice(0, 4)} />
-      <main id="main" className="pt-2 p-4">
+      <main id="main" className="pt-1 p-4">
 
           <TopSection posts={posts.slice(0, 3)}/>
           <Topics tags={tags}/>
