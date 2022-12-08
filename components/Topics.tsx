@@ -15,8 +15,9 @@ type Props = {
     {tags.map((it, i) => (
     <Link href={`/posts/tagged/${tags.slug}`}>
       <a>
-<li key={i} style={{width: '32.5%'}} className="flex justify-center rounded-lg mt-3 dark:bg-evening bg-daylight dark:hover:bg-lightnight dark:text-white inline-block h-1/3 p-6 pt-4">{tags.name}</li>
-</li>
+<li key={i} style={{width: '32.5%'}}
+className="flex justify-center rounded-lg mt-3 dark:bg-evening bg-daylight dark:hover:bg-lightnight dark:text-white inline-block h-1/3 p-6 pt-4"
+>{tags.name}</li>
 </a>
 </Link>
 ))}
