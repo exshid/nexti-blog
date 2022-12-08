@@ -62,7 +62,7 @@ return (
     </ul>
   </div>
   </div>
- {dropdown &&(<div id="mega-menu-full-dropdown" className={!dropdown ? 'mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-midnightish dark:border-gray-600 hidden' : 'mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-midnightish dark:border-gray-600'}>
+ {dropdown &&(<div id="mega-menu-full-dropdown" className='mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-midnightish dark:border-gray-600'>
         <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
         <ul>
             {posts.filter((file) => file.tags?.includes('typescript')).map((post,index) => (
