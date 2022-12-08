@@ -22,6 +22,7 @@ dropdown = false;
   }
 
 }
+console.log(dropdown)
 return (
     <header className="mt-3 px-4 z-40	sticky top-0 w-full">
 <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-midnightish w-full z-20 top-0 left-0 rounded-lg border border-grayish dark:border-none">
