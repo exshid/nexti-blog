@@ -47,13 +47,13 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
         {previous || next ? (
           <nav
             className={cx(
-              "mt-8 pt-8 grid grid-cols-2 gap-8 border-t",
+              "mt-8 pt-8 flex flex-col border-t",
               "border-gray-200",
               "dark:border-gray-700 w-1/2"
             )}
           >
             {previous ? (
-              <div>
+              <div className="w-full flex">
                 <p
                   className={cx(
                     "mb-2 uppercase tracking-wider text-sm",
@@ -69,7 +69,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
               </div>
             ) : null}
             {next ? (
-              <div className="col-start-2 text-right">
+              <div className="col-start-2">
                 <p
                   className={cx(
                     "mb-2 uppercase tracking-wider text-sm",
@@ -83,7 +83,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
                   <a className="font-bold">{next?.title}</a>
                 </Link>
               </div>
-            ) : <div className="col-start-2 text-right">
+            ) : <div className="col-start-2">
             <p
               className={cx(
                 "mb-2 uppercase tracking-wider text-sm",
@@ -100,7 +100,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
 
           <nav
             className={cx(
-              "mt-8 pt-8 grid grid-cols-2 gap-8 border-t",
+              "mt-8 pt-8 text-right flex flex-col border-t",
               "border-gray-200",
               "dark:border-gray-700 w-1/2"
             )}
