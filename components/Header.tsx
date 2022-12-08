@@ -12,12 +12,10 @@ interface PostListProps {
 }
 
 export const Header: React.FC<PostListProps> = ({ posts }) => {
-  const [drowpdown, setDropdown] = useState(false)
+  const [drowpdown, setDropdown] = useState()
   
 const dropdownHandler = () =>{
-  if (!dropdown){
-    setDropdown(true)
-    }
+      setDropdown(true)
     
     console.log(dropdown)
 
