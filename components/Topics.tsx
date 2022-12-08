@@ -2,6 +2,8 @@ import styles from '@/components/Home.module.css'
 import Topic from '@/components/UI/Topic';
 import TagLink from "@/components/TagLink";
 import { TagContent } from "@/lib/tags";
+import Link from "next/link";
+
 
 type Props = {
     tags: TagContent[];
@@ -11,8 +13,12 @@ type Props = {
     <div className="w-full h-auto">
     <ul className="flex justify-around flex-wrap px-3 pb-3 bg-white rounded-lg dark:border-none border border-grayish dark:bg-midnightish h-auto">
     {tags.map((it, i) => (
-<li key={i} style={{width: '32.5%'}} className="flex justify-center rounded-lg mt-3 dark:bg-evening bg-daylight dark:hover:bg-lightnight dark:text-white inline-block h-1/3 p-6 pt-4">            <TagLink tag={it} />
+    <Link href={`/posts/tagged/${tags.slug}`}>
+      <a>
+<li key={i} style={{width: '32.5%'}} className="flex justify-center rounded-lg mt-3 dark:bg-evening bg-daylight dark:hover:bg-lightnight dark:text-white inline-block h-1/3 p-6 pt-4">{tags.name}</li>
 </li>
+</a>
+</Link>
 ))}
 </ul>
 </div>
