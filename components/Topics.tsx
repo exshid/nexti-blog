@@ -18,7 +18,7 @@ type Props = {
       <a>
 <li style={{width: '32.5%'}}
 className="flex justify-center rounded-lg mt-3 dark:bg-evening bg-daylight dark:hover:bg-lightnight dark:text-white inline-block h-1/3 p-6 pt-4"
->{tags}</li>
+>tags</li>
 </a>
 </Link>
 ))}
