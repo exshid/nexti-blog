@@ -43,12 +43,13 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
         <Prose>
           <MDXRemote {...mdx} components={components} />
         </Prose>
+<div>
         {previous || next ? (
           <nav
             className={cx(
               "mt-8 pt-8 grid grid-cols-2 gap-8 border-t",
               "border-gray-200",
-              "dark:border-gray-700"
+              "dark:border-gray-700 w-1/2"
             )}
           >
             {previous ? (
@@ -82,7 +83,18 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
                   <a className="font-bold">{next?.title}</a>
                 </Link>
               </div>
-            ) : null}
+            ) : <div className="col-start-2 text-right">
+            <p
+              className={cx(
+                "mb-2 uppercase tracking-wider text-sm",
+                "text-gray-500",
+                "dark:text-gray-400"
+              )}
+            >
+              Next
+            </p>
+            <p className="uppercase">There is no next post yet.</p>
+          </div>}
           </nav>
         ) : null}
 
@@ -90,7 +102,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
             className={cx(
               "mt-8 pt-8 grid grid-cols-2 gap-8 border-t",
               "border-gray-200",
-              "dark:border-gray-700"
+              "dark:border-gray-700 w-1/2"
             )}
           >
                       {posts.slice(0, 2).map((post,index) => (
@@ -111,7 +123,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
               </div>
 ))}            
           </nav>
-        
+          </div>   
 
 
       </Page>
