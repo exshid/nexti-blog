@@ -89,7 +89,7 @@ return (
                 </Link>
              ))}
              </ul>
-            <ul>
+            <ul onClick={dropdownCloseHandler}>
             {posts.filter((file) => file.tags?.includes('react')).map((post,index) => (
 
                 <li key={index}>
