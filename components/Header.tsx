@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { useState } from "react";
 import Image from "next/image";
 import siteConfig from "@/data/siteConfig";
 import Link from "next/link";
@@ -12,11 +12,14 @@ interface PostListProps {
 }
 
 export const Header: React.FC<PostListProps> = ({ posts }) => {
-  let dropdown = false;
+  const [drowpdown, setDropdown] = useState(false)
+  
 const dropdownHandler = () =>{
   if (!dropdown){
-  dropdown = true; 
-  }   console.log(dropdown)
+    setDropdown(true)
+    }
+    
+    console.log(dropdown)
 
 }
 console.log(dropdown)
