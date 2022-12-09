@@ -44,6 +44,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
           <MDXRemote {...mdx} components={components} />
         </Prose>
 <div className="flex">
+  <div className="grid md:grid-cols-1 mr-3 mt-3 w-1/2 border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
   <h2 className="font-bold text-2xl uppercase py-4 px-6 dark:bg-midnightish rounded-lg">READ MORE</h2>
         {previous || next ? (
           <nav
@@ -94,7 +95,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
           </div>}
           </nav>
         ) : null}
-
+</div>
           <nav
             className={cx(
               "mt-8 pt-8 text-right flex flex-col border-t",
