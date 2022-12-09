@@ -44,7 +44,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
           <MDXRemote {...mdx} components={components} />
         </Prose>
         <hr/>
-<div className="flex">
+<div className="flex border-t border-gray-200 dark:border-gray-700">
   <div className="grid md:grid-cols-1 mr-3 mt-3 w-1/2 border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
   <h2 className="text-2xl uppercase py-4 px-2 dark:bg-midnightish rounded-lg">READ MORE</h2>
         {previous || next ? (
@@ -101,10 +101,10 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
 <h2 className="text-2xl uppercase py-4 dark:bg-midnightish rounded-lg text-right">Recent Posts</h2>
 
           <nav
-            className="text-right md:text-left first rounded-lg bg-white transition flex flex-col lg-round dark:bg-midnightish flex flex-col border-t border-gray-200 dark:border-gray-700 w-full"
+            className="text-right md:text-left first rounded-lg bg-white transition flex flex-col lg-round dark:bg-midnightish flex flex-col w-full"
           >
                       {posts.slice(0, 4).map((post,index) => (
-<div className="mb-2 p-2 rounded-lg hover:bg-daylight dark:hover:bg-lightnight" key={index}
+<div className="mb-1 p-2 rounded-lg hover:bg-daylight text-right dark:hover:bg-lightnight" key={index}
 >
                 <Link href={`/posts/${post.slug}`}>
                   <a >{post.title}</a>
