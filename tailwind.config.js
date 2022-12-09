@@ -17,6 +17,7 @@ module.exports = {
       'grayish': '#e7eaed',
       'grayer': '#676c70',
       'daylight':'#F9FAFB',
+      'lightreddish':'#A0144F',
       'muted': '#6c757d'
     }},
   darkMode: 'class', // or 'media' or 'class'
