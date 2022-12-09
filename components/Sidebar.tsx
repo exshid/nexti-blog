@@ -13,7 +13,7 @@ interface PostListProps {
                   {posts.filter((file) => file.tags?.includes('typescript')).map((post,index) => (
     <Link key={index} href={`/posts/${post.slug}`}>
                               <a className="py-2 flex focus:outline-none focus:ring-4">       
-    <li className="py-6 hover:bg-daylight dark:hover:bg-lightnight">
+    <li className="py-6 hover:text-reddish">
 <h5 className="text-xl">{post.title}</h5>
 <p className="text-muted uppercase">{formatDate(post.date)}</p>
     </li>
