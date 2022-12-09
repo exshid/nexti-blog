@@ -51,7 +51,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
             className="py-4 px-6 text-center md:text-left first rounded-lg bg-white transition flex flex-col lg-round dark:bg-midnightish"
           >
             {previous ? (
-              <div className="w-full hover:bg-daylight dark:hover:bg-lightnight">
+              <div className="w-full p-2 rounded-lg hover:bg-daylight dark:hover:bg-lightnight">
                 <p
                   className={cx(
                     "mb-2 uppercase tracking-wider text-sm",
@@ -67,7 +67,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
               </div>
             ) : null}
             {next ? (
-              <div className="col-start-2">
+              <div className="col-start-2 w-full p-2 rounded-lg hover:bg-daylight dark:hover:bg-lightnight">
                 <p
                   className={cx(
                     "mb-2 uppercase tracking-wider text-sm",
