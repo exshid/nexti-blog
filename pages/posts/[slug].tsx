@@ -99,22 +99,11 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
         ) : null}
 </div>
 <div className="grid md:grid-cols-1 mr-3 mt-3 w-1/2 border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
+{posts.slice(0, 4).map((post,index) => (
 <RecentPosts key={index} title={post.title} subtitle={posts.description} author={posts.author}/>
-<h2 className="text-2xl uppercase py-4 dark:bg-midnightish rounded-lg text-right">Recent Posts</h2>
-
-          <nav
-            className="text-right md:text-left first rounded-lg bg-white transition flex flex-col lg-round dark:bg-midnightish flex flex-col w-full"
-          >
-                      {posts.slice(0, 4).map((post,index) => (
-<div className="mb-1 p-2 rounded-lg hover:bg-daylight text-right dark:hover:bg-lightnight" key={index}
->
-                <Link href={`/posts/${post.slug}`}>
-                  <a className="heading type-a type-a-1">{post.title}</a>
-                </Link>
-              </div>
-))}            
-          </nav>
-          </div>
+))
+}
+          </div>   
           </div>   
 
 
