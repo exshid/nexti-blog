@@ -43,15 +43,16 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
         <Prose>
           <MDXRemote {...mdx} components={components} />
         </Prose>
+        <hr/>
 <div className="flex">
   <div className="grid md:grid-cols-1 mr-3 mt-3 w-1/2 border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
   <h2 className="text-2xl uppercase py-4 dark:bg-midnightish rounded-lg">READ MORE</h2>
         {previous || next ? (
           <nav
-            className="py-4 text-center md:text-left first rounded-lg bg-white transition flex flex-col lg-round dark:bg-midnightish"
+            className="text-center md:text-left first rounded-lg bg-white transition flex flex-col lg-round dark:bg-midnightish"
           >
             {previous ? (
-              <div className="w-full p-2 rounded-lg hover:bg-daylight dark:hover:bg-lightnight">
+              <div className="w-full py-2 rounded-lg hover:bg-daylight dark:hover:bg-lightnight">
                 <p
                   className={cx(
                     "mb-2 uppercase tracking-wider text-sm",
@@ -96,6 +97,9 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
           </nav>
         ) : null}
 </div>
+<div className="grid md:grid-cols-1 mr-3 mt-3 w-1/2 border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
+<h2 className="text-2xl uppercase py-4 dark:bg-midnightish rounded-lg text-right">Recent Posts</h2>
+
           <nav
             className={cx(
               "mt-8 pt-8 text-right flex flex-col border-t",
@@ -112,6 +116,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
               </div>
 ))}            
           </nav>
+          </div>
           </div>   
 
 
