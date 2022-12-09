@@ -45,10 +45,10 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
         </Prose>
 <div className="flex">
   <div className="grid md:grid-cols-1 mr-3 mt-3 w-1/2 border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
-  <h2 className="font-bold text-2xl uppercase py-4 px-6 dark:bg-midnightish rounded-lg">READ MORE</h2>
+  <h2 className="text-2xl uppercase py-4 dark:bg-midnightish rounded-lg">READ MORE</h2>
         {previous || next ? (
           <nav
-            className="py-4 px-6 text-center md:text-left first rounded-lg bg-white transition flex flex-col lg-round dark:bg-midnightish"
+            className="py-4 text-center md:text-left first rounded-lg bg-white transition flex flex-col lg-round dark:bg-midnightish"
           >
             {previous ? (
               <div className="w-full p-2 rounded-lg hover:bg-daylight dark:hover:bg-lightnight">
@@ -62,7 +62,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
                   Previous
                 </p>
                 <Link href={`/posts/${previous?.slug}`}>
-                  <a className="font-bold">{previous?.title}</a>
+                  <a>{previous?.title}</a>
                 </Link>
               </div>
             ) : null}
@@ -78,7 +78,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
                   Next
                 </p>
                 <Link href={`/posts/${next?.slug}`}>
-                  <a className="font-bold">{next?.title}</a>
+                  <a>{next?.title}</a>
                 </Link>
               </div>
             ) : <div className="col-start-2">
@@ -107,7 +107,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
 <div key={index}
 >
                 <Link href={`/posts/${post.slug}`}>
-                  <a className="font-bold">{post.title}</a>
+                  <a >{post.title}</a>
                 </Link>
               </div>
 ))}            
