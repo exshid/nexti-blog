@@ -13,6 +13,7 @@ import { components } from "@/components/MDX";
 import { Tag } from "@/components/Tag";
 import { Prose } from "@/components/Prose";
 import PostSidebar from "@/components/PostSidebar";
+import RecentPosts from "@/components/RecentPosts";
 import { listTags, TagContent } from "@/lib/tags";
 import { Header } from "@/components/Header";
 
@@ -98,6 +99,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
         ) : null}
 </div>
 <div className="grid md:grid-cols-1 mr-3 mt-3 w-1/2 border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
+<RecentPosts key={index} title={post.title} subtitle={posts.description} author={posts.author}/>
 <h2 className="text-2xl uppercase py-4 dark:bg-midnightish rounded-lg text-right">Recent Posts</h2>
 
           <nav
