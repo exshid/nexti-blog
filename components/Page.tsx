@@ -54,7 +54,7 @@ export const Page: React.FC<PageProps> = ({
             {formatDate(date)}
           </time>
         ) : null}
-        <h1 className="font-bold prose prose-invert text-3xl">{title}</h1>
+        <h1 className="text-3xl md:text-5xl dark:text-white mb-3 font-bold">{title}</h1>
         {description ? (
           <div className="mt-4">
             <Prose>
