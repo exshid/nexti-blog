@@ -1,3 +1,4 @@
+//ts-nocheck
 const RecentPosts: React.FC<{title:string, subtitle?:string, author:string, background:string}> = ({title,subtitle,author,background}) => {
 return 
 <div>
