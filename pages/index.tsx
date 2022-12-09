@@ -21,12 +21,12 @@ tag: string;
 }
 const Home: NextPage<HomeProps> = ({ posts, tags }) => {
 const [postNum, setPostNum] = useState(10);
-const [buttonReturn, setButtonReturn] = useState(false);
+const [buttonReturn, setButtonReturn] = useState(true);
 
 
 function postNumberHandler(){
   setPostNum(prevPostNum => prevPostNum + 5)
-  if (posts.length <= postNum){
+  if (posts.length !== postNum){
     setButtonReturn(false)
   }
 }
