@@ -107,7 +107,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
 <div className="mb-1 p-2 rounded-lg hover:bg-daylight text-right dark:hover:bg-lightnight" key={index}
 >
                 <Link href={`/posts/${post.slug}`}>
-                  <a >{post.title}</a>
+                  <a className="heading type-a type-a-1">{post.title}</a>
                 </Link>
               </div>
 ))}            
