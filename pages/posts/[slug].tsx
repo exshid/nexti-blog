@@ -48,10 +48,10 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
   <h2 className="font-bold text-2xl uppercase py-4 px-6 dark:bg-midnightish rounded-lg">READ MORE</h2>
         {previous || next ? (
           <nav
-            className="py-4 px-6 text-center md:text-left first rounded-lg bg-white transition flex flex-col lg-round dark:bg-midnightish hover:bg-daylight dark:hover:bg-lightnight"
+            className="py-4 px-6 text-center md:text-left first rounded-lg bg-white transition flex flex-col lg-round dark:bg-midnightish"
           >
             {previous ? (
-              <div className="w-full">
+              <div className="w-full hover:bg-daylight dark:hover:bg-lightnight">
                 <p
                   className={cx(
                     "mb-2 uppercase tracking-wider text-sm",
