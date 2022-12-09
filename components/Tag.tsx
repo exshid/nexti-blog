@@ -11,7 +11,7 @@ export const Tag: React.FC<TagProps> = ({ href, children }) => {
     <Link href={href}>
       <a
         className={cx(
-          "inline-block text-sm py-0.5 prose dark:prose-invert px-2.5 rounded-full hover:underline",
+          "inline-block text-sm py-0.5  px-2.5 rounded-full hover:underline",
           "bg-reddish hover:bg-darker-reddish transition text-white"
         )}
       >
