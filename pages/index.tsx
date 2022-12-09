@@ -26,7 +26,7 @@ const [buttonReturn, setButtonReturn] = useState(true);
 
 function postNumberHandler(){
   setPostNum(prevPostNum => prevPostNum + 5)
-  if (posts.length !== postNum){
+  if (posts.length < postNum){
     setButtonReturn(false)
   }
 }
