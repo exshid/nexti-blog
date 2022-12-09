@@ -21,7 +21,7 @@ tag: string;
 }
 const Home: NextPage<HomeProps> = ({ posts, tags }) => {
 const [postNum, setPostNum] = useState(10);
-const [buttonReturn, setButtonReturn] = useState(true);
+const [buttonReturn, setButtonReturn] = useState(false);
 
 
 function postNumberHandler(){
