@@ -41,7 +41,7 @@ export const TagTitle: React.FC<PageProps> = ({
         />
       </Head>
       <header
-        className="p-8 mb-4 rounded-lg dark:bg-midnightish"
+        className="p-8 mb-4 border border-grayish dark:border-none rounded-lg dark:bg-midnightish"
       >
         {date ? (
           <time
