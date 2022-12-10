@@ -13,9 +13,6 @@ body {
 	content:'•';
 }
 
-.recent-posts:hover{
-	background: none !important;
-}
 
 .image-span span{
 	height: 100% !important;

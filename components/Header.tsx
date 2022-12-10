@@ -19,14 +19,18 @@ export const Header: React.FC<PostListProps> = ({ posts }) => {
 const dropdownHandler = () =>{
     
   setDropdown(!dropdown)
-  setContactUs(!contactUs)
-   
+if(contactUs){
+  setContactUs(false)
+}   
 
 }
 
 const contactHandler = () =>{
-  setDropdown(!dropdown)
   setContactUs(!contactUs)
+  if(dropdown){
+    setDropdown(false)
+  }   
+  
     
 console.log(contactUs)   
 }
