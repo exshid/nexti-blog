@@ -26,7 +26,7 @@ const dropdownHandler = () =>{
 const contactHandler = () =>{
     
   setContactUs(!contactUs)
-console.log(contactUs)   
+  console.log(contactUs)   
 }
 
 
@@ -34,7 +34,9 @@ const dropdownCloseHandler =() =>{
   setDropdown(false)
 }
 return (
-    <header className="mt-3 mb-1 px-4 z-40	sticky top-0 w-full">
+  <>
+      <Contact/>
+  <header className="mt-3 mb-1 px-4 z-40	sticky top-0 w-full">
 <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-midnightish w-full z-20 top-0 left-0 rounded-lg border border-grayish dark:border-none">
   <div className="container flex flex-wrap items-center justify-between mx-auto">
   <a href="https://flowbite.com/" className="flex items-center">
@@ -73,7 +75,6 @@ return (
     </ul>
   </div>
   </div>
-  <Contact/>
  {dropdown && <div id="mega-menu-full-dropdown" className='mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-midnightish dark:border-gray-600'>
         <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
         <ul onClick={dropdownCloseHandler}>
@@ -118,5 +119,6 @@ return (
 </nav>
 
     </header>
+    </>
     );
 };
