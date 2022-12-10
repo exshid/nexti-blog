@@ -24,7 +24,7 @@ const dropdownHandler = () =>{
 }
 
 const contactHandler = () =>{
-  setDropdown(!contactUs)
+  setContactUs(!contactUs)
     
 console.log(contactUs)   
 }
