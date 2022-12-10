@@ -1,6 +1,6 @@
 //@ts-nocheck
 const Contact: React.FC = () => {
-return <div id="staticModal" data-modal-backdrop="static" tabIndex="-1" aria-hidden="true" className="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+return <div id="staticModal" tabIndex="-1" aria-hidden="true" className="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
 <div className="relative w-full h-full max-w-2xl md:h-auto">
     <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
         <div className="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
