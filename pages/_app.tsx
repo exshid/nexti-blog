@@ -19,7 +19,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         Skip to main content
       </a>
-      <Contact/>
         <Search/>
           <Component {...pageProps} />
         <Footer />
