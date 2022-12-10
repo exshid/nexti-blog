@@ -41,11 +41,7 @@ export const Page: React.FC<PageProps> = ({
         />
       </Head>
       <header
-        className={cx(
-          "mb-8 pb-8 border-b",
-          "border-gray-200",
-          "dark:border-gray-700"
-        )}
+        className="mb-3 px-8 py-4 rounded-lg dark:bg-midnightish border border-grayish dark:border-none"
       >
         <h1 className="text-3xl md:text-5xl dark:text-white mb-3 font-bold">{title}</h1>
         {description ? (
