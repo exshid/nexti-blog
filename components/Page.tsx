@@ -7,6 +7,7 @@ import { Prose } from "@/components/Prose";
 import { cx } from "@/lib/utils";
 
 interface PageProps {
+className?: string;
   date?: string;
   title: string | React.ReactNode;
   description?: string | React.ReactNode;
@@ -14,6 +15,7 @@ interface PageProps {
 }
 
 export const Page: React.FC<PageProps> = ({
+  className,
   date,
   title,
   description,
@@ -40,6 +42,7 @@ export const Page: React.FC<PageProps> = ({
           content={`${siteConfig.siteUrl}${metaThumbnail}`}
         />
       </Head>
+      <div className={className}>
       <header
         className="mb-3 rounded-lg dark:bg-midnightish"
       >
@@ -66,6 +69,7 @@ export const Page: React.FC<PageProps> = ({
           </div>
         ) : null}
       </header>
+      </div>
       {children}
     </>
   );
