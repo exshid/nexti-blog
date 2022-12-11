@@ -70,11 +70,11 @@ return (
   <div className="md:order-2 flex">
   <div className="flex">
   <div className="block space-y-4 md:flex md:space-y-0 md:space-x-4">
-    <button onClick={searchHandler} className="block w-full md:w-auto text-white hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-lightreddish font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-midnightish dark:hover:bg-lightnight dark:focus:ring-lightnight" type="button">
+    <button onClick={searchHandler} className="block w-full md:w-auto text-white focus:ring-4 focus:outline-none focus:ring-lightreddish font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-midnightish dark:focus:ring-lightnight" type="button">
     <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>    </button>
 </div>
 
-      <button onClick={searchHandler} type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-lightnight dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+      <button onClick={searchHandler} type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-lightnight dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span className="sr-only">Open search</span>
         <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
     </button>
