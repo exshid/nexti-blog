@@ -78,7 +78,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
            </div>
      </a>
      </Link>
-         ) : <div className=" w-full lg:max-w-full lg:flex">
+         ) : <div className="w-1/2 lg:flex">
          <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
            <div className="mb-8">
              <p className="text-sm text-gray-600 dark:text-white flex items-center">
@@ -122,13 +122,13 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
            </div>
      </a>
      </Link>
-         ) : <div className="ml-3 w-full lg:max-w-full lg:flex">
+         ) : <div className="ml-3 w-1/2 lg:flex">
          <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
            <div className="mb-8">
              <p className="text-sm text-gray-600 dark:text-white flex justify-end	">
                
                Next               </p>
-             <div className="text-gray-900 uppercase dark:text-white font-bold text-xl mb-2"><h3>No newer post yet!</h3>
+             <div className="text-gray-900 uppercase dark:text-white font-bold text-right text-xl mb-2"><h3>No newer post yet!</h3>
               </div>
              <p className="text-gray-700 dark:text-white text-base"></p>
            </div>
