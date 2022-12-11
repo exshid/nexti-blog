@@ -41,7 +41,7 @@ export default function Search() {
     <div id="mega-menu-full-dropdown" className='mt-1 bg-gray-50 md:bg-whitedark:bg-midnightish'
     ref={searchRef}>
     <div className="relative w-full max-w-7xl h-full md:h-auto">
-        <div className="relative bg-white rounded-lg dark:bg-midnightish">
+        <div className="relative bg-white dark:bg-midnightish">
                         <div className="p-6 space-y-6">
       <input id="default-search" className="block text-lg w-full p-4 pl-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-midnightish dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={onChange}
         onFocus={onFocus}

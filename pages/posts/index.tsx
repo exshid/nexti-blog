@@ -19,13 +19,14 @@ const Posts: NextPage<PostsProps> = ({ posts,tags }) => {
     <Layout>
           <Header posts={posts.slice(0, 4)} />
           <main id="main" className="pt-2 p-4">
-
+<div className="px-8 py-4 border border-grayish dark:border-none">
       <Page
         title="Posts"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
       >
         <PostList posts={posts} />
       </Page>
+      </div>
 </main>
     </Layout>
   );
