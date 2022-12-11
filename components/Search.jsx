@@ -39,7 +39,7 @@ export default function Search() {
 
   return (
     <div
-    id="extralarge-modal" tabIndex="-1" className="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full"
+    id="extralarge-modal" tabIndex="-1" className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full"
       ref={searchRef}>
     <div className="relative w-full max-w-7xl h-full md:h-auto">
         <div className="relative bg-white rounded-lg shadow dark:bg-midnightish">
