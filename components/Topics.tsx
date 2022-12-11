@@ -16,7 +16,7 @@ type Props = {
       
       <Link key={i} href={`/posts/tagged/${it.slug}`}>
       <a style={{width: '32.5%'}} className="inline-block h-1/3">
-<li className="flex justify-center rounded-lg mt-3 text-2xl transition dark:border-none border border-grayish dark:bg-evening hover:bg-daylight dark:hover:bg-lightnight text-midnightish dark:text-white inline-block h-1/3 p-6 pt-4"
+<li className="flex justify-center rounded-lg mt-3 font-bold text-2xl transition dark:border-none border border-grayish dark:bg-evening hover:bg-daylight dark:hover:bg-lightnight text-midnightish dark:text-white inline-block h-1/3 p-6 pt-4"
 >{it.name}</li>
 </a>
 </Link>
