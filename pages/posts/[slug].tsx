@@ -49,7 +49,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
         </Prose>
         
 <div className="flex">
-  <div className="grid md:grid-cols-1 mr-3 mt-3 w-1/2 border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
+  <div className="grid md:grid-cols-1 mt-3 w-full border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
   
         {previous || next ? (
           <nav
@@ -57,7 +57,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
           >
             {previous ? (
            <Link href={`/posts/${previous?.slug}`}>
-           <a>
+           <a className="w-1/2">
            <div className=" w-full lg:max-w-full lg:flex">
            <div className="bg-white dark:bg-midnightish text-nightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
              <div className="mb-8">
@@ -101,8 +101,8 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
 
          {next ? (
            <Link href={`/posts/${next?.slug}`}>
-           <a>
-           <div className=" w-full lg:max-w-full lg:flex">
+<a className="w-1/2">
+             <div className=" w-full lg:max-w-full lg:flex">
            <div className="bg-white dark:bg-midnightish text-nightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
              <div className="mb-8">
                <p className="text-sm text-gray-600 dark:text-white flex items-center">
