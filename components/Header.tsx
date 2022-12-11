@@ -64,7 +64,7 @@ return (
   <Link href={`/`}>
 
   <a className="flex items-center">
-      <span className="self-center text-xl font-semibold whitespace-nowrap text-midnightish dark:text-white">Home</span>
+      <span className="self-center text-xl font-semibold whitespace-nowrap text-midnightish dark:text-white hover:text-lightreddish dark:hover:text-lightreddish">Home</span>
   </a>
 </Link>
   <div className="md:order-2 flex">
