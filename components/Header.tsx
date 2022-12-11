@@ -67,7 +67,7 @@ return (
       <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Home</span>
   </a>
 </Link>
-  <div className="md:order-2">
+  <div className="md:order-2 flex">
   <div className="flex">
   <div className="block space-y-4 md:flex md:space-y-0 md:space-x-4">
     <button onClick={searchHandler} className="block w-full md:w-auto text-white bg-blue-700 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-midnightish dark:hover:bg-lightnight dark:focus:ring-lightnight" type="button">
