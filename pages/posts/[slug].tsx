@@ -48,7 +48,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
           <MDXRemote {...mdx} components={components} />
         </Prose>
         
-<div className="flex border-t border-gray-200 dark:border-gray-700">
+<div className="flex">
   <div className="grid md:grid-cols-1 mr-3 mt-3 w-1/2 border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
   
         {previous || next ? (
@@ -59,9 +59,9 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
            <Link href={`/posts/${previous?.slug}`}>
            <a>
            <div className=" w-full lg:max-w-full lg:flex">
-           <div className="bg-white dark:bg-midnightish text-midnightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
+           <div className="bg-white dark:bg-midnightish text-nightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
              <div className="mb-8">
-               <p className="text-sm text-gray-600 flex items-center">
+               <p className="text-sm text-gray-600 dark:text-white flex items-center">
                  
                  Previous               </p>
                <div className="text-gray-900 dark:text-white font-bold text-xl mb-2"><h3>{previous?.title}</h3>
@@ -71,42 +71,76 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
              <div className="flex items-center">
                <div className="text-sm">
                  <p className="text-gray-900 dark:text-white leading-none">{previous?.author}</p>
-                 <p className="text-gray-600 dark:text-white">formatDate({previous?.date})</p>
+                 <p className="text-gray-600 dark:text-white">{formatDate(previous?.date)}</p>
                </div>
              </div>
            </div>
            </div>
      </a>
      </Link>
-         ) : null}
-          
-            {next ? (
-              <div className="col-start-2 w-full p-2 rounded-lg hover:bg-daylight dark:hover:bg-lightnight">
-                <p
-                  className={cx(
-                    "mb-2 uppercase tracking-wider text-sm",
-                    "text-gray-500",
-                    "dark:text-gray-400"
-                  )}
-                >
-                  Next
-                </p>
-                <Link href={`/posts/${next?.slug}`}>
-                  <a>{next?.title}</a>
-                </Link>
+         ) : <div className=" w-full lg:max-w-full lg:flex">
+         <div className="bg-white dark:bg-midnightish text-nightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
+           <div className="mb-8">
+             <p className="text-sm text-gray-600 dark:text-white flex items-center">
+               
+               Previous               </p>
+             <div className="text-gray-900 uppercase dark:text-white font-bold text-xl mb-2"><h3>This is the first post ever!</h3>
               </div>
-            ) : <div className="col-start-2">
-            <p
-              className={cx(
-                "mb-2 uppercase tracking-wider text-sm",
-                "text-gray-500",
-                "dark:text-gray-400"
-              )}
-            >
-              Next
-            </p>
-            <p className="uppercase">There is no next post yet.</p>
-          </div>}
+             <p className="text-gray-700 dark:text-white text-base"></p>
+           </div>
+           <div className="flex items-center">
+             <div className="text-sm">
+               <p className="text-gray-900 dark:text-white leading-none"></p>
+               <p className="text-gray-600 dark:text-white"></p>
+             </div>
+           </div>
+         </div>
+         </div>}
+          
+
+
+         {next ? (
+           <Link href={`/posts/${next?.slug}`}>
+           <a>
+           <div className=" w-full lg:max-w-full lg:flex">
+           <div className="bg-white dark:bg-midnightish text-nightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
+             <div className="mb-8">
+               <p className="text-sm text-gray-600 dark:text-white flex items-center">
+                 
+                 Next               </p>
+               <div className="text-gray-900 dark:text-white font-bold text-xl mb-2"><h3>{next?.title}</h3>
+                </div>
+               <p className="text-gray-700 dark:text-white text-base">{next?.description}</p>
+             </div>
+             <div className="flex items-center">
+               <div className="text-sm">
+                 <p className="text-gray-900 dark:text-white leading-none">{next?.author}</p>
+                 <p className="text-gray-600 dark:text-white">{formatDate(next?.date)}</p>
+               </div>
+             </div>
+           </div>
+           </div>
+     </a>
+     </Link>
+         ) : <div className=" w-full lg:max-w-full lg:flex">
+         <div className="bg-white dark:bg-midnightish text-nightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
+           <div className="mb-8">
+             <p className="text-sm text-gray-600 dark:text-white flex items-center">
+               
+               Next               </p>
+             <div className="text-gray-900 uppercase dark:text-white font-bold text-xl mb-2"><h3>No newer post yet!</h3>
+              </div>
+             <p className="text-gray-700 dark:text-white text-base"></p>
+           </div>
+           <div className="flex items-center">
+             <div className="text-sm">
+               <p className="text-gray-900 dark:text-white leading-none"></p>
+               <p className="text-gray-600 dark:text-white"></p>
+             </div>
+           </div>
+         </div>
+         </div>}
+
           </nav>
         ) : null}
 </div>
