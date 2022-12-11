@@ -39,6 +39,7 @@ const searchHandler = () =>{
   if(contactUs){
     setContactUs(false)
   }  
+  console.log(searchPopUp)
 }
 const contactHandler = () =>{
   setContactUs(!contactUs)
