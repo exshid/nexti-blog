@@ -38,9 +38,8 @@ export default function Search() {
   }, [])  
 
   return (
-    <div
-    id="extralarge-modal" tabIndex="-1" className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full"
-      ref={searchRef}>
+    <div id="mega-menu-full-dropdown" className='mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-midnightish dark:border-gray-600'
+    ref={searchRef}>
     <div className="relative w-full max-w-7xl h-full md:h-auto">
         <div className="relative bg-white rounded-lg shadow dark:bg-midnightish">
             <div className="flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600">
