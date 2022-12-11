@@ -38,10 +38,10 @@ export default function Search() {
   }, [])  
 
   return (
-    <div id="mega-menu-full-dropdown" className='mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-midnightish dark:border-gray-600'
+    <div id="mega-menu-full-dropdown" className='mt-1 border-gray-200 bg-gray-50 md:bg-white border-y dark:bg-midnightish dark:border-gray-600'
     ref={searchRef}>
     <div className="relative w-full max-w-7xl h-full md:h-auto">
-        <div className="relative bg-white rounded-lg shadow dark:bg-midnightish">
+        <div className="relative bg-white rounded-lg dark:bg-midnightish">
             <div className="flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600">
                 <h3 className="text-xl font-medium text-gray-900 dark:text-white">
                     Search
@@ -58,7 +58,7 @@ export default function Search() {
         type='text'
         value={query}
       />
-      { active && results.length > 0 && (
+      { results.length > 0 && (
         <ul className="flex flex-wrap	w-full p-4 pl-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-midnightish dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           {results.map(({ id, title }) => (
             <li className="py-4 w-1/2 text-lg" key={id}>
