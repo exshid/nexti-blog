@@ -7,6 +7,7 @@ import { TagTitle } from "@/components/TagTitle";
 import { PostList } from "@/components/PostList";
 import { listTags, TagContent } from "@/lib/tags";
 import { Header } from "@/components/Header";
+import Layout from '@/components/Layout';
 
 interface ContextProps extends ParsedUrlQuery {
   tag: string;
@@ -20,14 +21,14 @@ interface PostsProps {
 
 const Posts: NextPage<PostsProps> = ({ tag, posts,tags }) => {
   return (
-    <>
+    <Layout>
               <Header posts={posts.slice(0, 4)} />
               <main id="main" className="pt-2 p-4">
       <TagTitle title={`Posts tagged: "${tag}"`}>
         <PostList posts={posts} />
       </TagTitle>
 </main>
-    </>
+    </Layout>
   );
 };
 

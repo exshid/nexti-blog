@@ -17,6 +17,7 @@ import RecentPosts from "@/components/RecentPosts";
 import { listTags, TagContent } from "@/lib/tags";
 import { Header } from "@/components/Header";
 import Contact from "../../components/Contact";
+import Layout from '@/components/Layout';
 
 
 interface ContextProps extends ParsedUrlQuery {
@@ -35,7 +36,7 @@ interface PostProps {
 
 const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, next }) => {
   return (
-<>
+<Layout>
     <Header posts={posts.slice(0, 4)} />
         <main id="main" className="pt-2 p-4">
     <article className="px-6 md:px-0 w-full">
@@ -129,7 +130,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
 
       </article>
       </main>
-</>    
+</Layout>    
   );
 };
 

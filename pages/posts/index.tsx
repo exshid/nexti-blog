@@ -5,7 +5,7 @@ import { MDXFrontMatter } from "@/lib/types";
 import { PostList } from "@/components/PostList";
 import { listTags, TagContent } from "@/lib/tags";
 import { Header } from "@/components/Header";
-
+import Layout from '@/components/Layout';
 
 interface PostsProps {
   posts: Array<MDXFrontMatter>;
@@ -16,7 +16,7 @@ tag: string;
 
 const Posts: NextPage<PostsProps> = ({ posts,tags }) => {
   return (
-    <>
+    <Layout>
           <Header posts={posts.slice(0, 4)} />
           <main id="main" className="pt-2 p-4">
 
@@ -27,7 +27,7 @@ const Posts: NextPage<PostsProps> = ({ posts,tags }) => {
         <PostList posts={posts} />
       </Page>
 </main>
-    </>
+    </Layout>
   );
 };
 

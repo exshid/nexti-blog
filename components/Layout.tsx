@@ -38,11 +38,10 @@ const Layout: React.FC = ({ children }) => {
   }, []);
 
   return (
-    <div className="relative rounded-lg">
-      <div className="flex flex-col items-center w-full mx-auto">
+          <>
         {children}
-      </div>
-    </div>
+      </>
+    
   );
 }
 
