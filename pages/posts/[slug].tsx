@@ -56,29 +56,28 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
             className="text-center md:text-left first rounded-lg bg-white transition flex flex-col lg-round dark:bg-midnightish"
           >
             {previous ? (
-           
+           <Link href={`/posts/${previous?.slug}`}>
+           <a>
            <div className=" w-full lg:max-w-full lg:flex">
-           <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
-           </div>
            <div className="bg-white dark:bg-midnightish text-midnightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
              <div className="mb-8">
                <p className="text-sm text-gray-600 flex items-center">
                  
                  Previous               </p>
-               <div className="text-gray-900 font-bold text-xl mb-2"><Link href={`/posts/${previous?.slug}`}>
-                  <a>{previous?.title}</a>
-                </Link></div>
-               <p className="text-gray-700 text-base">{previous?.description}</p>
+               <div className="text-gray-900 dark:text-white font-bold text-xl mb-2"><h3>{previous?.title}</h3>
+                </div>
+               <p className="text-gray-700 dark:text-white text-base">{previous?.description}</p>
              </div>
              <div className="flex items-center">
                <div className="text-sm">
-                 <p className="text-gray-900 leading-none">{previous?.author}</p>
-                 <p className="text-gray-600">Aug 18</p>
+                 <p className="text-gray-900 dark:text-white leading-none">{previous?.author}</p>
+                 <p className="text-gray-600 dark:text-white">formatDate({previous?.date})</p>
                </div>
              </div>
            </div>
-         </div>
-     
+           </div>
+     </a>
+     </Link>
          ) : null}
           
             {next ? (
