@@ -50,7 +50,7 @@ export const TagTitle: React.FC<PageProps> = ({
             {formatDate(date)}
           </time>
         ) : null}
-        <h1 className="font-bold prose prose-invert text-3xl">{title}</h1>
+        <h1 className="font-bold text-midnightish dark:text-white text-3xl">{title}</h1>
         {description ? (
           <div className="mt-4">
             <Prose>
