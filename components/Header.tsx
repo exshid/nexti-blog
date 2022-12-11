@@ -17,7 +17,7 @@ interface PostListProps {
 export const Header: React.FC<PostListProps> = ({ posts }) => {
   const [dropdown, setDropdown] = useState(false)
   const [contactUs, setContactUs] = useState(false)
-  const [searchPopUp, setSearchPopUp] = useState(false)
+  const [searchPopUp, setSearchPopUp] = useState(true)
   
 const dropdownHandler = () =>{
     
