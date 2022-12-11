@@ -20,7 +20,7 @@ const Posts: NextPage<PostsProps> = ({ posts,tags }) => {
           <Header posts={posts.slice(0, 4)} />
           <main id="main" className="pt-2 p-4">
       <Page
-      className="px-8 py-4 border border-grayish dark:border-none"
+      className="px-8 rounded-lg bg-white dark:bg-midnightish mb-3 py-4 border border-grayish dark:border-none"
         title="Posts"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
       >
