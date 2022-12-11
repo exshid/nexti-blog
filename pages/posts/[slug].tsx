@@ -50,7 +50,6 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
         
 <div className="flex border-t border-gray-200 dark:border-gray-700">
   <div className="grid md:grid-cols-1 mr-3 mt-3 w-1/2 border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
-  <h2 className="text-2xl uppercase py-4 px-2 dark:bg-midnightish rounded-lg">READ MORE</h2>
   
         {previous || next ? (
           <nav
@@ -61,20 +60,19 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
            <div className=" w-full lg:max-w-full lg:flex">
            <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
            </div>
-           <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+           <div className="bg-white dark:bg-midnightish text-midnightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
              <div className="mb-8">
                <p className="text-sm text-gray-600 flex items-center">
                  
                  Previous               </p>
-               <div className="text-gray-900 font-bold text-xl mb-2">                <Link href={`/posts/${previous?.slug}`}>
+               <div className="text-gray-900 font-bold text-xl mb-2"><Link href={`/posts/${previous?.slug}`}>
                   <a>{previous?.title}</a>
                 </Link></div>
-               <p className="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+               <p className="text-gray-700 text-base">{previous?.description}</p>
              </div>
              <div className="flex items-center">
-               <img className="w-10 h-10 rounded-full mr-4" src="/ben.png" alt="Avatar of Writer"/>
                <div className="text-sm">
-                 <p className="text-gray-900 leading-none">John Smith</p>
+                 <p className="text-gray-900 leading-none">{previous?.author}</p>
                  <p className="text-gray-600">Aug 18</p>
                </div>
              </div>
@@ -113,8 +111,6 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
           </nav>
         ) : null}
 </div>
-<div className="grid md:grid-cols-1 mr-3 mt-3 w-1/2 border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
-          </div>   
           </div>   
 
 
