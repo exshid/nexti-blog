@@ -47,30 +47,42 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
         <Prose>
           <MDXRemote {...mdx} components={components} />
         </Prose>
-        <hr/>
+        
 <div className="flex border-t border-gray-200 dark:border-gray-700">
   <div className="grid md:grid-cols-1 mr-3 mt-3 w-1/2 border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
   <h2 className="text-2xl uppercase py-4 px-2 dark:bg-midnightish rounded-lg">READ MORE</h2>
+  
         {previous || next ? (
           <nav
             className="text-center md:text-left first rounded-lg bg-white transition flex flex-col lg-round dark:bg-midnightish"
           >
             {previous ? (
-              <div className="w-full p-2 rounded-lg hover:bg-daylight dark:hover:bg-lightnight">
-                <p
-                  className={cx(
-                    "mb-2 uppercase tracking-wider text-sm",
-                    "text-gray-500",
-                    "dark:text-gray-400"
-                  )}
-                >
-                  Previous
-                </p>
-                <Link href={`/posts/${previous?.slug}`}>
+           
+           <div class=" w-full lg:max-w-full lg:flex">
+           <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/mountain.jpg')" title="Mountain">
+           </div>
+           <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+             <div class="mb-8">
+               <p class="text-sm text-gray-600 flex items-center">
+                 
+                 Previous               </p>
+               <div class="text-gray-900 font-bold text-xl mb-2">                <Link href={`/posts/${previous?.slug}`}>
                   <a>{previous?.title}</a>
-                </Link>
-              </div>
-            ) : null}
+                </Link></div>
+               <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+             </div>
+             <div class="flex items-center">
+               <img class="w-10 h-10 rounded-full mr-4" src="/ben.png" alt="Avatar of Writer"/>
+               <div class="text-sm">
+                 <p class="text-gray-900 leading-none">John Smith</p>
+                 <p class="text-gray-600">Aug 18</p>
+               </div>
+             </div>
+           </div>
+         </div>
+     
+         ) : null}
+          
             {next ? (
               <div className="col-start-2 w-full p-2 rounded-lg hover:bg-daylight dark:hover:bg-lightnight">
                 <p
