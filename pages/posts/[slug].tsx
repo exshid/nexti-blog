@@ -101,28 +101,28 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
 
          {next ? (
            <Link href={`/posts/${next?.slug}`}>
-<a className="w-1/2">
+<a className="w-1/2 ml-3">
              <div className=" w-full lg:max-w-full lg:flex">
            <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
              <div className="mb-8">
-               <p className="text-sm text-gray-600 dark:text-white flex items-center">
+               <p className="text-sm text-gray-600 dark:text-white flex text-right items-center">
                  
                  Next               </p>
-               <div className="text-gray-900 dark:text-white font-bold text-xl mb-2"><h3>{next?.title}</h3>
+               <div className="text-gray-900 dark:text-white font-bold text-xl text-right mb-2"><h3>{next?.title}</h3>
                 </div>
-               <p className="text-gray-700 dark:text-white text-base">{next?.description}</p>
+               <p className="text-gray-700 dark:text-white text-right text-base">{next?.description}</p>
              </div>
              <div className="flex items-center">
                <div className="text-sm">
-                 <p className="text-gray-900 dark:text-white leading-none">{next?.author}</p>
-                 <p className="text-gray-600 dark:text-white">{formatDate(next?.date)}</p>
+                 <p className="text-gray-900 dark:text-white leading-none text-right">{next?.author}</p>
+                 <p className="text-gray-600 dark:text-white text-right">{formatDate(next?.date)}</p>
                </div>
              </div>
            </div>
            </div>
      </a>
      </Link>
-         ) : <div className=" w-full lg:max-w-full lg:flex">
+         ) : <div className="ml-3 w-full lg:max-w-full lg:flex">
          <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
            <div className="mb-8">
              <p className="text-sm text-gray-600 dark:text-white flex items-center">
