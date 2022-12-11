@@ -7,6 +7,8 @@ import type { MDXFrontMatter } from "@/lib/types";
 import { Prose } from "@/components/Prose";
 import { cx, slugify } from "@/lib/utils";
 import Contact from "@/components/Contact";
+import Search from "@/components/Search";
+
 
 interface PostListProps {
   posts: Array<MDXFrontMatter>;
