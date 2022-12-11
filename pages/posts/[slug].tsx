@@ -59,7 +59,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
            <Link href={`/posts/${previous?.slug}`}>
            <a className="w-1/2">
            <div className=" w-full lg:max-w-full lg:flex">
-           <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
+           <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
              <div className="mb-8">
                <p className="text-sm text-gray-600 dark:text-white flex items-center">
                  
@@ -79,7 +79,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
      </a>
      </Link>
          ) : <div className=" w-full lg:max-w-full lg:flex">
-         <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
+         <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
            <div className="mb-8">
              <p className="text-sm text-gray-600 dark:text-white flex items-center">
                
@@ -103,7 +103,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
            <Link href={`/posts/${next?.slug}`}>
 <a className="w-1/2 ml-3">
              <div className=" w-full lg:max-w-full lg:flex">
-           <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
+           <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
              <div className="mb-8">
                <p className="text-sm text-gray-600 dark:text-white flex text-right justify-end	">
                  
@@ -123,7 +123,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
      </a>
      </Link>
          ) : <div className="ml-3 w-full lg:max-w-full lg:flex">
-         <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex flex-col justify-between leading-normal">
+         <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
            <div className="mb-8">
              <p className="text-sm text-gray-600 dark:text-white flex justify-end	">
                
