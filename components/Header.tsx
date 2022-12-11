@@ -67,7 +67,8 @@ return (
       <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Home</span>
   </a>
 </Link>
-  <div className="flex md:order-2">
+  <div className="md:order-2">
+  <div className="flex">
   <div className="block space-y-4 md:flex md:space-y-0 md:space-x-4">
     <button onClick={searchHandler} className="block w-full md:w-auto text-white bg-blue-700 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-midnightish dark:hover:bg-lightnight dark:focus:ring-lightnight" type="button">
     <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>    </button>
@@ -80,6 +81,7 @@ return (
   </div>
   <div>
     <ThemeSwitcher/>
+  </div>
   </div>
   <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul className="flex flex-col p-4 mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:bg-white dark:bg-midnightish md:dark:bg-midnightish">
