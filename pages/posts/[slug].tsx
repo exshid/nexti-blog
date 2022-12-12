@@ -39,10 +39,10 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
 <Layout>
     <Header posts={posts.slice(0, 4)} />
         <main id="main" className="pt-2 p-4">
-    <article className="px-6 md:px-0 w-full">
+    <article className="w-full">
 <div className="flex w-full flex-col">
-    <div className="flex">
-<div className="w-9/12 mr-4 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-4 p-12 h-auto">
+    <div className="flex flex-col-reverse md:flex-row">
+<div className="w-full md:w-9/12 mr-4 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-4 p-12 h-auto">
     <Page {...frontMatter}>
         <Prose>
           <MDXRemote {...mdx} components={components} />
@@ -53,11 +53,11 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
   
         {previous || next ? (
           <nav
-            className="text-center md:text-left first rounded-lg transition flex lg-round"
+            className="flex-col md:flex-row text-center md:text-left first rounded-lg transition flex lg-round"
           >
             {previous ? (
            <Link href={`/posts/${slugify(previous?.slug)}`}>
-           <a className="w-1/2 group">
+           <a className="w-full md:w-1/2 group">
            <div className=" w-full lg:max-w-full lg:flex">
            <div className="text-nightish dark:text-white rounded-lg flex w-full flex-col justify-between leading-normal">
              <div className="mb-8">
@@ -78,7 +78,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
            </div>
      </a>
      </Link>
-         ) : <div className="w-1/2 lg:flex">
+         ) : <div className="w-full md:w-1/2 lg:flex">
          <div className="text-nightish dark:text-white rounded-lg flex w-full flex-col justify-between leading-normal">
            <div className="mb-8">
              <p className="text-sm text-gray-600 dark:text-white flex items-center">
@@ -101,34 +101,34 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
 
          {next ? (
            <Link href={`/posts/${slugify(next?.slug)}`}>
-<a className="w-1/2 ml-3 group">
+<a className="w-full md:w-1/2 ml-3 group">
              <div className=" w-full lg:max-w-full lg:flex">
            <div className="text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
              <div className="mb-8">
-               <p className="text-sm text-gray-600 dark:text-white flex text-right justify-end	">
+               <p className="text-sm text-gray-600 dark:text-white flex md:text-right justify-end	">
                  
                  Next               </p>
-               <div className="text-gray-900 group-hover:translate-x-0.5 transition dark:text-white font-bold text-xl text-right mb-2"><h3>{next?.title}</h3>
+               <div className="text-gray-900 group-hover:translate-x-0.5 transition dark:text-white font-bold text-xl md:text-right mb-2"><h3>{next?.title}</h3>
                 </div>
-               <p className="text-gray-700 dark:text-white text-right text-base">{next?.description}</p>
+               <p className="text-gray-700 dark:text-white md:text-right text-base">{next?.description}</p>
              </div>
              <div className="flex justify-end	">
                <div className="text-sm">
-                 <p className="text-gray-900 dark:text-white leading-none text-right">{next?.author}</p>
-                 <p className="text-gray-600 dark:text-white text-right">{formatDate(next?.date)}</p>
+                 <p className="text-gray-900 dark:text-white leading-none md:text-right">{next?.author}</p>
+                 <p className="text-gray-600 dark:text-white md:text-right">{formatDate(next?.date)}</p>
                </div>
              </div>
            </div>
            </div>
      </a>
      </Link>
-         ) : <div className="ml-3 w-1/2 lg:flex">
+         ) : <div className="ml-3 w-full md:w-1/2 lg:flex">
          <div className="text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
            <div className="mb-8">
              <p className="text-sm text-gray-600 dark:text-white flex justify-end	">
                
                Next               </p>
-             <div className="text-gray-900 uppercase dark:text-white font-bold text-right text-xl mb-2"><h3>No newer post yet!</h3>
+             <div className="text-gray-900 uppercase dark:text-white font-bold md:text-right text-xl mb-2"><h3>No newer post yet!</h3>
               </div>
              <p className="text-gray-700 dark:text-white text-base"></p>
            </div>
@@ -150,7 +150,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
       </Page>
       </div>
         
-      <div className="w-3/12 h-auto rounded-lg"> 
+      <div className="w-full md:w-3/12 h-auto rounded-lg"> 
          <PostSidebar author={frontMatter.author} date={formatDate(frontMatter.date)}>
          {frontMatter.tags ? frontMatter.tags.map((tag, index) => {
                     return (
