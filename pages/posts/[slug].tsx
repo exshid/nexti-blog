@@ -57,7 +57,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
           >
             {previous ? (
            <Link href={`/posts/${slugify(previous?.slug)}`}>
-           <a className="w-full md:w-1/2 group border-b pb-3 md:pb-0 md:border-b-0">
+           <a className="w-full md:w-1/2 group border-b pb-3 md:pb-0 md:border-b-0 border-grayish">
            <div className=" w-full lg:max-w-full lg:flex">
            <div className="text-nightish dark:text-white rounded-lg flex w-full flex-col justify-between leading-normal">
              <div className="mb-8">
