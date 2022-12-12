@@ -62,7 +62,7 @@ return (
   <div className="container flex flex-wrap items-center justify-between mx-auto">
   <Link href={`/`}>
 
-  <a className="flex items-center">
+  <a className="flex items-center ml-3 md:ml-0">
       <span className="self-center text-xl font-semibold whitespace-nowrap text-midnightish dark:text-white hover:text-lightreddish dark:hover:text-lightreddish">Home</span>
   </a>
 </Link>

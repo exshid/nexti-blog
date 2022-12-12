@@ -42,7 +42,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
     <article className="w-full">
 <div className="flex w-full flex-col">
     <div className="flex flex-col-reverse md:flex-row">
-<div className="w-full md:w-9/12 mr-4 mt-3 md:mt-0 p-4 md:p-12 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-4 p-12 h-auto">
+<div className="w-full md:w-9/12 mr-4 mt-3 md:mt-0 p-4 md:p-12 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-4 md:p-12 h-auto">
     <Page {...frontMatter}>
         <Prose>
           <MDXRemote {...mdx} components={components} />
@@ -66,12 +66,12 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
                  Previous               </p>
                <div className="text-gray-900 group-hover:translate-x-0.5 transition dark:text-white font-bold text-xl mb-2"><h3>{previous?.title}</h3>
                 </div>
-               <p className="text-gray-700 dark:text-white text-base">{previous?.description}</p>
+               <p className="text-gray-700 dark:text-white text-base overflow-hidden" style={{height:'50px'}}>{previous?.description}</p>
              </div>
              <div className="flex items-center">
                <div className="text-sm">
-                 <p className="text-gray-900 dark:text-white leading-none">{previous?.author}</p>
-                 <p className="text-gray-600 dark:text-white">{formatDate(previous?.date)}</p>
+                 <p className="text-gray-900 text-lg dark:text-white leading-none mb-1">{previous?.author}</p>
+                 <p className="text-gray-600 text-lg dark:text-white">{formatDate(previous?.date)}</p>
                </div>
              </div>
            </div>
@@ -110,12 +110,12 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
                  Next               </p>
                <div className="text-gray-900 group-hover:translate-x-0.5 transition dark:text-white font-bold text-xl md:text-right mb-2"><h3>{next?.title}</h3>
                 </div>
-               <p className="text-gray-700 dark:text-white md:text-right text-base">{next?.description}</p>
+               <p className="text-gray-700 dark:text-white md:text-right text-base overflow-hidden" style={{height:'50px'}}>{next?.description}</p>
              </div>
              <div className="flex justify-end	">
                <div className="text-sm">
-                 <p className="text-gray-900 dark:text-white leading-none md:text-right">{next?.author}</p>
-                 <p className="text-gray-600 dark:text-white md:text-right">{formatDate(next?.date)}</p>
+                 <p className="text-gray-900 dark:text-white leading-none mb-1 text-lg md:text-right">{next?.author}</p>
+                 <p className="text-gray-600 dark:text-white md:text-right text-lg">{formatDate(next?.date)}</p>
                </div>
              </div>
            </div>
