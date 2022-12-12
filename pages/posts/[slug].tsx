@@ -53,7 +53,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
   
         {previous || next ? (
           <nav
-            className="text-center md:text-left first rounded-lg transition flex lg-round"
+            className="text-center md:text-left -p3 first rounded-lg transition flex lg-round"
           >
             {previous ? (
            <Link href={`/posts/${previous?.slug}`}>

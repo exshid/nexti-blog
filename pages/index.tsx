@@ -13,7 +13,7 @@ import { listTags, TagContent } from "@/lib/tags";
 import { Header } from "@/components/Header";
 import TopSection from '@/components/TopSection';
 import Topics from '@/components/Topics';
-
+import RecentPosts from '@/components/RecentPosts';
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
   tags: TagContent[];
@@ -34,7 +34,7 @@ function postNumberHandler(){
     <Layout>
       <Header posts={posts.slice(0, 4)} />
       <main id="main" className="pt-1 p-4">
-
+<RecentPosts/>
           <TopSection posts={posts.slice(0, 3)}/>
           <Topics tags={tags}/>
         <div className="flex mt-3 w-full ">
