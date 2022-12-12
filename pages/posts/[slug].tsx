@@ -42,24 +42,24 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
     <article className="px-6 md:px-0 w-full">
 <div className="flex w-full flex-col">
     <div className="flex">
-<div className="w-9/12 mr-4 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-9 p-12 h-auto">
+<div className="w-9/12 mr-4 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-4 p-12 h-auto">
     <Page {...frontMatter}>
         <Prose>
           <MDXRemote {...mdx} components={components} />
         </Prose>
         
-<div className="flex">
-  <div className="grid md:grid-cols-1 mt-3 w-full border rounded-lg dark:bg-midnightish dark:border-none rounded-lg border-grayish">
+<div className="flex mt-3 border-t">
+  <div className="grid md:grid-cols-1 mt-3 w-full border rounded-lg dark:border-none rounded-lg border-grayish">
   
         {previous || next ? (
           <nav
-            className="text-center md:text-left -p3 first rounded-lg transition flex lg-round"
+            className="text-center md:text-left first rounded-lg transition flex lg-round"
           >
             {previous ? (
            <Link href={`/posts/${previous?.slug}`}>
            <a className="w-1/2">
            <div className=" w-full lg:max-w-full lg:flex">
-           <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
+           <div className="text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
              <div className="mb-8">
                <p className="text-sm text-gray-600 dark:text-white flex items-center">
                  
@@ -79,7 +79,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
      </a>
      </Link>
          ) : <div className="w-1/2 lg:flex">
-         <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
+         <div className="text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
            <div className="mb-8">
              <p className="text-sm text-gray-600 dark:text-white flex items-center">
                
@@ -103,7 +103,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
            <Link href={`/posts/${next?.slug}`}>
 <a className="w-1/2 ml-3">
              <div className=" w-full lg:max-w-full lg:flex">
-           <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
+           <div className="text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
              <div className="mb-8">
                <p className="text-sm text-gray-600 dark:text-white flex text-right justify-end	">
                  
@@ -123,7 +123,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
      </a>
      </Link>
          ) : <div className="ml-3 w-1/2 lg:flex">
-         <div className="bg-white dark:bg-nightish text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
+         <div className="text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
            <div className="mb-8">
              <p className="text-sm text-gray-600 dark:text-white flex justify-end	">
                
