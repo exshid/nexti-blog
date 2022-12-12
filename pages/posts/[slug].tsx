@@ -48,8 +48,8 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
           <MDXRemote {...mdx} components={components} />
         </Prose>
         
-<div className="flex mt-3 border-t">
-  <div className="grid md:grid-cols-1 mt-3 w-full border rounded-lg dark:border-none rounded-lg border-grayish">
+<div className="flex mt-3 border-t border-grayish">
+  <div className="grid md:grid-cols-1 mt-3 w-full rounded-lg dark:border-none rounded-lg border-grayish">
   
         {previous || next ? (
           <nav
@@ -57,14 +57,14 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
           >
             {previous ? (
            <Link href={`/posts/${previous?.slug}`}>
-           <a className="w-1/2">
+           <a className="w-1/2 group">
            <div className=" w-full lg:max-w-full lg:flex">
            <div className="text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
              <div className="mb-8">
                <p className="text-sm text-gray-600 dark:text-white flex items-center">
                  
                  Previous               </p>
-               <div className="text-gray-900 dark:text-white font-bold text-xl mb-2"><h3>{previous?.title}</h3>
+               <div className="text-gray-900 group-hover:translate-x-0.5 dark:text-white font-bold text-xl mb-2"><h3>{previous?.title}</h3>
                 </div>
                <p className="text-gray-700 dark:text-white text-base">{previous?.description}</p>
              </div>
@@ -101,14 +101,14 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
 
          {next ? (
            <Link href={`/posts/${next?.slug}`}>
-<a className="w-1/2 ml-3">
+<a className="w-1/2 ml-3 group">
              <div className=" w-full lg:max-w-full lg:flex">
            <div className="text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
              <div className="mb-8">
                <p className="text-sm text-gray-600 dark:text-white flex text-right justify-end	">
                  
                  Next               </p>
-               <div className="text-gray-900 dark:text-white font-bold text-xl text-right mb-2"><h3>{next?.title}</h3>
+               <div className="text-gray-900 group-hover:translate-x-0.5 dark:text-white font-bold text-xl text-right mb-2"><h3>{next?.title}</h3>
                 </div>
                <p className="text-gray-700 dark:text-white text-right text-base">{next?.description}</p>
              </div>
