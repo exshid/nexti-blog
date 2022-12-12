@@ -34,7 +34,10 @@ function postNumberHandler(){
     <Layout>
       <Header posts={posts.slice(0, 4)} />
       <main id="main" className="pt-1 p-4">
-<RecentPosts/>
+      {posts.slice(0, 1).map((post,index) => (
+<RecentPosts key={index} title={post.title} background={post.thumbnail} subtitle={post.description} author={post.author} slug={post.slug}/>
+))
+}
           <TopSection posts={posts.slice(0, 3)}/>
           <Topics tags={tags}/>
         <div className="flex mt-3 w-full ">
