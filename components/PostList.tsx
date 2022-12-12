@@ -30,11 +30,11 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
                   )}
 <div className="w-4/6">
                   {post.date && (
-                    <p className="uppercase mb-3 opacity-60 prose dark:prose-invert">
+                    <p className="uppercase mb-1 text-sm md:text-base opacity-60 prose dark:prose-invert">
                       {formatDate(post.date)}
                     </p>
                   )}
-                  <h2 className="text-2xl md:text-3xl prose dark:prose-invert">{post.title}</h2>
+                  <h2 className="text-xl md:text-3xl prose dark:prose-invert">{post.title}</h2>
                   {post.description && (
                     <p className="mt-3 md:text-lg overflow-hidden prose dark:prose-invert" style={{maxHeight:'50px'}}>
                       {post.description}
