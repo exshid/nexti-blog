@@ -16,10 +16,11 @@ interface ContextProps extends ParsedUrlQuery {
 interface PostsProps {
   tag: string;
   posts: Array<MDXFrontMatter>;
+  postsNav: Array<MDXFrontMatter>;
   tags: TagContent[];
 }
 
-const Posts: NextPage<PostsProps> = ({ tag, posts,tags }) => {
+const Posts: NextPage<PostsProps> = ({ tag, posts,postsNav,tags }) => {
   return (
     <Layout>
               <Header posts={postsNav} />
