@@ -55,7 +55,7 @@ function postNumberHandler(){
 </button>}
        
         </div>
-        <div className="w-full md:w-3/12 h-auto"><Sidebar posts={posts.slice(0, 10)}/></div>
+        <div className="w-full mt-3 md:mt-0 md:w-3/12 h-auto"><Sidebar posts={posts.slice(0, 10)}/></div>
 </div>
 </main>
         </Layout>

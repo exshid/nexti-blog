@@ -17,7 +17,7 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
           {posts.map((post,index) => (
             <li
               key={index}
-              className="px-8 bg-white dark:bg-midnightish hover:bg-daylight dark:hover:bg-lightnight transition"
+              className="px-3 md:px-8 bg-white dark:bg-midnightish hover:bg-daylight dark:hover:bg-lightnight transition"
             >
                               <Link href={`/posts/${slugify(post.slug)}`}>
                 <a className="py-3 flex focus:outline-none focus:ring-4">
