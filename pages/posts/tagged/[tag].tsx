@@ -22,7 +22,7 @@ interface PostsProps {
 const Posts: NextPage<PostsProps> = ({ tag, posts,tags }) => {
   return (
     <Layout>
-              <Header posts={posts.slice(0, 4)} />
+              <Header posts={postsNav} />
               <main id="main" className="pt-2 p-4">
       <TagTitle title={`Posts tagged: "${tag}"`}>
         <PostList posts={posts} />
@@ -57,6 +57,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     props: {
 tags,
       tag,
+      postsNav: mdxFiles.slice(0, 4),
       posts: mdxFiles.filter((file) => {
         return file.tags?.includes(tag);
       }),
