@@ -40,7 +40,6 @@ const searchHandler = () =>{
   if(contactUs){
     setContactUs(false)
   }  
-  console.log(searchPopUp)
 }
 const contactHandler = () =>{
   setContactUs(!contactUs)
@@ -95,7 +94,7 @@ return (
       </Link>
       </li>
       <li>
-        <a className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-lightreddish md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-lightnight dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" type="button" onClick={contactHandler}>Contact</a>
+        <a className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-lightreddish md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-lightnight dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer" type="button" onClick={contactHandler}>Contact</a>
       </li>
     </ul>
   </div>

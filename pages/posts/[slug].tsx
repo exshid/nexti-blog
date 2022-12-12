@@ -59,7 +59,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
            <Link href={`/posts/${slugify(previous?.slug)}`}>
            <a className="w-1/2 group">
            <div className=" w-full lg:max-w-full lg:flex">
-           <div className="text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
+           <div className="text-nightish dark:text-white rounded-lg flex w-full flex-col justify-between leading-normal">
              <div className="mb-8">
                <p className="text-sm text-gray-600 dark:text-white flex items-center">
                  
@@ -79,7 +79,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
      </a>
      </Link>
          ) : <div className="w-1/2 lg:flex">
-         <div className="text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
+         <div className="text-nightish dark:text-white rounded-lg flex w-full flex-col justify-between leading-normal">
            <div className="mb-8">
              <p className="text-sm text-gray-600 dark:text-white flex items-center">
                
