@@ -74,7 +74,7 @@ return (
     <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>    </button>
 </div>
 
-      <button data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+      <button data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center mr-1 p-2 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span className="sr-only">Open menu</span>
         <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
     </button>
@@ -115,7 +115,7 @@ return (
         <ul onClick={dropdownCloseHandler}>
             {posts.filter((file) => file.tags?.includes('typescript')).map((post,index) => (
 
-                                    <Link key={index} href={`/posts/${post.slug}`}>
+                                    <Link key={index} href={`/posts/${slugify(post.slug)}`}>
                     <a className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
                 <li className="flex my-1" >
          {post.thumbnail && (<div className="overflow-hidden mr-4 rounded-lg relative w-1/5 image-span">
@@ -139,7 +139,7 @@ return (
             {posts.filter((file) => file.tags?.includes('react')).map((post,index) => (
 
                 <li key={index}>
-                                    <Link href={`/posts/${post.slug}`}>
+                                    <Link href={`/posts/${slugify(post.slug)}`}>
                     <a className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
                         <div className="font-semibold">{post.title}</div>
                         <span className="text-sm font-light text-gray-500 dark:text-gray-400">{post.description}</span>

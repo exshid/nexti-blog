@@ -19,7 +19,7 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
               key={index}
               className="px-8 bg-white dark:bg-midnightish hover:bg-daylight dark:hover:bg-lightnight transition"
             >
-                              <Link href={`/posts/${post.slug}`}>
+                              <Link href={`/posts/${slugify(post.slug)}`}>
                 <a className="py-3 flex focus:outline-none focus:ring-4">
 	
                 {post.thumbnail && (<div className="overflow-hidden mr-4 rounded-lg relative w-2/6">
