@@ -14,7 +14,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
         <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
-
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         </Head>
         <body
           className="bg-white dark:bg-nightish"
