@@ -3,7 +3,6 @@ backend:
   branch: main
 media_folder: public/images
 public_folder: /images
-publish_mode: editorial_workflow
 
 collections:
   - name: "config"
@@ -90,7 +89,7 @@ collections:
 
   - name: "posts"
     label: "Posts"
-    folder: "content/posts/"
+    folder: "posts/"
     extension: "mdx"
     format: "frontmatter"
     create: true

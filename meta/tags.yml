@@ -5,3 +5,7 @@ tags:
     name: react
   - slug: featured
     name: featured
+  - slug: news
+    name: News
+  - slug: politics
+    name: Politics
