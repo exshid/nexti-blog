@@ -6,7 +6,7 @@ tags: ['react', 'typescript']
 author: Alan Parniyan
 thumbnail: https://static.wixstatic.com/media/84dd34_8bb0ef1e9b434502892c6b8dc442334d~mv2_d_1367_2048_s_2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84dd34_8bb0ef1e9b434502892c6b8dc442334d~mv2_d_1367_2048_s_2.jpg
 ---
-
+import Image from 'next/image'
 <p className="lead">
   Until now, trying to style an article, document, or blog post with Tailwind has been a tedious
   task that required a keen eye for typography and a lot of complex custom CSS.
@@ -67,6 +67,10 @@ Something a wise person once told me about typography is:
 It's probably important that images look okay here by default as well:
 
 <figure>
+                    <Image className="bg-contain w-full relative post-image" src="https://static.wixstatic.com/media/84dd34_8bb0ef1e9b434502892c6b8dc442334d~mv2_d_1367_2048_s_2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84dd34_8bb0ef1e9b434502892c6b8dc442334d~mv2_d_1367_2048_s_2.jpg"
+                    alt="salam"
+                    />
+
   <img
     src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
     alt=""
