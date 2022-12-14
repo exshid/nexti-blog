@@ -84,7 +84,7 @@ return (
                   <p className="block px-6 py-2 border-b border-gray-200 w-full uppercase font-semibold text-gray-700">Lorem ipsum</p>
                   <a href="#!" aria-current="true" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -93,7 +93,7 @@ return (
                   </a>
                   <a href="#!" aria-current="true" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -102,7 +102,7 @@ return (
                   </a>
                   <a href="#!" aria-current="true" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -111,7 +111,7 @@ return (
                   </a>
                   <a href="#!" aria-current="true" className="block px-6 py-3 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -123,7 +123,7 @@ return (
                   <p className="block px-6 py-2 border-b border-gray-200 w-full uppercase font-semibold text-gray-700">Explit voluptas</p>
                   <a href="#!" aria-current="true" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -132,7 +132,7 @@ return (
                   </a>
                   <a href="#!" aria-current="true" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -141,7 +141,7 @@ return (
                   </a>
                   <a href="#!" aria-current="true" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -150,7 +150,7 @@ return (
                   </a>
                   <a href="#!" aria-current="true" className="block px-6 py-3 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -162,7 +162,7 @@ return (
                   <p className="block px-6 py-2 border-b border-gray-200 w-full uppercase font-semibold text-gray-700">Iste quaerato</p>
                   <a href="#!" aria-current="true" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -171,7 +171,7 @@ return (
                   </a>
                   <a href="#!" aria-current="true" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -180,7 +180,7 @@ return (
                   </a>
                   <a href="#!" aria-current="true" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -189,7 +189,7 @@ return (
                   </a>
                   <a href="#!" aria-current="true" className="block px-6 py-3 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -201,7 +201,7 @@ return (
                   <p className="block px-6 py-2 border-b border-gray-200 w-full uppercase font-semibold text-gray-700">Cras justo odio</p>
                   <a href="#!" aria-current="true" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -210,7 +210,7 @@ return (
                   </a>
                   <a href="#!" aria-current="true" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -219,7 +219,7 @@ return (
                   </a>
                   <a href="#!" aria-current="true" className="block px-6 py-3 border-b border-gray-200 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
@@ -228,7 +228,7 @@ return (
                   </a>
                   <a href="#!" aria-current="true" className="block px-6 py-3 w-full hover:bg-gray-50 hover:text-gray-700 transition duration-150 ease-in-out flex items-center">
                     <div className="shrink-0">
-                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" className="w-20 shadow-lg rounded" alt="Hollywood Sign on The Hill"/>
                     </div>
                     <div className="grow ml-4">
                       <p className="mb-1 font-semibold">Sed ut perspiciatis unde omnis</p>
