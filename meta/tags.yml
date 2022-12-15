@@ -1,11 +1,21 @@
 tags:
-  - slug: css
-    name: css
-  - slug: react
-    name: react
+  - slug: nature
+    name: Nature
   - slug: featured
-    name: featured
+    name: Featured
+  - slug: world
+    name: World
   - slug: news
     name: News
   - slug: politics
     name: Politics
+  - slug: sports
+    name: Sports
+  - slug: lgbt
+    name: LGBT
+  - slug: articles
+    name: Articles
+  - slug: tech
+    name: Tech
+  - slug: science
+    name: Science
