@@ -27,7 +27,11 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
                     alt={post.title}
                     height={300}
                     width={300}
-                    layout={"responsive"}
+                    responsive
+                    sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
+     
                     />
                     </div>
                   )}
