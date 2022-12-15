@@ -22,12 +22,11 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
                               <Link href={`/posts/${slugify(post.slug)}`}>
                 <a className="py-3 flex focus:outline-none focus:ring-4">
 	
-                {post.thumbnail && (<div className="overflow-hidden mr-4 rounded-lg relative w-2/6">
+                {post.thumbnail && (<div className="block overflow-hidden mr-4 rounded-lg w-2/6">
                     <Image className="object-cover w-full relative" src={post.thumbnail}
                     alt={post.title}
                     height={300}
                     width={300}
-                    layout="responsive"
                     />
                     </div>
                   )}
