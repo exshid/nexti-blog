@@ -25,8 +25,8 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
                 {post.thumbnail && (<div className="overflow-hidden mr-4 rounded-lg relative w-2/6">
                     <Image className="object-cover w-full relative" src={post.thumbnail}
                     alt={post.title}
-                    height={250}
-                    width={250}
+                    height={300}
+                    width={300}
                     layout="responsive"
                     />
                     </div>
