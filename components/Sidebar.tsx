@@ -10,7 +10,7 @@ interface PostListProps {
   export const Sidebar: React.FC<PostListProps> = ({ posts }) => {
 
     return <ul style={{top: "85px"}} className="w-full divide-y divide-grayish dark:text-white dark:border-none border border-grayish flex flex-col justify-between content-start bg-white rounded-lg dark:text-white dark:bg-midnightish px-6 h-fit top-0 sticky">
-                  {posts.filter((file) => file.tags?.includes('World')).map((post,index) => (
+                  {posts.filter((file) => file.tags?.includes('world')).map((post,index) => (
     <Link key={index} href={`/posts/${post.slug}`}>
                               <a className="py-2 flex focus:outline-none focus:ring-4">       
     <li className="py-6 group transition text-midnightish dark:text-white">
