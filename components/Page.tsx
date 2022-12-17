@@ -60,8 +60,8 @@ export const Page: React.FC<PageProps> = ({
     className="postImage w-full mb-3 rounded-lg"
     src={thumbnail}
     alt='Post thumbnail'
-    width={800}
-    height={500}
+    width={1100}
+    height={700}
   />)}
 
 
