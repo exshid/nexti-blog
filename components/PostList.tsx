@@ -23,7 +23,7 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
                 <a className="py-3 flex focus:outline-none focus:ring-4">
 	
                 {post.thumbnail && (<div className="block overflow-hidden mr-4 rounded-lg w-2/6">
-                    <Image className="object-cover w-full relative h-full rounded-lg" src={post.thumbnail}
+                    <Image className="object-cover w-full relative h-full max-h-80 rounded-lg" src={post.thumbnail}
                     alt={post.title}
                     height={300}
                     width={300}
