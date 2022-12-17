@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/future/image";
 import { slugify } from "@/lib/utils";
 
 const RecentPosts: React.FC<{title:string, subtitle?:string, author:string, background:string, slug:string}> = ({title,subtitle,author,background, slug}) => {
