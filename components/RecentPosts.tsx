@@ -8,8 +8,6 @@ src={background}
 height={200}
 width={720}
 alt='Post thumbnail'
-layout='fill'
-objectFit='contain'
 />
 <figure style={{height: '190px', background: 'linear-gradient(70deg, rgba(20, 20, 20, 1), rgba(20, 20, 20, 0))'}} className="transition group recent-posts my-2 even:ml-2 rounded-lg odd:mr-2 flex flex-col items-center justify-center px-8 text-center dark:border-none border border-grayish transition">
                 <blockquote className="max-w-2xl mx-auto text-left text-white">
