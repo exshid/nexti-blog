@@ -6,7 +6,7 @@ const RecentPosts: React.FC<{title:string, subtitle?:string, author:string, back
 return <Link href={`/posts/${slugify(slug)}`}><a><Image
 src={background}
 height={200}
-widget={720}
+width={720}
 alt='Post thumbnail'
 layout='fill'
 objectFit='contain'
