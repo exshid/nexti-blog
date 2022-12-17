@@ -14,7 +14,7 @@ return <ul style={{top: "85px"}} className="w-full text-midnightish dark:text-wh
         </li>
         <li className="pt-3 pb-6 flex justify-between">
         <p className="text-xl uppercase inline-block">Tags:</p>
-<p className="text-xl uppercase inline-block" style={{width: "130px"}}>{children}</p>
+<p className="text-xl uppercase inline-block" style={{width: "200px"}}>{children}</p>
         </li>
     </ul>
 }
