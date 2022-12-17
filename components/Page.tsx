@@ -62,7 +62,6 @@ export const Page: React.FC<PageProps> = ({
     alt='Post thumbnail'
     width={800}
     height={500}
-    objectFit='contain'
   />)}
 
 
