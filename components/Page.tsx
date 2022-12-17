@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/future/image";
 import { onlyText } from "react-children-utilities";
 import { formatDate } from "@/lib/formatDate";
 import siteConfig from "@/data/siteConfig";
