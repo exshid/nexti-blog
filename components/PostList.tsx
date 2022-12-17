@@ -30,7 +30,6 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
                     sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 50vw,
                     33vw"  
-                    layout={"responsive"}
                     />
                     </div>
                   )}
