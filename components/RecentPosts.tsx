@@ -6,6 +6,7 @@ const RecentPosts: React.FC<{title:string, subtitle?:string, author:string, back
 return <Link href={`/posts/${slugify(slug)}`}><a className='my-2 even:ml-2 rounded-lg' style={{height:'190px'}}><Image
 className='recent-image rounded-lg'
 src={background}
+placeholder={blur}
 height={200}
 width={720}
 alt='Post thumbnail'

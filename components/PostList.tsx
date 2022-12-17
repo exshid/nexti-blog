@@ -26,6 +26,7 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
                     <Image className="object-cover w-full relative" src={post.thumbnail}
                     alt={post.title}
                     height={300}
+                    placeholder={blur}
                     width={300}
                     sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 50vw,
