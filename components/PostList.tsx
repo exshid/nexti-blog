@@ -50,7 +50,7 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
                 <ul className="mt-4 flex flex-wrap space-x-2">
                   {post.tags.map((tag, index) => {
                     return (
-                      <li key={index}>
+                      <li style={{margin:'4px'}} key={index}>
                         <Tag href={`/posts/tagged/${slugify(tag)}`}>{tag}</Tag>
                       </li>
                     );

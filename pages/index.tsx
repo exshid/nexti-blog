@@ -31,7 +31,21 @@ function postNumberHandler(){
   }
 }
   return (
-    <Layout>
+    <>
+    <Head>
+    <title>
+      {metaTitle} - {siteConfig.siteName}
+    </title>
+    <meta name="og:url" content={siteConfig.siteUrl} />
+    <meta property="og:title" content={metaTitle} />
+    <meta name="description" content={metaDescription} />
+    <meta name="og:description" content={metaDescription} />
+    <meta
+      property="og:image"
+      content={`${siteConfig.siteUrl}${metaThumbnail}`}
+    />
+  </Head>
+<Layout>
       <Header posts={posts.slice(0, 4)} />
       <main id="main" className="pt-1 p-4">
       <div className="grid my-3 mt-2 p-3 px-4 dark:border-none border border-grayish bg-white dark:bg-midnightish rounded-lg md:grid-cols-2">
@@ -45,7 +59,7 @@ function postNumberHandler(){
           <Topics tags={tags}/>
         <div className="flex mt-3 w-full flex-col md:flex-row">
 	<div className="w-full md:w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish h-fit">
-
+<h2 className="bg-reddish p-4 uppercase text-white">Recent Posts</h2>
         <PostList posts={posts.slice(0, postNum) } />
 
       {buttonReturn && <button className="p-4 bg-reddish hover:bg-darker-reddish rounded-bl-lg text-white transition flex" onClick={postNumberHandler}><p className="mr-1">Load More Posts </p><ArrowRight
@@ -59,6 +73,7 @@ function postNumberHandler(){
 </div>
 </main>
         </Layout>
+        </>
   );
 };
 
