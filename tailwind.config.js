@@ -16,7 +16,7 @@ module.exports = {
       'darker-reddish':'#39021c',
       'grayish': '#e7eaed',
       'grayer': '#676c70',
-      'daylight':'#F9FAFB',
+      'daylight':'#f2f2f2',
       'lightreddish':'#A0144F',
       'muted': '#6c757d'
     }},
