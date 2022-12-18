@@ -10,7 +10,7 @@ interface PostListProps {
   }
   
   export const TopSection: React.FC<PostListProps> = ({ posts }) => {
-      return <div className="flex mb-2 w-full flex-col md:flex-row">
+      return <div className="flex mb-2 w-full flex-col md:flex-row border-t border-reddish border-t-8 rounded-lg md:even:rounded-tr-lg md:odd:rounded-tl-lg md:rounded-none">
                {posts.slice(0,2).filter((file) => file.tags?.includes('politics')).map((post,index) => (
                               <Link key={index} href={`/posts/${post.slug}`}>
                               <a className="pt-1 py-2 flex odd:mr-4 focus:outline-none w-full md:odd:w-2/6 md:even:w-4/6 focus:ring-4">
