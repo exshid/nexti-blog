@@ -72,7 +72,7 @@ return (
   <Link href={`/`}>
 
   <a className="flex items-center ml-3 md:ml-0">
-      <span className="self-center transition text-gray-700 md:hover:text-gray-500 md:dark:hover:text-white dark:text-gray-400  dark:hover:text-white text-xl font-semibold whitespace-nowrap rounded-3xl hover:text-lightreddish">Home</span>
+      <span className="self-center transition text-gray-700 hover:text-gray-500 dark:hover:text-white dark:text-gray-400  dark:hover:text-white text-xl font-semibold whitespace-nowrap rounded-3xl hover:text-lightreddish">Home</span>
   </a>
 </Link>
   <div className="md:order-2 flex">
@@ -82,7 +82,7 @@ return (
     <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>    </button>
 </div>
 
-      <button onClick={classesHander} type="button" className="inline-flex items-center mr-1 p-2 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+      <button onClick={classesHander} type="button" className="hover:bg-grayish transition rounded-3xl inline-flex items-center mr-1 p-2 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span className="sr-only">Open menu</span>
         <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
     </button>
@@ -99,11 +99,11 @@ return (
       <li>
       <Link href={`/posts`}>
        
-        <a className="transition block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-lightreddish md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-lightnight dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Posts</a>
+        <a className="transition block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-lightreddish md:p-0 dark:hover:text-white dark:text-gray-400 dark:hover:bg-lightnight dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Posts</a>
       </Link>
       </li>
       <li>
-        <a className="transition block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-lightreddish md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-lightnight dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer" type="button" onClick={contactHandler}>Contact</a>
+        <a className="transition block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent hover:text-lightreddish md:p-0 dark:hover:text-white dark:text-gray-400 dark:hover:bg-lightnight dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer" type="button" onClick={contactHandler}>Contact</a>
       </li>
     </ul>
   </div>
