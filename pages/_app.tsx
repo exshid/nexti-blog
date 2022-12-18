@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps, posts }: Props) {
       defaultTheme="system"
       attribute="class"
     >
-      <Header posts={posts.slice(0, 4)} />
+      <Header posts={posts} />
       <a
         href="#main"
         className="fixed p-2 top-0 left-0 -translate-y-full focus:translate-y-0"
