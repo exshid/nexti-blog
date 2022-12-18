@@ -13,7 +13,8 @@ interface PostListProps {
 
 export const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (
-    <ul className="w-full pb-4 bg-white divide-y divide-grayish dark:divide-none border border-grayish dark:border-none rounded-lg dark:bg-midnightish">
+<div className="border-t border-reddish border-t-8 rounded-lg md:rounded-t-lg">
+    <ul className="w-full pb-4 bg-white divide-y rounded-lg divide-grayish dark:divide-none border border-grayish dark:border-none rounded-lg dark:bg-midnightish">
           {posts.map((post,index) => (
             <li
               key={index}
@@ -63,5 +64,6 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
             </li>
           ))}
     </ul>
+    </div>
   );
 };
