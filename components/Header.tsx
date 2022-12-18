@@ -67,12 +67,12 @@ const dropdownCloseHandler =() =>{
 }
 return (
     <header className="mt-3 mb-1 px-4 z-40	sticky top-0 w-full">
-<nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-midnightish w-full z-20 top-0 left-0 rounded-lg border border-grayish dark:border-none">
+<nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-midnightish transition w-full z-20 top-0 left-0 rounded-lg border border-grayish dark:border-none">
   <div className="container flex flex-wrap items-center justify-between mx-auto">
   <Link href={`/`}>
 
   <a className="flex items-center ml-3 md:ml-0">
-      <span className="self-center text-gray-700 md:hover:text-lightreddish md:dark:hover:text-white dark:text-gray-400  dark:hover:text-white text-xl font-semibold whitespace-nowrap rounded-3xl p-2 hover:bg-grayish">Home</span>
+      <span className="self-center text-gray-700 md:hover:text-gray-500 md:dark:hover:text-white dark:text-gray-400  dark:hover:text-white text-xl font-semibold whitespace-nowrap rounded-3xl p-1 hover:bg-grayish">Home</span>
   </a>
 </Link>
   <div className="md:order-2 flex">
