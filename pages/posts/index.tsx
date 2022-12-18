@@ -25,7 +25,7 @@ const Posts: NextPage<PostsProps> = ({ posts,tags }) => {
         title="Posts"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
       >
-        <PostList posts={posts} />
+        <PostList posts={posts} className="border-t border-reddish border-t-8 rounded-lg md:rounded-t-lg" />
       </Page>
       </div>
 </main>

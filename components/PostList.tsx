@@ -8,12 +8,13 @@ import { Tag } from "@/components/Tag";
 
 interface PostListProps {
   posts: Array<MDXFrontMatter>;
+  className: string;
 }
 
 
-export const PostList: React.FC<PostListProps> = ({ posts }) => {
+export const PostList: React.FC<PostListProps> = ({ posts, className }) => {
   return (
-<div className="border-t border-reddish border-t-8 rounded-lg md:rounded-t-lg">
+<div className={className}>
     <ul className="w-full pb-4 bg-white divide-y rounded-lg divide-grayish dark:divide-none border border-grayish dark:border-none rounded-lg dark:bg-midnightish">
           {posts.map((post,index) => (
             <li
