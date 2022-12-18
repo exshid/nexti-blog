@@ -13,7 +13,7 @@ interface PostListProps {
       return <div className="flex mb-2 w-full flex-col md:flex-row">
                {posts.slice(0,2).filter((file) => file.tags?.includes('politics')).map((post,index) => (
                               <Link key={index} href={`/posts/${post.slug}`}>
-                              <a className="pt-1 py-2 flex odd:mr-4 focus:outline-none w-full border-t border-reddish border-t-8 rounded-lg md:even:rounded-tr-lg md:odd:rounded-tl-lg md:rounded-none md:odd:w-2/6 md:even:w-4/6 focus:ring-4">
+                              <a className="pt-0 py-2 flex odd:mr-4 focus:outline-none w-full border-t border-reddish border-t-8 rounded-lg md:rounded-t-lg md:odd:w-2/6 md:even:w-4/6 focus:ring-4">
               
     <div 
     className="w-full h-52 h-auto dark:border-none border border-grayish rounded-lg">
