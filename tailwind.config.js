@@ -8,9 +8,9 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'nightish': '#262D39',
-      'midnightish': '#222831',
-      'evening': '#242A35',
+      'nightish': '#222831',
+      'midnightish': '#242A35',
+      'evening': '#262D39',
       'lightnight': '#1c2229',
       'reddish': '#480323',
       'darker-reddish':'#39021c',

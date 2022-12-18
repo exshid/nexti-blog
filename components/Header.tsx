@@ -67,7 +67,7 @@ const dropdownCloseHandler =() =>{
 }
 return (
     <header className="mt-3 mb-1 px-4 z-40	sticky top-0 w-full">
-<nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-midnightish transition w-full z-20 top-0 left-0 rounded-lg border border-grayish dark:border-none">
+<nav className="bg-white header-shadow px-2 sm:px-4 py-2.5 dark:bg-midnightish transition w-full z-20 top-0 left-0 rounded-lg border border-grayish dark:border-none">
   <div className="container flex flex-wrap items-center justify-between mx-auto">
   <Link href={`/`}>
 
@@ -92,7 +92,7 @@ return (
   </div>
   </div>
   <div className={headerClasses} id="navbar-sticky">
-    <ul className="flex flex-col p-4 mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:bg-white dark:bg-midnightish md:dark:bg-midnightish">
+    <ul className="flex flex-col p-4 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
       <li onClick={dropdownHandler}>
                     <button onClick={dropdownHandler} className="transition text-gray-700  hover:bg-gray-100 hover:text-lightreddish dark:hover:text-white dark:text-gray-400 flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-lightnight md:dark:hover:bg-transparent dark:border-gray-700">News <svg className="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg></button>
                 </li>

@@ -32,7 +32,9 @@ body {
 		 object-fit: cover !important;
 		}
 	
-
+.header-shadow{
+    box-shadow: -15px 10px 8px 3px rgb(0 0 0 / 4%);
+}
 	.postImage{
 		width: 100% !important;
 		height: 500px !important;
