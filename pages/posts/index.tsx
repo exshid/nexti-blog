@@ -19,6 +19,7 @@ const Posts: NextPage<PostsProps> = ({ posts,tags }) => {
     <Layout>
           <Header posts={posts.slice(0, 4)} />
           <main id="main" className="pt-2 p-4">
+          <div className="border-t border-reddish border-t-8 rounded-lg md:rounded-t-lg">
       <Page
       className="px-8 rounded-lg bg-white dark:bg-midnightish mb-3 py-4 border border-grayish dark:border-none"
         title="Posts"
@@ -26,6 +27,7 @@ const Posts: NextPage<PostsProps> = ({ posts,tags }) => {
       >
         <PostList posts={posts} />
       </Page>
+      </div>
 </main>
     </Layout>
   );
