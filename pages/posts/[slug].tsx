@@ -42,7 +42,9 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
     <article className="w-full">
 <div className="flex w-full flex-col">
     <div className="flex flex-col-reverse md:flex-row">
+      <div className="border-t border-reddish border-t-8 rounded-tl-lg">
 <div className="w-full md:w-9/12 mr-4 mt-3 md:mt-0 p-4 md:p-12 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-4 md:p-12 h-auto">
+ 
     <Page {...frontMatter}>
         <Prose>
           <MDXRemote {...mdx} components={components} />
@@ -149,7 +151,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
 
       </Page>
       </div>
-        
+        </div>
       <div className="w-full md:w-3/12 h-auto rounded-lg"> 
          <PostSidebar author={frontMatter.author} date={formatDate(frontMatter.date)}>
          {frontMatter.tags ? frontMatter.tags.map((tag, index) => {
