@@ -20,7 +20,17 @@ export const Header: React.FC<PostListProps> = ({ posts }) => {
   const [dropdown, setDropdown] = useState(false)
   const [contactUs, setContactUs] = useState(false)
   const [searchPopUp, setSearchPopUp] = useState(false)
+
+  const classesHander = () =>{
+    if (headerClasses === "items-center justify-between w-full md:flex md:w-auto md:order-1"){
+  setHeaderClasses("items-center justify-between w-full md:flex md:w-auto md:order-1")
+    } else {
+      setHeaderClasses("items-center justify-between w-full md:flex md:w-auto md:order-1 hidden")
+    }
+  console.log(headerClasses)
+  }
   
+
 const dropdownHandler = () =>{
     
   setDropdown(!dropdown)
@@ -30,14 +40,6 @@ if(contactUs){
 if(searchPopUp){
   setSearchPopUp(false)
 }   
-const classesHander = () =>{
-  if (headerClasses === "items-center justify-between w-full md:flex md:w-auto md:order-1"){
-setHeaderClasses("items-center justify-between w-full md:flex md:w-auto md:order-1")
-  } else {
-    setHeaderClasses("items-center justify-between w-full md:flex md:w-auto md:order-1 hidden")
-  }
-console.log(headerClasses)
-}
 
 }
 const searchHandler = () =>{
