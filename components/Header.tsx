@@ -72,13 +72,13 @@ return (
   <Link href={`/`}>
 
   <a className="flex items-center ml-3 md:ml-0">
-      <span className="self-center text-gray-700 md:hover:text-gray-500 md:dark:hover:text-white dark:text-gray-400  dark:hover:text-white text-xl font-semibold whitespace-nowrap rounded-3xl">Home</span>
+      <span className="self-center transition text-gray-700 md:hover:text-gray-500 md:dark:hover:text-white dark:text-gray-400  dark:hover:text-white text-xl font-semibold whitespace-nowrap rounded-3xl hover:text-lightreddish">Home</span>
   </a>
 </Link>
   <div className="md:order-2 flex">
   <div className="flex">
   <div className="block space-y-4 md:flex md:space-y-0 md:space-x-4">
-    <button onClick={searchHandler} className="block w-full md:w-auto text-white focus:ring-4 focus:outline-none focus:ring-lightreddish font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-midnightish dark:focus:ring-lightnight" type="button">
+    <button onClick={searchHandler} className="block w-full md:w-auto hover:bg-grayish transition rounded-3xl text-white focus:ring-4 focus:outline-none focus:ring-lightreddish font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-midnightish dark:focus:ring-lightnight" type="button">
     <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>    </button>
 </div>
 
@@ -94,16 +94,16 @@ return (
   <div className={headerClasses} id="navbar-sticky">
     <ul className="flex flex-col p-4 mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:bg-white dark:bg-midnightish md:dark:bg-midnightish">
       <li onClick={dropdownHandler}>
-                    <button onClick={dropdownHandler} className="text-gray-700  hover:bg-gray-100 md:hover:text-lightreddish md:dark:hover:text-white dark:text-gray-400 flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-lightnight md:dark:hover:bg-transparent dark:border-gray-700">News <svg className="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg></button>
+                    <button onClick={dropdownHandler} className="transition text-gray-700  hover:bg-gray-100 hover:text-lightreddish dark:hover:text-white dark:text-gray-400 flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-lightnight md:dark:hover:bg-transparent dark:border-gray-700">News <svg className="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg></button>
                 </li>
       <li>
       <Link href={`/posts`}>
        
-        <a className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-lightreddish md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-lightnight dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Posts</a>
+        <a className="transition block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-lightreddish md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-lightnight dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Posts</a>
       </Link>
       </li>
       <li>
-        <a className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-lightreddish md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-lightnight dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer" type="button" onClick={contactHandler}>Contact</a>
+        <a className="transition block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-lightreddish md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-lightnight dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer" type="button" onClick={contactHandler}>Contact</a>
       </li>
     </ul>
   </div>
