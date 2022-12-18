@@ -9,7 +9,6 @@ import { cx, slugify } from "@/lib/utils";
 import Contact from "@/components/Contact";
 import Search from "@/components/Search";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
-import { getAllMdx } from "@/lib/mdx";
 
 
 interface PostListProps {
@@ -17,8 +16,6 @@ interface PostListProps {
 }
 
 export const Header: React.FC<PostListProps> = ({ posts }) => {
-  const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
-console.log(mdxFiles)
   const [dropdown, setDropdown] = useState(false)
   const [contactUs, setContactUs] = useState(false)
   const [searchPopUp, setSearchPopUp] = useState(false)
@@ -85,7 +82,7 @@ return (
     <ThemeSwitcher/>
   </div>
   </div>
-  <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+  <div className="items-center justify-between w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul className="flex flex-col p-4 mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:bg-white dark:bg-midnightish md:dark:bg-midnightish">
       <li onClick={dropdownHandler}>
                     <button onClick={dropdownHandler} className="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-lightreddish md:p-0 dark:text-gray-400 md:dark:hover:text-lightreddish dark:hover:bg-lightnight dark:hover:text-lightreddish md:dark:hover:bg-transparent dark:border-gray-700">News <svg className="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg></button>
