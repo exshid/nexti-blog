@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { useState } from "react";
 import Image from "next/image";
 import siteConfig from "@/data/siteConfig";
