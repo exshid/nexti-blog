@@ -35,12 +35,14 @@ function postNumberHandler(){
 <Layout>
       <Header posts={posts.slice(0, 4)} />
       <main id="main" className="pt-1 p-4">
+      <div className="border-t mt-3 border-reddish border-t-8 rounded-lg">
       <div className="grid my-3 mt-2 p-3 px-4 dark:border-none border border-grayish bg-white dark:bg-midnightish rounded-lg md:grid-cols-2">
 
       {posts.slice(0, 2).map((post,index) => (
 <RecentPosts key={index} title={post.title} background={post.thumbnail} subtitle={post.description} author={post.author} slug={post.slug}/>
 ))
 }
+</div>
 </div>
           <TopSection posts={posts.slice(0, 3)}/>
           <Topics tags={tags}/>

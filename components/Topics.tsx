@@ -10,7 +10,7 @@ type Props = {
   };
       const Topics: React.FC<Props> = ({tags}) => {
     return (<div className="flex mb-4 w-full">
-    <div className="w-full h-auto">
+    <div className="w-full h-auto border-t mt-3 border-reddish border-t-8 rounded-lg">
     <ul className="flex justify-around flex-wrap px-3 pb-3 bg-white rounded-lg dark:border-none border border-grayish dark:bg-midnightish h-auto">
     {tags.slice(0,9).map((it, i) => (
       
