@@ -42,14 +42,12 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
     <article className="w-full">
 <div className="flex w-full flex-col">
     <div className="flex flex-col-reverse md:flex-row">
-<div className="w-full md:w-9/12 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg h-auto">
+<div className="w-full md:w-9/12 mr-4 mt-3 md:mt-0 p-4 md:p-12 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-4 md:p-12 h-auto">
     <Page {...frontMatter}>
-    <div className="w-full h-full border-t border-reddish border-t-8 rounded-tl-lg mr-4 mt-3 md:mt-0 p-4 md:p-12 pt-4 md:p-12">
-
         <Prose>
           <MDXRemote {...mdx} components={components} />
         </Prose>
-</div>        
+        
 <div className="flex mt-3 border-t border-grayish">
   <div className="grid md:grid-cols-1 mt-3 w-full rounded-lg dark:border-none rounded-lg border-grayish">
   
@@ -66,7 +64,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
                <p className="text-muted flex items-center">
                  
                  Previous               </p>
-               <div className="text-gray-900 group-hover:translate-x-1 transition dark:text-white font-bold text-xl mb-2"><h3>{previous?.title}</h3>
+               <div className="text-gray-900 group-hover:translate-x-0.5 transition dark:text-white font-bold text-xl mb-2"><h3>{previous?.title}</h3>
                 </div>
                <p className="text-gray-700 dark:text-white text-base overflow-hidden" style={{height:'50px'}}>{previous?.description}</p>
              </div>
@@ -110,7 +108,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
                <p className="text-muted flex md:text-right justify-end	">
                  
                  Next               </p>
-               <div className="text-gray-900 group-hover:translate-x-1 transition dark:text-white font-bold text-xl md:text-right mb-2"><h3>{next?.title}</h3>
+               <div className="text-gray-900 group-hover:translate-x-0.5 transition dark:text-white font-bold text-xl md:text-right mb-2"><h3>{next?.title}</h3>
                 </div>
                <p className="text-gray-700 dark:text-white md:text-right text-base overflow-hidden" style={{height:'50px'}}>{next?.description}</p>
              </div>
