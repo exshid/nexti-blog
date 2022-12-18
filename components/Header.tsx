@@ -1,4 +1,3 @@
-import useSWR from 'swr'
 import { useState } from "react";
 import Image from "next/image";
 import siteConfig from "@/data/siteConfig";
@@ -11,10 +10,12 @@ import Contact from "@/components/Contact";
 import Search from "@/components/Search";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 
+import useSWR from 'swr'
 
 interface PostListProps {
   posts: Array<MDXFrontMatter>;
 }
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 export const Header: React.FC<PostListProps> = ({ posts }) => {
   const [dropdown, setDropdown] = useState(false)
