@@ -9,21 +9,22 @@ interface PostListProps {
   }
   export const Sidebar: React.FC<PostListProps> = ({ posts }) => {
 
-    return <ul style={{top: "85px"}} className="w-full divide-y dark:divide-none divide-grayish dark:text-white dark:border-none border border-grayish flex flex-col justify-between content-start bg-white rounded-lg dark:text-white dark:bg-midnightish px-6 h-fit top-0 sticky">
+    return <><h2 class="bg-reddish rounded-tr-lg p-4 inline-block uppercase text-white" style="justify-self: unset;width: fit-content;align-self: flex-end;">Recent Posts</h2>
+    <ul style={{top: "85px"}} className="w-full divide-y dark:divide-none divide-grayish dark:text-white flex flex-col justify-between content-start bg-white rounded-lg dark:text-white dark:bg-midnightish px-6 h-fit top-0 sticky">
                   {posts.filter((file) => file.tags?.includes('world')).map((post,index) => (
     <Link key={index} href={`/posts/${post.slug}`}>
-                              <a className="py-1 first:pt-6 last:pb-6 group flex focus:outline-none focus:ring-4">       
+                              <a className="py-1 last:pb-6 group flex focus:outline-none focus:ring-4">       
     <li className="py-3 transition text-midnightish w-full dark:text-white">
 <h3 className="text-xl group-hover:translate-x-1 transition">{post.title}</h3>
 <p className="text-muted uppercase">{formatDate(post.date)}</p>
     </li>
     </a>
     </Link>
-    
              ))}
 
 
 </ul>
+             </>    
 }
 
 export default Sidebar
