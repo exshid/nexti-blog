@@ -136,7 +136,7 @@ return (
          <div className="w-4/5">
 
                         <div className="font-semibold">{post.title}</div>
-                        <span className="text-sm font-light text-gray-500 dark:text-gray-400">{post.description}</span>
+                        <span className="text-sm md:visible font-light text-gray-500 dark:text-gray-400">{post.description}</span>
                 </div>
                 </li>
                     </a>
@@ -150,7 +150,7 @@ return (
                                     <Link href={`/posts/${slugify(post.slug)}`}>
                     <a className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
                         <div className="font-semibold">{post.title}</div>
-                        <span className="text-sm font-light text-gray-500 dark:text-gray-400">{post.description}</span>
+                        <span className="text-sm md:visible font-light text-gray-500 dark:text-gray-400">{post.description}</span>
                     </a>
                 </Link>
                 </li>
