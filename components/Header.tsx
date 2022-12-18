@@ -1,3 +1,4 @@
+import useSWR from 'swr'
 import { useState } from "react";
 import Image from "next/image";
 import siteConfig from "@/data/siteConfig";
@@ -19,7 +20,8 @@ export const Header: React.FC<PostListProps> = ({ posts }) => {
   const [dropdown, setDropdown] = useState(false)
   const [contactUs, setContactUs] = useState(false)
   const [searchPopUp, setSearchPopUp] = useState(false)
-  
+  const { data, error } = useSWR('/posts', fetcher)
+console.log(data)
 const dropdownHandler = () =>{
     
   setDropdown(!dropdown)
