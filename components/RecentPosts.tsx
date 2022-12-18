@@ -3,7 +3,7 @@ import Image from "next/future/image";
 import { slugify } from "@/lib/utils";
 
 const RecentPosts: React.FC<{title:string, subtitle?:string, author:string, background:string, slug:string}> = ({title,subtitle,author,background, slug}) => {
-return <Link href={`/posts/${slugify(slug)}`}><a className='my-2 relative md:even:ml-2 md:odd:mr-2 rounded-lg border-t border-reddish border-t-8' style={{height:'190px'}}><Image
+return <Link href={`/posts/${slugify(slug)}`}><a className='my-2 relative md:even:ml-2 md:odd:mr-2 rounded-lg' style={{height:'190px'}}><Image
 className='recent-image rounded-lg'
 src={background}
 height={200}

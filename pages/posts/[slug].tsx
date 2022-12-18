@@ -164,12 +164,13 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
                   </PostSidebar>
 </div>
  </div>
+ <div className="border-t border-reddish border-t-8 rounded-lg md:rounded-none md:rounded-tl-lg">
 <div className="grid mt-3 p-3 px-4 dark:border-none border border-grayish bg-white dark:bg-midnightish rounded-lg md:grid-cols-2">
 {posts.slice(0, 4).map((post,index) => (
 <RecentPosts key={index} title={post.title} background={post.thumbnail} subtitle={post.description} author={post.author} slug={post.slug}/>
 ))
 }
-</div>                 </div>
+</div>                </div> </div>
 
       </article>
       </main>
