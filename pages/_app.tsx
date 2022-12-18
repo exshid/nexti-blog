@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import Search from "@/components/Search";
 import Contact from "@/components/Contact";
 import { MDXFrontMatter } from "@/lib/types";
+import { getAllMdx } from "@/lib/mdx";
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
