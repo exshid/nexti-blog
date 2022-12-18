@@ -8,6 +8,8 @@ import Search from "@/components/Search";
 import Contact from "@/components/Contact";
 import { MDXFrontMatter } from "@/lib/types";
 import { getAllMdx } from "@/lib/mdx";
+import type { GetStaticProps, NextPage } from "next";
+
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
