@@ -13,8 +13,8 @@ interface PostListProps {
                   {posts.filter((file) => file.tags?.includes('world')).map((post,index) => (
     <Link key={index} href={`/posts/${post.slug}`}>
                               <a className="py-1 first:pt-6 last:pb-6 group flex focus:outline-none focus:ring-4">       
-    <li className="py-3 transition text-midnightish dark:text-white">
-<h3 className="text-xl group-hover:translate-x-0.5 transition">{post.title}</h3>
+    <li className="py-3 transition text-midnightish w-full dark:text-white">
+<h3 className="text-xl group-hover:translate-x-1 transition">{post.title}</h3>
 <p className="text-muted uppercase">{formatDate(post.date)}</p>
     </li>
     </a>
