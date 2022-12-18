@@ -42,7 +42,6 @@ export const Page: React.FC<PageProps> = ({
           content={`${siteConfig.siteUrl}${metaThumbnail}`}
         />
       </Head>
-<div className="w-full h-full border-t border-reddish border-t-8 rounded-tl-lg mr-4 mt-3 md:mt-0 p-4 md:p-12 pt-4 md:p-12">
       <div className={className}>
       <header
         className="mb-3 rounded-lg dark:bg-midnightish"
@@ -71,7 +70,6 @@ export const Page: React.FC<PageProps> = ({
         ) : null}
       </header>
       </div>
-      </div> 
       {children}
     </>
   );

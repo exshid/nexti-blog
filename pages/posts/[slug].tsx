@@ -44,10 +44,12 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
     <div className="flex flex-col-reverse md:flex-row">
 <div className="w-full md:w-9/12 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg h-auto">
     <Page {...frontMatter}>
+    <div className="w-full h-full border-t border-reddish border-t-8 rounded-tl-lg mr-4 mt-3 md:mt-0 p-4 md:p-12 pt-4 md:p-12">
+
         <Prose>
           <MDXRemote {...mdx} components={components} />
         </Prose>
-        
+</div>        
 <div className="flex mt-3 border-t border-grayish">
   <div className="grid md:grid-cols-1 mt-3 w-full rounded-lg dark:border-none rounded-lg border-grayish">
   
