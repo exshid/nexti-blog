@@ -46,7 +46,7 @@ function postNumberHandler(){
           <Topics tags={tags}/>
         <div className="flex mt-3 w-full flex-col md:flex-row">
 	<div className="w-full md:w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish h-fit">
-<h2 className="border-t border-reddish border-t-8 rounded-tl-lg p-4 inline-block uppercase text-white">Recent Posts</h2>
+<h2 className="border-t border-reddish border-t-8 rounded-tl-lg p-4 uppercase dark:text-white">Recent Posts</h2>
         <PostList posts={posts.slice(0, postNum) } />
 
       {buttonReturn && <button className="p-4 bg-reddish hover:bg-darker-reddish rounded-bl-lg text-white transition flex" onClick={postNumberHandler}><p className="mr-1">Load More Posts </p><ArrowRight
