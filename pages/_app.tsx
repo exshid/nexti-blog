@@ -8,7 +8,14 @@ import Search from "@/components/Search";
 import Contact from "@/components/Contact";
 import { MDXFrontMatter } from "@/lib/types";
 
-function MyApp({ Component, pageProps }: AppProps, {posts}:MDXFrontMatter) {
+interface HomeProps {
+  posts: Array<MDXFrontMatter>;
+}
+
+type Props = AppProps | HomeProps;
+
+
+function MyApp({ Component, pageProps, posts }: Props) {
   return (
     <ThemeProvider
       disableTransitionOnChange
