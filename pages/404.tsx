@@ -14,12 +14,14 @@ tag: string;
 const Custom404: NextPage<HomeProps> = ({ posts, tags }) => {
 
   return <Layout> <Header posts={posts.slice(0, 4)} />
-  <main id="main" className="pt-2 p-4">
-  <header className="mb-3 px-8 py-4 rounded-lg dark:bg-midnightish border flex flex-col items-center border-grayish dark:border-none">
+  <main id="main" className="pt-2 pb-2 px-4">
+  <div className="mb-3 px-8 py-4 rounded-lg dark:bg-midnightish border flex flex-col items-center border-grayish dark:border-none">
+<div className="border-t border-reddish border-t-8 rounded-lg md:rounded-t-lg">
     <h1 className="text-3xl md:text-5xl text-midnightish dark:text-white mb-3 inline-block font-bold">404</h1>
     <div className="mt-4 inline-block"><div className="max-w-none text-midnightish dark:text-white image-container">
       <p>Page not found</p></div></div>
-  </header>
+      </div>
+  </div>
   </main>
 </Layout>
 };
