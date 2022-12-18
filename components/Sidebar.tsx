@@ -9,7 +9,7 @@ interface PostListProps {
   }
   export const Sidebar: React.FC<PostListProps> = ({ posts }) => {
 
-    return <><h2 className="bg-reddish rounded-tr-lg p-4 inline-block uppercase text-white" style="justify-self: unset;width: fit-content;align-self: flex-end;">Recent Posts</h2>
+    return <><h2 className="bg-reddish rounded-tr-lg p-4 inline-block uppercase text-white">Recent Posts</h2>
     <ul style={{top: "85px"}} className="w-full divide-y dark:divide-none divide-grayish dark:text-white flex flex-col justify-between content-start bg-white rounded-lg dark:text-white dark:bg-midnightish px-6 h-fit top-0 sticky">
                   {posts.filter((file) => file.tags?.includes('world')).map((post,index) => (
     <Link key={index} href={`/posts/${post.slug}`}>
