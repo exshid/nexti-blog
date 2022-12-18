@@ -11,7 +11,7 @@ module.exports = {
       'nightish': '#222831',
       'midnightish': '#242A35',
       'evening': '#262D39',
-      'lightnight':'#323B4B',
+      'lightnight':'#282F3C',
       'reddish': '#480323',
       'darker-reddish':'#39021c',
       'grayish': '#e7eaed',
