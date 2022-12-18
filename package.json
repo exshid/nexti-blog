@@ -21,7 +21,7 @@
     "react": "latest",
     "react-children-utilities": "^2.6.3",
     "react-dom": "latest",
-    "swrd": "2.0.0",
+    "swr": "2.0.0",
     "react-feather": "^2.0.9",
     "js-yaml": "^4.0.0",
     "@types/js-yaml": "^4.0.0",
