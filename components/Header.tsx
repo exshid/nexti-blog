@@ -9,6 +9,7 @@ import { cx, slugify } from "@/lib/utils";
 import Contact from "@/components/Contact";
 import Search from "@/components/Search";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
+import { getAllMdx } from "@/lib/mdx";
 
 
 interface PostListProps {
