@@ -25,9 +25,11 @@ const Posts: NextPage<PostsProps> = ({ tag, posts,postsNav,tags }) => {
     <Layout>
               <Header posts={postsNav} />
               <main id="main" className="pt-2 p-4">
+                <div className="border-t border-reddish border-t-8 rounded-lg md:rounded-t-lg">
       <TagTitle title={`Posts tagged: "${tag}"`}>
         <PostList posts={posts} className="border-t border-reddish border-t-8 rounded-lg md:rounded-t-lg" />
       </TagTitle>
+      </div>
 </main>
     </Layout>
   );
