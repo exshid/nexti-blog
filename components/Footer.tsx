@@ -1,4 +1,3 @@
-import siteConfig from "@/data/siteConfig";
 import { cx } from "@/lib/utils";
 import { ThemeSelect } from "@/components/ThemeSelect";
 import siteConfig from "@/data/siteConfig";
