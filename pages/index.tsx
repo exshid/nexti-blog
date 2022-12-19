@@ -47,7 +47,7 @@ function postNumberHandler(){
           <TopSection posts={posts.slice(0, 3)}/>
           <Topics tags={tags}/>
         <div className="flex mt-3 w-full flex-col md:flex-row">
-	<div className="w-full md:w-8/12 md:w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish h-fit">
+	<div className="w-full lg:w-9/12 mr-4 h-auto dark:bg-midnightish rounded-lg dark:border-none border border-grayish h-fit">
 <h2 className="border-t border-reddish border-t-8 rounded-lg md:rounded-t-lg p-4 uppercase text-midnightish dark:text-white">Recent Posts</h2>
         <PostList posts={posts.slice(0, postNum) } />
 
@@ -58,7 +58,7 @@ function postNumberHandler(){
 </button>}
        
         </div>
-        <div className="w-full flex flex-col dark:border-none border border-grayish rounded-lg mt-3 md:mt-0 md:w-4/12 md:w-3/12 h-auto dark:bg-midnightish"><Sidebar posts={posts.slice(0, 10)}/></div>
+        <div className="w-full flex flex-col dark:border-none border border-grayish rounded-lg mt-3 md:mt-0 lg:w-3/12 h-auto dark:bg-midnightish"><Sidebar posts={posts.slice(0, 10)}/></div>
 </div>
 </main>
         </Layout>
