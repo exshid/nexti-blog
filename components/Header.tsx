@@ -39,6 +39,7 @@ if(contactUs){
 if(searchPopUp){
   setSearchPopUp(false)
 }   
+setHeaderClasses("items-center justify-between w-full md:flex md:w-auto md:order-1 hidden")
 
 }
 const searchHandler = () =>{
