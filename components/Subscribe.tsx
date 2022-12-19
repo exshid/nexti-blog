@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 const Subscribe: React.FC = () => {
 const formHandler = (e) =>{
     e.preventDefault();
