@@ -1,5 +1,6 @@
+//@ts-nocheck
 const Subscribe: React.FC = () => {
-const formHandler = (e:string) =>{
+const formHandler = (e) =>{
     e.preventDefault();
     console.log(this.value)
 
