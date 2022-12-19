@@ -50,6 +50,8 @@ const searchHandler = () =>{
   if(contactUs){
     setContactUs(false)
   }  
+  setHeaderClasses("items-center justify-between w-full md:flex md:w-auto md:order-1 hidden")
+
 }
 const contactHandler = () =>{
   setContactUs(!contactUs)
@@ -59,6 +61,7 @@ const contactHandler = () =>{
   if(searchPopUp){
     setSearchPopUp(false)
   }   
+  setHeaderClasses("items-center justify-between w-full md:flex md:w-auto md:order-1 hidden")
  
 }
 
