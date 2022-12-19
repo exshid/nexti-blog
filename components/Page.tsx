@@ -1,6 +1,6 @@
 import Head from "next/head";
-import siteConfig from "@/data/siteConfig";
 import Image from "next/future/image";
+import siteConfig from "@/data/siteConfig";
 import { onlyText } from "react-children-utilities";
 import { formatDate } from "@/lib/formatDate";
 import { Prose } from "@/components/Prose";

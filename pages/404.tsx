@@ -1,3 +1,4 @@
+import Head from "next/head";
 import type { GetStaticProps, NextPage } from "next";
 import { getAllMdx } from "@/lib/mdx";
 import { MDXFrontMatter } from "@/lib/types";
@@ -5,15 +6,32 @@ import { listTags, TagContent } from "@/lib/tags";
 import { Header } from "@/components/Header";
 import { Page } from "@/components/Page";
 import Layout from '@/components/Layout';
+import siteConfig from "@/data/siteConfig";
+import { onlyText } from "react-children-utilities";
+
 
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
   tags: TagContent[];
-tag: string;
-}
-const Custom404: NextPage<HomeProps> = ({ posts, tags }) => {
+  tag: string;
+  description?: string | React.ReactNode;
 
-  return <Layout> <Header posts={posts.slice(0, 4)} />
+    }
+const Custom404: NextPage<HomeProps> = ({ posts, tags,  description}) => {
+  const metaDescription = description
+    ? onlyText(description)
+    : siteConfig.siteDescription;
+
+  return <>
+        <Head>
+        <title>
+          Not Found - {siteConfig.siteName}
+        </title>
+        <meta name="og:url" content={siteConfig.siteUrl} />
+        <meta name="description" content={metaDescription} />
+        <meta name="og:description" content={metaDescription} />
+      </Head>
+  <Layout> <Header posts={posts.slice(0, 4)} />
   <main id="main" className="pt-2 pb-2 px-4">
 <div className="border-t border-reddish border-t-8 rounded-lg md:rounded-t-lg">
   <div className="mb-3 px-8 py-4 rounded-lg dark:bg-midnightish border flex flex-col items-center border-grayish dark:border-none">
@@ -24,6 +42,7 @@ const Custom404: NextPage<HomeProps> = ({ posts, tags }) => {
   </div>
   </main>
 </Layout>
+</>
 };
 
 export const getStaticProps: GetStaticProps = async () => {
