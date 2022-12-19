@@ -5,7 +5,7 @@ interface Props {
   
 const Contact: React.FC<Props> = ({close}) => {
 return <div className="relative w-full h-full flex justify-center md:h-auto">
-    <div className="relative rounded-lg w-full md:w-1/2">
+    <div className="relative rounded-lg w-full lg:w-1/2">
         <div className="flex items-start justify-between py-4 border-b rounded-t dark:border-gray-600">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
             Contact Us
@@ -14,8 +14,8 @@ return <div className="relative w-full h-full flex justify-center md:h-auto">
 
             <form>
   <div className="mb-6">
-    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your name</label>
-    <input placeholder="Your name" type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-darker-reddish focus:border-darker-reddish block w-full p-2.5 dark:bg-lightnight dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-darker-reddish dark:focus:border-darker-reddish" required/>
+    <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your name</label>
+    <input placeholder="Your name" type="text" id="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-darker-reddish focus:border-darker-reddish block w-full p-2.5 dark:bg-lightnight dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-darker-reddish dark:focus:border-darker-reddish" required/>
   </div>
   <div className="mb-6">
     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your email</label>
