@@ -1,9 +1,7 @@
-//@ts-nocheck
-
 const Subscribe: React.FC = () => {
-const formHandler = (e) =>{
+const formHandler = (e:string) =>{
     e.preventDefault();
-    console.log(e)
+    console.log(this.value)
 
 }
 return <div className="w-full mt-4 p-4 dark:bg-midnightish bg-white rounded-lg border border-grayish dark:border-none sm:p-6 md:p-8">
