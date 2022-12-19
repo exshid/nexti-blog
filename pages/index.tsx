@@ -56,7 +56,7 @@ function postNumberHandler(){
     <>
           <Head>
         <title>
-          {metaTitle} - {siteConfig.siteName}
+          {siteConfig.siteName} - {siteConfig.siteDescription}
         </title>
         <meta name="og:url" content={siteConfig.siteUrl} />
         <meta property="og:title" content={metaTitle} />
