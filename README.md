@@ -1,1 +1,1 @@
-Next.js blog made using TailwindCSS
+This project is licensed under the terms of the MIT license.
