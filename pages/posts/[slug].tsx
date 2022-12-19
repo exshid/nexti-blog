@@ -42,7 +42,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
     <article className="w-full">
 <div className="flex w-full flex-col">
     <div className="flex flex-col-reverse md:flex-row">
-      <div className="border-t mt-3 md:mt-0  border-reddish border-t-8 rounded-lg md:rounded-t-lg w-full md:w-8/12 lg:9/12 mr-4">
+      <div className="border-t mt-3 md:mt-0  border-reddish border-t-8 rounded-lg md:rounded-t-lg w-full md:w-8/12 lg:w-9/12 mr-4">
 <div className="w-full mr-4 p-4 md:p-12 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-4 md:p-12 h-auto">
  
     <Page {...frontMatter}>
@@ -165,7 +165,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
 </div>
  </div>
  <div className="border-t mt-3 border-reddish border-t-8 rounded-lg">
-<div className="grid p-3 px-4 dark:border-none border border-grayish bg-white dark:bg-midnightish rounded-lg lg:grid-cols-2">
+<div className="grid p-3 px-4 dark:border-none border border-grayish bg-white dark:bg-midnightish rounded-lg md:grid-cols-2">
 {posts.slice(0, 4).map((post,index) => (
 <RecentPosts key={index} title={post.title} background={post.thumbnail} subtitle={post.description} author={post.author} slug={post.slug}/>
 ))
