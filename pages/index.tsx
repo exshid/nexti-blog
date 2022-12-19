@@ -14,6 +14,7 @@ import { Header } from "@/components/Header";
 import TopSection from '@/components/TopSection';
 import Topics from '@/components/Topics';
 import RecentPosts from '@/components/RecentPosts';
+import Subscribe from '../components/Subscribe';
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
   tags: TagContent[];
@@ -60,6 +61,7 @@ function postNumberHandler(){
         </div>
         <div className="w-full flex flex-col dark:border-none border border-grayish rounded-lg mt-3 lg:mt-0 lg:w-3/12 h-auto dark:bg-midnightish"><Sidebar posts={posts.slice(0, 10)}/></div>
 </div>
+<Subscribe/>
 </main>
         </Layout>
         </>
