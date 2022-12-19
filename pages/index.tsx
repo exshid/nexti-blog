@@ -54,6 +54,20 @@ function postNumberHandler(){
 }
   return (
     <>
+          <Head>
+        <title>
+          {metaTitle} - {siteConfig.siteName}
+        </title>
+        <meta name="og:url" content={siteConfig.siteUrl} />
+        <meta property="og:title" content={metaTitle} />
+        <meta name="description" content={metaDescription} />
+        <meta name="og:description" content={metaDescription} />
+        <meta
+          property="og:image"
+          content={`${siteConfig.siteUrl}${metaThumbnail}`}
+        />
+      </Head>
+
 <Layout>
       <Header posts={posts.slice(0, 4)} />
       <main id="main" className="pt-1 p-4">
