@@ -5,7 +5,7 @@ interface Props {
   
 const Contact: React.FC<Props> = ({close}) => {
 return <div className="relative w-full h-full flex justify-center md:h-auto">
-    <div className="relative rounded-lg w-1/2">
+    <div className="relative rounded-lg w-full md:w-1/2">
         <div className="flex items-start justify-between py-4 border-b rounded-t dark:border-gray-600">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
             Contact Us
