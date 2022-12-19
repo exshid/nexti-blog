@@ -8,8 +8,9 @@ return <div className="w-full mt-4 p-4 dark:bg-midnightish bg-white rounded-lg b
             <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your email</label>
             <input type="email" name="email" id="email" className="bg-gray-50 border border-grayish dark:border-none text-sm rounded-lg focus:ring-darker-reddish focus:border-darker-reddish block w-full p-2.5 dark:bg-lightnight dark:placeholder-gray-400 dark:text-white" placeholder="name@email.com" required/>
         </div>
-        <button type="submit" className="w-3/12 text-white bg-reddish hover:bg-darker-reddish focus:ring-4 focus:outline-none focus:ring-darker-reddish font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button></div>
+        <button type="submit" className="w-3/12 text-white bg-reddish hover:bg-darker-reddish focus:ring-4 focus:outline-none focus:ring-darker-reddish font-medium rounded-lg text-sm px-5 py-2.5 text-center">Subscribe</button></div>
     </form>
+    <p id="helper-text-explanation" className="mt-2 text-sm text-gray-500 dark:text-gray-400">We will never share your email. Read our <a href="#" className="font-medium text-blue-600 hover:underline dark:text-blue-500">Privacy Policy</a>.</p>
 </div>
 
 }
