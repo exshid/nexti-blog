@@ -27,7 +27,16 @@ export const Header: React.FC<PostListProps> = ({ posts }) => {
     } else {
       setHeaderClasses("items-center justify-between w-full md:flex md:w-auto md:order-1 hidden")
     }
-  console.log(headerClasses)
+    if(searchPopUp){
+      setSearchPopUp(false)
+    }   
+    if(dropdown){
+      setDropdown(false)
+    }   
+    if(contactUs){
+      setContactUs(false)
+    }  
+  
   }
   
 const dropdownHandler = () =>{

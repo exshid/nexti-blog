@@ -54,7 +54,7 @@ export default function Search() {
           {results.slice(0,16).map(({ id, title }) => (
             <li className="py-2 w-1/2 text-lg" key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
-                <a>{title}</a>
+                <a className="hover:translate-x-1">{title}</a>
               </Link>  
             </li>            
           ))}
