@@ -15,12 +15,33 @@ import TopSection from '@/components/TopSection';
 import Topics from '@/components/Topics';
 import RecentPosts from '@/components/RecentPosts';
 import Subscribe from '../components/Subscribe';
+import Head from "next/head";
+import siteConfig from "@/data/siteConfig";
+import { onlyText } from "react-children-utilities";
+
 interface HomeProps {
   posts: Array<MDXFrontMatter>;
   tags: TagContent[];
 tag: string;
+className?: string;
+  date?: string;
+  title: string | React.ReactNode;
+  description?: string | React.ReactNode;
+  thumbnail?: string;
+
 }
-const Home: NextPage<HomeProps> = ({ posts, tags }) => {
+const Home: NextPage<HomeProps> = ({ posts, tags,
+  date,
+  title,
+  description,
+  thumbnail,
+ }) => {
+  const metaTitle = onlyText(title);
+  const metaDescription = description
+    ? onlyText(description)
+    : siteConfig.siteDescription;
+  const metaThumbnail = thumbnail ? thumbnail : siteConfig.siteThumbnail;
+
 const [postNum, setPostNum] = useState(10);
 const [buttonReturn, setButtonReturn] = useState(true);
 

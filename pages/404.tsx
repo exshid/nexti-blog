@@ -1,4 +1,3 @@
-import Head from "next/head";
 import type { GetStaticProps, NextPage } from "next";
 import { getAllMdx } from "@/lib/mdx";
 import { MDXFrontMatter } from "@/lib/types";
@@ -6,6 +5,7 @@ import { listTags, TagContent } from "@/lib/tags";
 import { Header } from "@/components/Header";
 import { Page } from "@/components/Page";
 import Layout from '@/components/Layout';
+import Head from "next/head";
 import siteConfig from "@/data/siteConfig";
 import { onlyText } from "react-children-utilities";
 
