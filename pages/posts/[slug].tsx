@@ -73,7 +73,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
              <div className="flex items-center">
                <div className="text-sm">
                  <p className="text-gray-900 text-lg dark:text-white leading-none mb-1">{previous?.author}</p>
-                 <p className="text-gray-600 text-lg dark:text-white">{previous?.JSON.parse(JSON.stringify(date))}</p>
+                 <p className="text-gray-600 text-lg dark:text-white">{previous?.date}</p>
                </div>
              </div>
            </div>
@@ -117,7 +117,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
              <div className="flex justify-end	">
                <div className="text-sm">
                  <p className="text-gray-900 dark:text-white leading-none mb-1 text-lg md:text-right">{next?.author}</p>
-                 <p className="text-gray-600 dark:text-white md:text-right text-lg">{next?.JSON.parse(JSON.stringify(date))}</p>
+                 <p className="text-gray-600 dark:text-white md:text-right text-lg">{next?.date}</p>
                </div>
              </div>
            </div>
@@ -153,7 +153,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
       </div>
         </div>
       <div className="w-full md:w-4/12 lg:w-3/12 h-auto rounded-lg"> 
-         <PostSidebar author={frontMatter.author} date={frontMatter.JSON.parse(JSON.stringify(date))}>
+         <PostSidebar author={frontMatter.author} date={frontMatter.date}>
          {frontMatter.tags ? frontMatter.tags.map((tag, index) => {
                     return (
                       <li className="inline-block mx-1 mr-1" key={index}>
@@ -207,7 +207,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
 tags,
       posts: JSON.parse(JSON.stringify(mdxFile)),
-      frontMatter,
+      frontMatter: JSON.parse(JSON.stringify(frontMatter)),
       mdx: mdxContent,
       previous: mdxFiles[postIndex + 1]?.frontMatter || null,
       next: mdxFiles[postIndex - 1]?.frontMatter || null,
