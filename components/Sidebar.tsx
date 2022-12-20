@@ -16,7 +16,7 @@ interface PostListProps {
                               <a className="py-1 last:pb-6 group flex focus:outline-none focus:ring-4">       
     <li className="py-3 transition text-midnightish w-full dark:text-white">
 <h3 className="text-xl group-hover:translate-x-1 transition">{post.title}</h3>
-<p className="text-muted uppercase">{post.date}</p>
+<p className="text-muted uppercase">{formatDate(post.date)}</p>
     </li>
     </a>
     </Link>
