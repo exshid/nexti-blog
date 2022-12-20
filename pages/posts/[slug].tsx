@@ -37,7 +37,7 @@ interface PostProps {
 const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, next }) => {
   return (
 <Layout>
-    <Header posts={posts.slice(0, 4)} />
+    <Header id="main-content" posts={posts.slice(0, 4)} />
         <main id="main" className="pt-2 p-4">
     <article className="w-full">
 <div className="flex w-full flex-col">
