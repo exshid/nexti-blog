@@ -205,8 +205,8 @@ tags,
       posts: JSON.parse(JSON.stringify(mdxFile)),
       frontMatter: JSON.parse(JSON.stringify(frontMatter)),
       mdx: mdxContent,
-      previous: mdxFiles[postIndex + 1]?.frontMatter || null,
-      next: mdxFiles[postIndex - 1]?.frontMatter || null,
+      previous: JSON.parse(JSON.stringify(mdxFiles))[postIndex + 1]?.frontMatter || null,
+      next: JSON.parse(JSON.stringify(mdxFiles))[postIndex - 1]?.frontMatter || null,
     },
   };
 };
