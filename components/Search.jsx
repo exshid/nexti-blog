@@ -2,7 +2,7 @@ import { useCallback, useRef, useState } from 'react'
 import Link from 'next/link'
 import styles from './search.module.css'
 
-export default function Search() {
+export default function Search(props) {
 
   const searchRef = useRef(null)
   const [query, setQuery] = useState('')
@@ -38,7 +38,7 @@ export default function Search() {
   }, [])  
 
   return (
-    <div id="mega-menu-full-dropdown" className='mt-1 bg-gray-50 md:bg-whitedark:bg-midnightish'
+    <div id="mega-menu-full-dropdown" className='mt-1 bg-gray-50 md:bg-whitedark:bg-midnightish' onClick={props.onSearch}
     ref={searchRef}>
     <div className="relative w-full max-w-7xl h-full md:h-auto">
         <div className="relative bg-white dark:bg-midnightish">
@@ -53,7 +53,7 @@ export default function Search() {
         <ul className="flex flex-wrap	w-full p-4 pl-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-midnightish dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           {results.slice(0,16).map(({ id, title }) => (
             <li className="py-2 w-1/2 text-lg" key={id}>
-              <Link href={`/posts/${id.replace(/\.md$/, '')}`}>
+              <Link href="/posts/[id]" as={`/posts/${id.replace(/\.md$/, '')}`}>
                 <a className="hover:translate-x-1">{title}</a>
               </Link>  
             </li>            
