@@ -141,7 +141,7 @@ return (
                 <li className="flex my-1" >
          {post.thumbnail && (<div className="overflow-hidden mr-4 rounded-lg relative w-1/5 image-span">
                     <Image className="bg-contain w-full relative header-image" src={post.thumbnail} height= "100px"
-                    alt={post.title}
+                    alt={post.alt}
                     />
                     </div>
                   )}
