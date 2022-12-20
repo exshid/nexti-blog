@@ -61,7 +61,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     props: {
 tags,
       tag,
-      postsNav: mdxFiles.slice(0, 4),
+      postsNav: JSON.parse(JSON.stringify(mdxFiles)).slice(0, 4),
       posts: JSON.parse(JSON.stringify(mdxFiles)).filter((file) => {
         return file.tags?.includes(tag);
       }),
