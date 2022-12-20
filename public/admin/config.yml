@@ -106,9 +106,9 @@ collections:
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"
-        hint: "Use a picture of landscape orientation (i.e. horizontal) for better perfomance."
         choose_url: true
         default: "/image/noimage.svg"
+        hint: "Use a picture of landscape orientation (i.e. horizontal) for better perfomance."
       - label: "Alt text"
         name: "alt"
         widget: "string"
