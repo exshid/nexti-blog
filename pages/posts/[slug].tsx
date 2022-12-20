@@ -165,7 +165,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
  <div className="border-t mt-3 border-reddish border-t-8 rounded-lg">
 <div className="grid p-3 px-4 dark:border-none border border-grayish bg-white dark:bg-midnightish rounded-lg md:grid-cols-2">
 {posts.slice(0, 4).map((post,index) => (
-<RecentPosts key={index} title={post.title} background={post.thumbnail} subtitle={post.description} author={post.author} slug={post.slug}/>
+<RecentPosts key={index} title={post.title} background={post.thumbnail} subtitle={post.description} author={post.author} slug={post.slug} alt={post.alt}/>
 ))
 }
 </div>                </div> </div>

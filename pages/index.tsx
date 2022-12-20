@@ -35,6 +35,7 @@ const Home: NextPage<HomeProps> = ({ posts, tags,
   title,
   description,
   thumbnail,
+  alt,
  }) => {
   const metaTitle = onlyText(title);
   const metaDescription = description
@@ -75,7 +76,7 @@ function postNumberHandler(){
       <div className="grid mb-3 p-3 px-4 dark:border-none border border-grayish bg-white dark:bg-midnightish rounded-lg md:grid-cols-2">
 
       {posts.slice(0, 2).map((post,index) => (
-<RecentPosts key={index} title={post.title} background={post.thumbnail} subtitle={post.description} author={post.author} slug={post.slug}/>
+<RecentPosts key={index} title={post.title} background={post.thumbnail} subtitle={post.description} author={post.author} slug={post.slug} alt={post.alt}/>
 ))
 }
 </div>
