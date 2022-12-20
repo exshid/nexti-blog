@@ -144,6 +144,10 @@ collections:
           displayFields:
             - "tags.*.name"
           valueField: "tags.*.slug"
+      - label: "Alt text"
+        name: "alt"
+        widget: "string"
+        hint: "Alt-text. Describe the picture"
       - label: "Body"
         name: "body"
         widget: "markdown"
