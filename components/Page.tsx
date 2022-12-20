@@ -54,7 +54,7 @@ export const Page: React.FC<PageProps> = ({
           <div className="mt-4">
             <Prose>
               {typeof description === "string" ? (
-                <p>{description}</p>
+                <p className="lead">{description}</p>
               ) : (
                 description
               )}
