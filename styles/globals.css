@@ -43,10 +43,6 @@ body {
    
 	}
 
-	.image-container span{
-position: relative !important;	
-	}
-
 	.recent-image{
 		height: 190px;
 		position: absolute;
