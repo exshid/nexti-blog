@@ -64,8 +64,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
            <div className="text-nightish dark:text-white rounded-lg flex w-full flex-col justify-between leading-normal">
              <div className="mb-8">
                <p className="text-muted flex items-center">
-                 
-                 Previous               </p>
+               Previous post </p>
                <div className="text-gray-900 group-hover:translate-x-0.5 transition dark:text-white font-bold text-xl mb-2"><h3>{previous?.title}</h3>
                 </div>
                <p className="text-gray-700 dark:text-white text-base overflow-hidden" style={{height:'50px'}}>{previous?.description}</p>
@@ -84,9 +83,8 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
          <div className="text-nightish dark:text-white rounded-lg flex w-full flex-col justify-between leading-normal">
            <div className="mb-8">
              <p className="text-muted flex items-center">
-               
-               Previous               </p>
-             <div className="text-gray-900 uppercase dark:text-white font-bold text-xl mb-2"><h3>This is the first post ever!</h3>
+             Previous post</p>
+              <div className="text-gray-900 uppercase dark:text-white font-bold text-xl mb-2"><h3>This is the first post ever!</h3>
               </div>
              <p className="text-gray-700 dark:text-white text-base"></p>
            </div>
@@ -107,9 +105,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
              <div className=" w-full lg:max-w-full lg:flex">
            <div className="text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
              <div className="mb-8">
-               <p className="text-muted flex md:text-right justify-end	">
-                 
-                 Next               </p>
+               <p className="text-muted flex md:text-right justify-end">Next</p>
                <div className="text-gray-900 group-hover:translate-x-1 transition dark:text-white font-bold text-xl md:text-right mb-2"><h3>{next?.title}</h3>
                 </div>
                <p className="text-gray-700 dark:text-white md:text-right text-base overflow-hidden" style={{height:'50px'}}>{next?.description}</p>

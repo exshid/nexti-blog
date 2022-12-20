@@ -8,6 +8,7 @@ const sunIcon = (
     fill="none"
     viewBox="0 0 25 24"
     className="dark:opacity-50"
+  aria-hidden="true"
   >
     <g
       stroke="#fff"
@@ -36,6 +37,7 @@ const moonIcon = (
     width="21"
     height="20"
     fill="none"
+    aria-hidden="true"
     viewBox="0 0 21 20"
   >
     <path
