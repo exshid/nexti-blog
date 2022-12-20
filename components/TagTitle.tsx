@@ -47,7 +47,7 @@ export const TagTitle: React.FC<PageProps> = ({
           <time
             className={cx("block mb-2", "text-gray-500", "dark:text-gray-400")}
           >
-            {formatDate(date)}
+            {date}
           </time>
         ) : null}
         <h1 className="font-bold text-midnightish dark:text-white text-3xl">{title}</h1>

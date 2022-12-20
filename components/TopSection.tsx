@@ -17,7 +17,7 @@ interface PostListProps {
               
     <div 
     className="w-full h-52 h-auto dark:border-none border border-grayish rounded-lg">
-    <Post title={post.title} subtitle={formatDate(post.date)}>{post.description}</Post></div>
+    <Post title={post.title} subtitle={post.date}>{post.description}</Post></div>
     </a>
     </Link>
              ))}
