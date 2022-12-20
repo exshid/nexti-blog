@@ -125,9 +125,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
          ) : <div className="ml-3 w-full md:w-1/2 lg:flex">
          <div className="text-nightish dark:text-white rounded-lg p-4 flex w-full flex-col justify-between leading-normal">
            <div className="mb-8">
-             <p className="text-muted flex justify-end	">
-               
-               Next               </p>
+             <p className="text-muted flex justify-end">Next</p>
              <div className="text-gray-900 uppercase dark:text-white font-bold md:text-right text-xl mb-2"><h3>No newer post yet!</h3>
               </div>
              <p className="text-gray-700 dark:text-white text-base"></p>
