@@ -38,8 +38,8 @@ export default function Search(props) {
   }, [])  
 
   return (
-    <div id="mega-menu-full-dropdown" className='mt-1 bg-gray-50 md:bg-whitedark:bg-midnightish' onClick={props.onSearch}
-    ref={searchRef}>
+    <div id="mega-menu-full-dropdown" className='mt-1 bg-gray-50 md:bg-whitedark:bg-midnightish' 
+        ref={searchRef}>
     <div className="relative w-full max-w-7xl h-full md:h-auto">
         <div className="relative bg-white dark:bg-midnightish">
                         <div className="p-6 space-y-6">
@@ -54,7 +54,7 @@ export default function Search(props) {
           {results.slice(0,16).map(({ id, title }) => (
             <li className="py-2 w-1/2 text-lg" key={id}>
               <Link href="/posts/[id]" as={`/posts/${id.replace(/\.md$/, '')}`}>
-                <a className="hover:translate-x-1">{title}</a>
+                <a onClick={props.onSearch} className="hover:translate-x-1">{title}</a>
               </Link>  
             </li>            
           ))}
