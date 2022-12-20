@@ -51,13 +51,13 @@ export default function Search(props) {
       />
       { results.length > 0 && (
         <ul className="flex flex-wrap	w-full p-4 pl-10 text-gray-900 border border-grayish dark:border-none dark:bg-lightnight focus:ring-darker-reddish focus:border-darker-reddish block rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-midnightish dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-          {results.slice(0,16).map(({ id, title }) => (
-            `${title ? <li className="p-2 transition hover:translate-x-1 w-full lg:w-1/2 text-lg" key={id}>
+          {results.length <= 1 ? results.slice(0,16).map(({ id, title }) => (
+            <li className="p-2 transition hover:translate-x-1 w-full lg:w-1/2 text-lg" key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
                 <a onClick={props.onSearch} className="hover:translate-x-1">{title}</a>
                 </Link>  
-            </li> : <p>Nothing found</p>}`
-          ))}
+            </li>            
+          )) : (<p>Nothing found</p>)}
         </ul>
       ) }
                   </div>
