@@ -67,7 +67,7 @@ export const Page: React.FC<PageProps> = ({
     width={1100}
     height={700}
   />
-  <span className="bg-midnightish opacity-60">{alit}</span>
+  <span className="bg-midnightish opacity-60">{alt}</span>
   </>
   )}
 
