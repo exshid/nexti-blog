@@ -67,7 +67,7 @@ export const Page: React.FC<PageProps> = ({
     width={1100}
     height={700}
   />
-  <span aria-hidden="true" className="bg-zinc-900 p-3 opacity-90 absolute" style={{left:'16px', bottom:'8px'}}>{alt}</span>
+  <span aria-hidden="true" className="bg-zinc-900 p-3 text-white rounded-lg opacity-90 absolute" style={{left:'16px', bottom:'8px'}}>{alt}</span>
   </div>  )}
 
 
