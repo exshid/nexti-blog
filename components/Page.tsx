@@ -12,6 +12,7 @@ className?: string;
   title: string | React.ReactNode;
   description?: string | React.ReactNode;
   thumbnail?: string;
+  alt: string;
 }
 
 export const Page: React.FC<PageProps> = ({
@@ -20,6 +21,7 @@ export const Page: React.FC<PageProps> = ({
   title,
   description,
   thumbnail,
+  alt,
   children,
 }) => {
   const metaTitle = onlyText(title);
@@ -59,7 +61,7 @@ export const Page: React.FC<PageProps> = ({
     <Image
     className="postImage w-full mb-3 rounded-lg"
     src={thumbnail}
-    alt='Post thumbnail'
+    alt={alt}
     width={1100}
     height={700}
   />)}
