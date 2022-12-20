@@ -73,7 +73,6 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
              <div className="flex items-center">
                <div className="text-sm">
                  <p className="text-gray-900 text-lg dark:text-white leading-none mb-1">{previous?.author}</p>
-                 <p className="text-gray-600 text-lg dark:text-white">{previous?.date}</p>
                </div>
              </div>
            </div>
@@ -117,7 +116,6 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
              <div className="flex justify-end	">
                <div className="text-sm">
                  <p className="text-gray-900 dark:text-white leading-none mb-1 text-lg md:text-right">{next?.author}</p>
-                 <p className="text-gray-600 dark:text-white md:text-right text-lg">{next?.date}</p>
                </div>
              </div>
            </div>
