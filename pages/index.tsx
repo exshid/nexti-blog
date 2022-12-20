@@ -88,7 +88,7 @@ function postNumberHandler(){
 <h2 className="border-t border-reddish border-t-8 rounded-lg md:rounded-t-lg p-4 uppercase text-midnightish dark:text-white">Recent Posts</h2>
         <PostList posts={posts.slice(0, postNum) } />
 
-      {buttonReturn && <button className="p-4 bg-reddish hover:bg-darker-reddish rounded-bl-lg text-white transition flex" onClick={postNumberHandler}><p className="mr-1">Load More Posts </p><ArrowRight
+      {buttonReturn && <button className="p-4 bg-reddish hover:bg-darker-reddish w-full md:w-fit justify-center rounded-bl-lg text-white transition flex" onClick={postNumberHandler}><p className="mr-1">Load More Posts </p><ArrowRight
                 className="group-hover:translate-x-1 transition-transform"
                 width={".9em"}
               />
