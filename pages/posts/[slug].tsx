@@ -197,7 +197,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       remarkPlugins: [],
       rehypePlugins: [rehypePrism],
     },
-    scope: frontMatter,
+    scope: JSON.parse(JSON.stringify(frontMatter)),
   });
   return {
     props: {
