@@ -1,3 +1,4 @@
+//@ts-nocheck
 import type { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { getAllMdx } from "@/lib/mdx";
