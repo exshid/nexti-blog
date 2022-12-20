@@ -117,7 +117,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
              <div className="flex justify-end	">
                <div className="text-sm">
                  <p className="text-gray-900 dark:text-white leading-none mb-1 text-lg md:text-right">{next?.author}</p>
-                 <p className="text-gray-600 dark:text-white md:text-right text-lg">{next?.date}</p>
+                 <p className="text-gray-600 dark:text-white md:text-right text-lg">{formatDate(next?.date)}</p>
                </div>
              </div>
            </div>

@@ -13,7 +13,7 @@ return <div style={{top: "85px"}} className="top-0 sticky border-t border-reddis
 
         <li className="pt-6 pb-3 flex justify-between md:flex-col lg:flex-row md:items-center lg:items-baseline">
 <p className="text-xl uppercase inline-block">Date:</p>
-<p className="text-xl uppercase md:text-center lg:text-left inline-block">{date}</p>
+<p className="text-xl uppercase md:text-center lg:text-left inline-block">{formatDate(date)}</p>
         </li>
         <li className="pt-3 pb-6 flex justify-between md:flex-col lg:flex-row md:items-center lg:items-baseline">
         <p className="text-xl uppercase inline-block">Tags:</p>

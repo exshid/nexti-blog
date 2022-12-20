@@ -38,7 +38,7 @@ export const PostList: React.FC<PostListProps> = ({ posts, className }) => {
 <div className="w-4/6">
                   {post.date && (
                     <p className="uppercase mb-1 text-sm md:text-base opacity-60 prose dark:prose-invert">
-                      {post.date}
+                      {formatDate(post.date)}
                     </p>
                   )}
                   <h2 className="text-xl md:text-3xl prose dark:prose-invert">{post.title}</h2>
