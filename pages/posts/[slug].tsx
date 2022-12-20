@@ -26,7 +26,7 @@ interface ContextProps extends ParsedUrlQuery {
 
 
 interface PostProps {
-  frontMatter: MDXFrontMatter;
+  newFM: MDXFrontMatter;
   mdx: any;
   tags: TagContent[];
   posts: Array<MDXFrontMatter>;
@@ -34,7 +34,7 @@ interface PostProps {
   next: MDXFrontMatter | null;
 }
 
-const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, next }) => {
+const Post: NextPage<PostProps> = ({ newFM, mdx, tags, posts, previous, next }) => {
   return (
 <Layout>
     <Header posts={posts.slice(0, 4)} />
@@ -45,7 +45,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
       <div className="border-t mt-3 md:mt-0  border-reddish border-t-8 rounded-lg md:rounded-t-lg w-full md:w-8/12 lg:w-9/12 mr-4">
 <div className="w-full mr-4 p-4 md:p-12 border border-grayish dark:border-none bg-white dark:bg-midnightish rounded-lg pt-4 md:p-12 h-auto">
  
-    <Page {...frontMatter}>
+    <Page {...newFM}>
         <Prose>
           <MDXRemote {...mdx} components={components} />
         </Prose>
@@ -151,8 +151,8 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, tags, posts, previous, ne
       </div>
         </div>
       <div className="w-full md:w-4/12 lg:w-3/12 h-auto rounded-lg"> 
-         <PostSidebar author={frontMatter.author} date={frontMatter.date}>
-         {frontMatter.tags ? frontMatter.tags.map((tag, index) => {
+         <PostSidebar author={newFM.author} date={newFM.date}>
+         {newFM.tags ? newFM.tags.map((tag, index) => {
                     return (
                       <li className="inline-block mx-1 mr-1" key={index}>
                         <Tag href={`/posts/tagged/${slugify(tag)}`}>{tag}</Tag>
@@ -180,7 +180,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const mdxFiles = getAllMdx();
   return {
     paths: mdxFiles.map((file) => ({
-      params: { slug: file.frontMatter.slug },
+      params: { slug: file.newFM.slug },
     })),
     fallback: false,
   };
@@ -191,21 +191,22 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params as ContextProps;
   const tags = listTags();
   const mdxFiles = getAllMdx();
-  const postIndex = mdxFiles.findIndex((p) => p.frontMatter.slug === slug);
+  const postIndex = mdxFiles.findIndex((p) => p.newFM.slug === slug);
   const post = mdxFiles[postIndex];
   const { frontMatter, content } = post;
+  const newFM = JSON.parse(JSON.stringify(frontMatter));
   const mdxContent = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [],
       rehypePlugins: [rehypePrism],
     },
-    scope: frontMatter,
+    scope: newFM,
   });
   return {
     props: {
 tags,
       posts: JSON.parse(JSON.stringify(mdxFile)),
-      frontMatter,
+      newFM,
       mdx: mdxContent,
       previous: mdxFiles[postIndex + 1]?.frontMatter || null,
       next: mdxFiles[postIndex - 1]?.frontMatter || null,
