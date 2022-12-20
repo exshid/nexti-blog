@@ -55,6 +55,7 @@ export default function Search(props) {
             <li className="p-2 transition hover:translate-x-1 w-1/2 text-lg" key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
                 <a onClick={props.onSearch} className="hover:translate-x-1">{title}</a>
+                {console.log(title)}
               </Link>  
             </li>            
           ))}
