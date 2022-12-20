@@ -53,11 +53,3 @@ position: relative !important;
 		object-fit: cover;
 	}
 
-	.image-container-lead p:first-of-type{
-		
-		color: var(--tw-prose-lead);
-		font-size: 1.25em;
-		line-height: 1.6;
-		margin-top: 1.2em;
-		margin-bottom: 1.2em;
-	}
