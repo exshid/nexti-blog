@@ -59,7 +59,7 @@ export const Page: React.FC<PageProps> = ({
                 description
               )}
                       {thumbnail && (
-   <>
+   <div className="relative">
    <Image
     className="postImage w-full mb-3 rounded-lg"
     src={thumbnail}
@@ -67,9 +67,8 @@ export const Page: React.FC<PageProps> = ({
     width={1100}
     height={700}
   />
-  <span className="bg-midnightish opacity-60">{alt}</span>
-  </>
-  )}
+  <span aria-hidden="true" className="bg-midnightish opacity-60 absolute">{alt}</span>
+  </div>  )}
 
 
             </Prose>
