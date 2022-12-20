@@ -91,7 +91,7 @@ return (
   <div className="md:order-2 flex">
   <div className="flex">
   <div className="block space-y-4 md:flex md:space-y-0 md:space-x-4">
-    <button onClick={searchHandler} className="block w-full md:w-auto hover:bg-grayish dark:hover:bg-lightnight mr-1 transition transition rounded-3xl text-white focus:ring-2 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-gray-600" type="button">
+    <button onClick={searchHandler} aria-label="Open search menu" className="block w-full md:w-auto hover:bg-grayish dark:hover:bg-lightnight mr-1 transition transition rounded-3xl text-white focus:ring-2 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-gray-600" type="button">
     <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>    </button>
 </div>
 
