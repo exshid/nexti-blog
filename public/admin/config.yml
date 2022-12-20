@@ -103,14 +103,14 @@ collections:
       - label: "Title"
         name: "title"
         widget: "string"
-          - label: "Featured Image"
-    name: "thumbnail"
-    widget: "image"
-    choose_url: true
-    default: "/image/noimage.svg"
-    media_library:
-      config:
-        multiple: true
+        - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        choose_url: true
+        default: "/image/noimage.svg"
+        media_library:
+          config:
+            multiple: true
       - label: "Alt text"
         name: "alt"
         widget: "string"
