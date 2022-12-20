@@ -54,9 +54,8 @@ export default function Search(props) {
           {results.slice(0,16).map(({ id, title }) => (
             <li className="p-2 transition hover:translate-x-1 w-full lg:w-1/2 text-lg" key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
-                <a onClick={props.onSearch} className="hover:translate-x-1">{title}</a>
-                {console.log(title)}
-              </Link>  
+                <a onClick={props.onSearch} className="hover:translate-x-1">{title ? title : 'No result found'}</a>
+                </Link>  
             </li>            
           ))}
         </ul>
