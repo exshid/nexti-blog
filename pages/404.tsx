@@ -40,7 +40,7 @@ const Custom404: NextPage<HomeProps> = ({ posts, tags,  description}) => {
     <div id="main-content" className="mt-4 inline-block"><div className="max-w-none text-midnightish dark:text-white image-container">
       <p>Page not found</p></div></div>
       <Link href='/'>
-      <a>Return to the Main Page</a>
+      <a className="mt-3 text-midnightish hover:text-lightnight dark:text-white dark:hover:text-muted">Return to the Main Page</a>
       </Link>
       </div>
   </div>
