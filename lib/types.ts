@@ -20,6 +20,6 @@ export type MDXFrontMatter = {
   author: string;
   description?: string;
   date: any;
-  alt?: string;
+  alt: string;
   tags?: Array<string>;
 };
