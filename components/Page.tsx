@@ -12,6 +12,8 @@ className?: string;
   title: string | React.ReactNode;
   description?: string | React.ReactNode;
   thumbnail?: string;
+  alt?: string;
+
 }
 
 export const Page: React.FC<PageProps> = ({
