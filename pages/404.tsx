@@ -37,7 +37,7 @@ const Custom404: NextPage<HomeProps> = ({ posts, tags,  description}) => {
 <div className="border-t border-reddish border-t-8 rounded-lg md:rounded-t-lg">
   <div className="mb-3 px-8 py-4 rounded-lg dark:bg-midnightish border flex flex-col items-center border-grayish dark:border-none">
     <h1 className="text-3xl md:text-5xl text-midnightish dark:text-white mb-3 inline-block font-bold">404</h1>
-    <div className="mt-4 inline-block"><div className="max-w-none text-midnightish dark:text-white image-container">
+    <div id="main-content" className="mt-4 inline-block"><div className="max-w-none text-midnightish dark:text-white image-container">
       <p>Page not found</p></div></div>
       <Link href='/'>
       <a>Return to the Main Page</a>
