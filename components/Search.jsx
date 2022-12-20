@@ -57,7 +57,7 @@ export default function Search(props) {
                 <a onClick={props.onSearch} className="hover:translate-x-1">{title}</a>
                 </Link>  
             </li>            
-          )) 
+          )) }
         </ul>
       ) : (<p>Nothing found</p>)}
                   </div>
