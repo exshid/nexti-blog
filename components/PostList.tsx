@@ -26,7 +26,7 @@ export const PostList: React.FC<PostListProps> = ({ posts, className }) => {
 	
                 {post.thumbnail && (<div className="block overflow-hidden mr-4 rounded-lg w-2/6">
                     <Image className="object-cover w-full relative h-full max-h-80 rounded-lg" src={post.thumbnail}
-                    alt={post.alt}
+                    alt={post.alt ? post.alt : "Post thumbnail"}
                     height={300}
                     width={300}
                     sizes="(max-width: 768px) 100vw,
