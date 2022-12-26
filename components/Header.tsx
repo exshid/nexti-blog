@@ -158,25 +158,25 @@ return (
             <ul onClick={dropdownCloseHandler}>
             {posts.filter((file) => file.tags?.includes('news')).map((post,index) => (
 
-                <li key={index}>
-                                    <Link href={`/posts/${slugify(post.slug)}`}>
-                    <a className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
-                    {post.thumbnail && (<div className="overflow-hidden mr-4 rounded-lg relative w-1/5 image-span">
-                    <Image className="bg-contain w-full relative header-image" src={post.thumbnail} height= "100px"
-                    alt={post.alt}
-                    />
-                    </div>
-                  )}
+<Link key={index} href={`/posts/${slugify(post.slug)}`}>
+<a className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
+<li className="flex my-1" >
+{post.thumbnail && (<div className="overflow-hidden mr-4 rounded-lg relative w-1/5 image-span">
+<Image className="bg-contain w-full relative header-image" src={post.thumbnail} height= "100px"
+alt={post.alt}
+/>
+</div>
+)}
 
 <div className="w-4/5">
 
 <div className="font-semibold">{post.title}</div>
 </div>
+</li>
 </a>
-                </Link>
-                </li>
-             ))}
-             </ul>
+</Link>
+))}
+</ul>
         </div>
     </div>
  }
