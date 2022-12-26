@@ -123,7 +123,7 @@ return (
   </div>
   {searchPopUp && 
   
-  <div id="mega-menu-full-dropdown" className='mt-1 bg-gray-50 md:bg-white dark:bg-evening border border-grayish dark:border-none dark:bg-midnightish absolute rounded-lg'>
+  <div id="mega-menu-full-dropdown" className='mt-1 border-gray-200 bg-gray-50 md:bg-white border-y dark:bg-midnightish dark:border-gray-600'>
         <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white md:px-6">
 <Search onSearch={searchHandler}/>
         </div>
@@ -131,7 +131,7 @@ return (
   
   }
 {contactUs && <Contact close={contactHandler}/>}
- {dropdown && <div id="mega-menu-full-dropdown" className='mt-1  shadow-sm bg-gray-50 md:bg-white dark:bg-evening border border-grayish dark:border-none dark:bg-midnightish absolute rounded-lg'>
+ {dropdown && <div id="mega-menu-full-dropdown" className='mt-1 shadow-sm bg-gray-50 md:bg-white dark:bg-evening border border-grayish dark:border-none dark:bg-midnightish absolute rounded-lg'>
         <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
         <ul onClick={dropdownCloseHandler}>
             {posts.filter((file) => file.tags?.includes('featured')).map((post,index) => (
@@ -149,7 +149,6 @@ return (
          <div className="w-4/5">
 
                         <div className="font-semibold">{post.title}</div>
-                        <span className="text-sm hidden md:block font-light max-h-14 overflow-hidden text-gray-500 dark:text-gray-400">{post.description}</span>
                 </div>
                 </li>
                     </a>
@@ -162,9 +161,18 @@ return (
                 <li key={index}>
                                     <Link href={`/posts/${slugify(post.slug)}`}>
                     <a className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-lightnight">
-                        <div className="font-semibold">{post.title}</div>
-                        <span className="text-sm hidden md:block font-light text-gray-500 max-h-14 overflow-hidden dark:text-gray-400">{post.description}</span>
-                    </a>
+                    {post.thumbnail && (<div className="overflow-hidden mr-4 rounded-lg relative w-1/5 image-span">
+                    <Image className="bg-contain w-full relative header-image" src={post.thumbnail} height= "100px"
+                    alt={post.alt}
+                    />
+                    </div>
+                  )}
+
+<div className="w-4/5">
+
+<div className="font-semibold">{post.title}</div>
+</div>
+</a>
                 </Link>
                 </li>
              ))}
