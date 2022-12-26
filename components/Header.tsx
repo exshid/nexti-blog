@@ -146,7 +146,7 @@ return (
                     </div>
                   )}
 
-         <div className="w-4/5">
+         <div className="w-4/5 flex items-center">
 
                         <div className="font-semibold">{post.title}</div>
                 </div>
@@ -168,7 +168,7 @@ alt={post.alt}
 </div>
 )}
 
-<div className="w-4/5">
+<div className="w-4/5 flex items-center">
 
 <div className="font-semibold">{post.title}</div>
 </div>
